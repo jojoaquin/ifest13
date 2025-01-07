@@ -3,10 +3,208 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>WDC - IFest #12</title>
+    <title>WDC - IFest #13</title>
     <link href="./output.css" rel="stylesheet" />
   </head>
   <body>
-    <h1 class="text-3xl text-red-600">Kerens</h1>
+    <!-- Start - Slide 1 & Navbar -->
+    <section
+      class="w-full h-screen bg-cover bg-center"
+      style="background-image: url('img/bg/first.svg')"
+    >
+      <div>
+        <div class="absolute left-0 mt-36 scale-x-[-1]">
+          <img
+            src="img/element/awan.svg"
+            alt="awan"
+            class="w-[250px] lg:w-[700px]"
+          />
+        </div>
+        <div class="absolute right-0 mt-56">
+          <img
+            src="img/element/awan.svg"
+            alt="awan"
+            class="w-[150px] lg:w-[500px]"
+          />
+        </div>
+      </div>
+      <!-- Start - Navbar -->
+
+      <!-- Start - Mobile -->
+      <div class="w-full h-20 lg:hidden relative">
+        <div class="h-full flex items-center font-quantico">
+          <div class="mx-5 flex w-full items-center">
+            <a href="/src/index.html">
+              <div class="flex items-center space-x-5">
+                <img src="img/element/logo.svg" alt="" class="h-6" />
+                <span class="">IFEST #13</span>
+              </div>
+            </a>
+            <div class="flex items-center lg:hidden ml-auto z-10">
+              <button
+                id="hamburger-btn"
+                class="bg-white p-3 rounded-full focus:outline-none shadow-xl border border-gray-300"
+              >
+                <svg
+                  id="hamburger-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6 text-black"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M3 12h18M3 6h18M3 18h18"></path>
+                </svg>
+                <svg
+                  id="close-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6 text-black hidden"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Mobile Menu Sliding from the Left -->
+      <div
+        id="mobile-menu"
+        class="font-quantico hidden fixed top-0 right-0 h-full w-64 bg-white shadow-lg transform -translate-x-full transition-transform duration-300"
+      >
+        <div class="mt-16 p-5 space-y-4">
+          <div
+            class="text-black hover:bg-gray-200 p-2 rounded flex items-center"
+          >
+            KOMPETISI
+            <!-- <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-4 w-4 ml-2"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            > -->
+              <path d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </div>
+          <ul class="space-y-2 ml-5">
+            <li>
+              <a href="#" class="block text-black hover:bg-gray-200 p-2 rounded"
+                >Mobile UI/UX Competition (MUC)</a
+              >
+            </li>
+            <li>
+              <a href="#" class="block text-black hover:bg-gray-200 p-2 rounded"
+                >Web Development Competition (WDC)</a
+              >
+            </li>
+            <li>
+              <a href="#" class="block text-black hover:bg-gray-200 p-2 rounded"
+                >Capture the Flag (CTF)</a
+              >
+            </li>
+          </ul>
+          <a
+            href="#semnas"
+            class="block text-black hover:bg-gray-200 p-2 rounded"
+            >SEMINAR NASIONAL</a
+          >
+          <a
+            href="#galeri"
+            class="block text-black hover:bg-gray-200 p-2 rounded"
+            >GALERI</a
+          >
+          <a
+            href="#partnership"
+            class="block text-black hover:bg-gray-200 p-2 rounded"
+            >PARTNERSHIP</a
+          >
+          <a
+            href="#dashboard"
+            class="block text-black hover:bg-gray-200 p-2 rounded"
+            >DASHBOARD</a
+          >
+        </div>
+      </div>
+      <!-- End - Mobile -->
+
+      <div class="w-full h-20 hidden lg:block">
+        <div
+          class="mx-10 bg-white h-full rounded-b-[35px] flex items-center font-quantico"
+        >
+          <div class="mx-10 flex w-full">
+            <a href="/src/index.html">
+              <div class="flex items-center space-x-5">
+                <img src="img/element/logo.svg" alt="" class="h-6" />
+                <span class="">IFEST #13</span>
+              </div>
+            </a>
+            <div class="ml-auto flex items-center gap-16">
+              <div class="relative">
+                <button
+                  id="kompetisi-btn"
+                  class="focus:outline-none flex items-center"
+                >
+                  KOMPETISI
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-4 w-4 ml-2"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M19 9l-7 7-7-7"></path>
+                  </svg>
+                </button>
+                <div
+                  id="kompetisi-dropdown"
+                  class="absolute hidden bg-white shadow-lg rounded-md p-4 mt-2 left-0 w-64 border border-gray-300"
+                >
+                  <a
+                    href="#"
+                    class="block text-black hover:bg-gray-200 p-2 rounded"
+                    >Mobile UI/UX Competition (MUC)</a
+                  >
+                  <a
+                    href="#"
+                    class="block text-black hover:bg-gray-200 p-2 rounded"
+                    >Web Development Competition (WDC)</a
+                  >
+                  <a
+                    href="#"
+                    class="block text-black hover:bg-gray-200 p-2 rounded"
+                    >Capture the Flag (CTF)</a
+                  >
+                </div>
+              </div>
+              <a href="#semnas">SEMINAR NASIONAL</a>
+              <a href="#galeri">GALERI</a>
+              <a href="#partnership">PARTNERSHIP</a>
+              <a href="#dashboard">DASHBOARD</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End - Navbar -->
+    </section>
+    <!-- End - Slide 1 -->
+    <script src="script.js"></script>
   </body>
 </html>
