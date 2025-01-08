@@ -5,6 +5,8 @@ module.exports = {
     extend: {
       fontFamily: {
         quantico: ["Quantico", "serif"],
+        jersey: ["'Jersey 10'", "serif"],
+        roboto: ["Roboto", "serif"],
       },
     },
   },

@@ -13,14 +13,14 @@
       style="background-image: url('img/bg/first.svg')"
     >
       <div>
-        <div class="absolute left-0 mt-36 scale-x-[-1]">
+        <div class="absolute left-0 mt-44 scale-x-[-1]">
           <img
             src="img/element/awan.svg"
             alt="awan"
             class="w-[250px] lg:w-[700px]"
           />
         </div>
-        <div class="absolute right-0 mt-56">
+        <div class="absolute right-0 mt-64 lg:mt-80">
           <img
             src="img/element/awan.svg"
             alt="awan"
@@ -40,7 +40,7 @@
                 <span class="">IFEST #13</span>
               </div>
             </a>
-            <div class="flex items-center lg:hidden ml-auto z-10">
+            <div class="flex items-center lg:hidden ml-auto z-20">
               <button
                 id="hamburger-btn"
                 class="bg-white p-3 rounded-full focus:outline-none shadow-xl border border-gray-300"
@@ -76,31 +76,32 @@
           </div>
         </div>
       </div>
-      <!-- Mobile Menu Sliding from the Left -->
       <div
         id="mobile-menu"
-        class="font-quantico hidden fixed top-0 right-0 h-full w-64 bg-white shadow-lg transform -translate-x-full transition-transform duration-300"
+        class="z-10 font-quantico hidden fixed top-0 right-0 h-full w-64 bg-white shadow-lg transform -translate-x-full transition-transform duration-300"
       >
         <div class="mt-16 p-5 space-y-4">
           <div
             class="text-black hover:bg-gray-200 p-2 rounded flex items-center"
+            id="kompetisi-btn-mobile"
+            role="button"
           >
             KOMPETISI
-            <!-- <svg
+            <svg
+              id="dropdown-arrow-mobile"
               xmlns="http://www.w3.org/2000/svg"
-              class="h-4 w-4 ml-2"
+              class="h-4 w-4 ml-2 transform transition-transform duration-200"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
-              xmlns:xlink="http://www.w3.org/1999/xlink"
               stroke-width="2"
               stroke-linecap="round"
               stroke-linejoin="round"
             >
-              <path d="M19 9l-7 7-7-7"></path>
-            </svg> -->
+              <text x="5" y="15" id="arrow-text-mobile">v</text>
+            </svg>
           </div>
-          <ul class="space-y-2 ml-5">
+          <ul id="kompetisi-dropdown-mobile" class="hidden space-y-2 ml-5">
             <li>
               <a href="#" class="block text-black hover:bg-gray-200 p-2 rounded"
                 >Mobile UI/UX Competition (MUC)</a
@@ -136,6 +137,7 @@
       </div>
       <!-- End - Mobile -->
 
+      <!-- Start - Desktop -->
       <div class="w-full h-20 hidden lg:block">
         <div
           class="mx-10 bg-white h-full rounded-b-[35px] flex items-center font-quantico"
@@ -150,27 +152,27 @@
             <div class="ml-auto flex items-center gap-16">
               <div class="relative">
                 <button
-                  id="kompetisi-btn"
+                  id="kompetisi-btn-desktop"
                   class="focus:outline-none flex items-center"
                 >
                   KOMPETISI
                   <svg
+                    id="dropdown-arrow-desktop"
                     xmlns="http://www.w3.org/2000/svg"
-                    class="h-4 w-4 ml-2"
+                    class="h-4 w-4 ml-2 transform transition-transform duration-200"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
-                    xmlns:xlink="http://www.w3.org/1999/xlink"
                     stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
                   >
-                    <path d="M19 9l-7 7-7-7"></path>
+                    <text x="5" y="15" id="arrow-text-desktop">v</text>
                   </svg>
                 </button>
                 <div
-                  id="kompetisi-dropdown"
-                  class="absolute hidden bg-white shadow-lg rounded-md p-4 mt-2 left-0 w-64 border border-gray-300"
+                  id="kompetisi-dropdown-desktop"
+                  class="absolute z-20 hidden bg-white shadow-lg rounded-md p-4 mt-2 left-0 w-64 border border-gray-300"
                 >
                   <a
                     href="#"
@@ -196,9 +198,120 @@
           </div>
         </div>
       </div>
+      <!-- End - Desktop -->
+
       <!-- End - Navbar -->
+
+      <div
+        class="text-center items-center justify-center flex flex-col relative z-0"
+      >
+        <img
+          src="img/element/webdev.svg"
+          alt=""
+          class="mt-5 mb-2 w-80 lg:w-max"
+        />
+        <h1 class="font-jersey text-white text-6xl lg:text-7xl">
+          Web Development Competition
+        </h1>
+      </div>
+
+      <div class="w-full flex justify-center gap-2 font-roboto mt-3">
+        <div class="px-5 bg-[#F4347F] rounded-3xl h-10 grid place-items-center">
+          <h1 class="text-white text-xs lg:text-lg text-center">Rp. 100.000</h1>
+        </div>
+        <div class="px-5 bg-[#F4347F] rounded-3xl h-10 grid place-items-center">
+          <h1 class="text-white text-xs lg:text-lg text-center">
+            SMA / Sederajat
+          </h1>
+        </div>
+        <div class="px-5 bg-[#F4347F] rounded-3xl h-10 grid place-items-center">
+          <h1 class="text-white text-xs lg:text-lg text-center">
+            Max. 3 orang
+          </h1>
+        </div>
+      </div>
+
+      <h1
+        class="text-center text-white mx-5 text-sm lg:text-base lg:mx-36 mt-5 font-roboto"
+      >
+        Web Development Competition (WDC) 2025 merupakan sebuah kompetisi
+        penciptaan/perancangan sistem serta desain visual informasi digital yang
+        ditampilkan dalam situs web. Acara ini tergabung dalam rangkaian
+        multi-event pada Informatics Festival (IFest) #13. Pada tahun ini, WDC
+        mengangkat tema <br />
+        “StitchLoop: Where Every Thread Tells a New Story”.
+      </h1>
+
+      <div class="flex justify-center items-center mt-5 mx-5 lg:mx-10">
+        <img src="./img/element/cahaya.svg" class="w-10 lg:w-20" alt="" />
+        <h1
+          class="text-white text-center font-jersey mt-5 text-3xl lg:text-5xl mx-2"
+        >
+          About Web Development Competition
+        </h1>
+        <img src="./img/element/cahaya.svg" class="w-10 lg:w-20" alt="" />
+      </div>
     </section>
     <!-- End - Slide 1 -->
+
+    <section
+      class="w-full h-screen bg-cover bg-center"
+      style="background-image: url('img/bg/second.svg')"
+    >
+      <div class="flex justify-center items-center mx-5 lg:mx-10">
+        <img src="./img/element/cahaya.svg" class="w-10 lg:w-20" alt="" />
+        <div>
+          <h1 class="text-center text-white mt-5 text-xs">
+            IFEST #13 : HEROES OF INNOVATION
+          </h1>
+          <h1
+            class="text-white text-center font-jersey text-3xl lg:text-5xl mx-2 mt-3"
+          >
+            Web Development Competition
+          </h1>
+        </div>
+        <img src="./img/element/cahaya.svg" class="w-10 lg:w-20" alt="" />
+      </div>
+      <h1
+        class="text-center text-white mx-5 text-sm lg:text-base lg:mx-36 mt-5 font-roboto"
+      >
+        Web Development Competition (WDC) adalah sebuah kompetisi dimana
+        mahasiswa/i dalam sebuah tim yang terdiri dari maksimal tiga orang
+        berlomba untuk menciptakan/merancang sistem serta desain visual
+        informasi digital yang ditampilkan dalam situs web agar dapat
+        mempermudah setiap pengguna web atau pencari informasi mendapatkan
+        informasi yang jelas dan tepat. Web Development Competition (WDC) 2025
+        bertujuan untuk membuat atau menyampaikan informasi secara cepat dan
+        dibuat sebagai sarana untuk menuangkan ide dalam menyajikan informasi
+        yang terpercaya serta menarik untuk dibaca. Tema yang diangkat pada Web
+        Development Competition 2025 ini yaitu, <br />
+        “StitchLoop: Where Every Thread Tells a New Story”.
+      </h1>
+    </section>
+
+    <section
+      class="w-full h-screen bg-cover bg-center"
+      style="background-image: url('img/bg/third.svg')"
+    >
+      <div class="flex justify-center items-center mx-5 lg:mx-10">
+        <img src="./img/element/cahaya.svg" class="w-10 lg:w-20" alt="" />
+        <div>
+          <h1 class="text-center text-white mt-5 text-xs">
+            IFEST #13 : HEROES OF INNOVATION
+          </h1>
+          <h1
+            class="text-white text-center font-jersey text-2xl lg:text-5xl mx-2 mt-3"
+          >
+            TAHAPAN WEB DEVELOPMENT COMPETITION
+          </h1>
+          <h1 class="text-center text-white mt-2 text-sm lg:text-base">
+            Berikut ketentuan umum dan ketentuan karya untuk lomba Capture The
+            Flag
+          </h1>
+        </div>
+        <img src="./img/element/cahaya.svg" class="w-10 lg:w-20" alt="" />
+      </div>
+    </section>
     <script src="script.js"></script>
   </body>
 </html>
