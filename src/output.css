@@ -1177,6 +1177,11 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
 }
 
+.bg-\[\#f48600\]{
+  --tw-bg-opacity: 1;
+  background-color: rgb(244 134 0 / var(--tw-bg-opacity, 1));
+}
+
 .bg-cover{
   background-size: cover;
 }
