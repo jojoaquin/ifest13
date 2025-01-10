@@ -794,6 +794,10 @@ video {
   height: 100%;
 }
 
+.h-5{
+  height: 1.25rem;
+}
+
 .max-h-\[500px\]{
   max-height: 500px;
 }
@@ -1395,6 +1399,16 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
+.text-\[\#FDB81A\]{
+  --tw-text-opacity: 1;
+  color: rgb(253 184 26 / var(--tw-text-opacity, 1));
+}
+
+.text-\[\#f48600\]{
+  --tw-text-opacity: 1;
+  color: rgb(244 134 0 / var(--tw-text-opacity, 1));
+}
+
 .opacity-75{
   opacity: 0.75;
 }
@@ -1509,6 +1523,10 @@ video {
 
   .lg\:h-\[400px\]{
     height: 400px;
+  }
+
+  .lg\:h-10{
+    height: 2.5rem;
   }
 
   .lg\:w-20{
