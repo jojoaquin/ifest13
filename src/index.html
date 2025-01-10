@@ -10,6 +10,9 @@
     />
     <link href="./output.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
+
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         const swiper = new Swiper(".swiper", {
@@ -263,7 +266,7 @@
       <!-- End - Navbar -->
 
       <div
-        class="text-center items-center justify-center flex flex-col relative z-0"
+        class="text-center items-center justify-center flex flex-col relative z-0 fadeIn"
       >
         <img
           src="img/element/webdev.svg"
@@ -275,7 +278,9 @@
         </h1>
       </div>
 
-      <div class="w-full flex justify-center gap-2 font-roboto mt-3 px-4">
+      <div
+        class="w-full flex justify-center gap-2 font-roboto mt-3 px-4 fadeIn"
+      >
         <div class="px-5 bg-[#F4347F] rounded-3xl h-10 grid place-items-center">
           <h1 class="text-white text-xs lg:text-lg text-center">Rp50.000,00</h1>
         </div>
@@ -292,7 +297,7 @@
       </div>
 
       <h1
-        class="text-center text-white mx-5 text-sm lg:text-base lg:mx-32 mt-5 font-inter"
+        class="text-center text-white mx-5 text-sm lg:text-base lg:mx-32 mt-5 font-inter fadeIn"
       >
         Web Development Competition (WDC) 2025 merupakan sebuah kompetisi
         penciptaan/perancangan sistem serta desain visual informasi digital yang
@@ -304,7 +309,9 @@
         </p>
       </h1>
 
-      <div class="flex justify-center items-center mx-5 lg:mx-10 mt-5">
+      <div
+        class="flex justify-center items-center mx-5 lg:mx-10 mt-5 slideUp translate-y-full transform"
+      >
         <img src="./img/element/cahaya.svg" class="w-10 lg:w-20" alt="" />
         <h1
           class="text-white text-center font-jersey mt-2 text-4xl lg:text-5xl mx-2"
@@ -320,7 +327,9 @@
       class="w-full h-full bg-cover bg-center"
       style="background-image: url('img/bg/second.svg')"
     >
-      <div class="flex justify-center items-center mx-5 lg:mx-10">
+      <div
+        class="flex justify-center items-center mx-5 lg:mx-10 slideUp translate-y-full transform"
+      >
         <img src="./img/element/cahaya.svg" class="w-10 lg:w-20" alt="" />
         <div>
           <h1 class="text-center text-white mt-5 text-xs font-khdam">
@@ -335,7 +344,8 @@
         <img src="./img/element/cahaya.svg" class="w-10 lg:w-20" alt="" />
       </div>
       <h1
-        class="text-center text-white mx-5 text-sm lg:text-base lg:mx-36 mt-5 font-inter"
+        class="text-center text-white mx-5 text-sm lg:text-base lg:mx-36 mt-5 font-inter fadeIn"
+        style="--fade-duration: 1"
       >
         Web Development Competition (WDC) adalah sebuah kompetisi dimana
         mahasiswa/i dalam sebuah tim yang terdiri dari maksimal tiga orang
@@ -353,7 +363,9 @@
       </h1>
 
       <!-- Start - Carousel -->
-      <div class="bg-[#FDB81A] w-full h-10 flex items-center mt-5 lg:mt-10">
+      <div
+        class="bg-[#FDB81A] w-full h-10 flex items-center mt-5 lg:mt-10 slideLeft transform translate-x-full"
+      >
         <marquee
           behavior="scroll"
           direction="right"
@@ -368,7 +380,7 @@
           </div>
         </marquee>
       </div>
-      <div class="py-5 flex items-center justify-center w-full">
+      <div class="py-5 flex items-center justify-center w-full fadeIn">
         <div class="swiper lg:overflow-visible w-[90%] md:w-96 lg:w-[500px]">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
@@ -387,23 +399,8 @@
           <div class="swiper-scrollbar"></div>
         </div>
       </div>
-      <div class="bg-[#FDB81A] w-full h-10 flex items-center">
-        <marquee
-          behavior="scroll"
-          direction="left"
-          class="text-white font-khdam"
-        >
-          <div class="flex text-2xl gap-48">
-            <h1>WDC</h1>
-            <h1>WDC</h1>
-            <h1>WDC</h1>
-            <h1>WDC</h1>
-            <h1>WDC</h1>
-          </div>
-        </marquee>
-      </div>
 
-      <div class="w-full flex justify-center gap-5 font-roboto py-5">
+      <div class="w-full flex justify-center gap-5 font-roboto mb-5">
         <a
           href="#daftar
         "
@@ -423,6 +420,23 @@
           </div></a
         >
       </div>
+      <div
+        class="bg-[#FDB81A] w-full h-10 flex items-center slideRight transform translate-x-full"
+      >
+        <marquee
+          behavior="scroll"
+          direction="left"
+          class="text-white font-khdam"
+        >
+          <div class="flex text-2xl gap-48">
+            <h1>WDC</h1>
+            <h1>WDC</h1>
+            <h1>WDC</h1>
+            <h1>WDC</h1>
+            <h1>WDC</h1>
+          </div>
+        </marquee>
+      </div>
 
       <!-- End - Carousel -->
     </section>
@@ -431,7 +445,9 @@
       class="w-full h-full bg-cover bg-center"
       style="background-image: url('img/bg/third.svg')"
     >
-      <div class="flex justify-center items-center mx-5 lg:mx-10">
+      <div
+        class="flex justify-center items-center mx-5 lg:mx-10 slideUp transform translate-y-full"
+      >
         <img src="./img/element/cahaya.svg" class="w-10 lg:w-20" alt="" />
         <div>
           <h1 class="text-center text-white mt-5 text-xs font-khdam">
@@ -477,7 +493,7 @@
         <div class="lg:hidden mt-5">
           <div class="flex flex-col mx-10 items-center">
             <div
-              class="bg-white w-full h-auto rounded-xl max-h-[500px] overflow-y-scroll"
+              class="bg-white w-full h-auto rounded-xl max-h-[500px] overflow-y-scroll slideLeft transform translate-x-full"
               style="
                 box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2),
                   0 4px 25px rgba(255, 255, 255, 0.15),
@@ -574,7 +590,7 @@
               class="my-5 w-96"
             />
             <div
-              class="bg-white w-full max-h-[500px] overflow-y-scroll rounded-xl"
+              class="bg-white w-full max-h-[500px] overflow-y-scroll rounded-xl slideRight transform translate-x-full"
               style="
                 box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2),
                   0 4px 25px rgba(255, 255, 255, 0.15),
@@ -696,7 +712,7 @@
         <div class="hidden lg:block mt-10">
           <div class="flex items-center space-x-10">
             <div
-              class="bg-white w-[40vw] h-auto rounded-xl"
+              class="bg-white w-[40vw] h-auto rounded-xl slideLeft transform translate-x-full"
               style="
                 box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2),
                   0 4px 25px rgba(255, 255, 255, 0.15),
@@ -789,7 +805,7 @@
             </div>
             <img src="img/element/garis.svg" alt="" class="w-12 mt-16" />
             <div
-              class="bg-white w-[40vw] h-auto rounded-xl z-10 max-h-[690px] overflow-y-scroll"
+              class="bg-white w-[40vw] h-auto rounded-xl z-10 max-h-[690px] overflow-y-scroll slideRight transform translate-x-full"
               style="
                 box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2),
                   0 4px 25px rgba(255, 255, 255, 0.15),
@@ -968,7 +984,9 @@
         </div>
       </div>
 
-      <div class="flex justify-center items-center mx-5 lg:mx-10 relative z-10">
+      <div
+        class="flex justify-center items-center mx-5 lg:mx-10 relative z-10 slideUp transform translate-y-full"
+      >
         <img src="./img/element/cahaya.svg" class="w-10 lg:w-20" alt="" />
         <div class="text-black">
           <h1 class="text-center mt-5 text-xs font-khdam">
@@ -990,7 +1008,9 @@
 
       <div class="block lg:hidden p-5">
         <div class="mx-5 items-center justify-center flex flex-col">
-          <div class="flex items-center justify-center relative mr-10">
+          <div
+            class="flex items-center justify-center relative mr-10 slideUp transform translate-y-full"
+          >
             <div
               class="absolute -top-1 bg-[#EDB108] w-32 h-3 rounded-full drop-shadow-lg"
             ></div>
@@ -1012,8 +1032,14 @@
               class="absolute -bottom-1 bg-[#EDB108] w-32 h-3 rounded-full drop-shadow-lg"
             ></div>
           </div>
-          <img src="img/element/panah.svg" class="w-16 py-5 rotate-45" alt="" />
-          <div class="flex items-center justify-center relative ml-10">
+          <img
+            src="img/element/panah.svg"
+            class="w-16 py-5 rotate-45 slideUp transform translate-y-full"
+            alt=""
+          />
+          <div
+            class="flex items-center justify-center relative ml-10 slideUp transform translate-y-full"
+          >
             <div
               class="absolute -top-1 bg-[#E98F06] w-32 h-3 rounded-full drop-shadow-lg"
             ></div>
@@ -1037,10 +1063,12 @@
           </div>
           <img
             src="img/element/panah.svg"
-            class="w-16 py-5 -rotate-45 scale-x-[-1]"
+            class="w-16 py-5 -rotate-45 scale-x-[-1] slideUp transform translate-y-full"
             alt=""
           />
-          <div class="flex items-center justify-center relative mr-10">
+          <div
+            class="flex items-center justify-center relative mr-10 slideUp transform translate-y-full"
+          >
             <div
               class="absolute -top-1 bg-[#DD5017] w-32 h-3 rounded-full drop-shadow-lg"
             ></div>
@@ -1062,8 +1090,14 @@
               class="absolute -bottom-1 bg-[#DD5017] w-32 h-3 rounded-full drop-shadow-lg"
             ></div>
           </div>
-          <img src="img/element/panah.svg" class="w-16 py-5 rotate-45" alt="" />
-          <div class="flex items-center justify-center relative ml-10">
+          <img
+            src="img/element/panah.svg"
+            class="w-16 py-5 rotate-45 slideUp transform translate-y-full"
+            alt=""
+          />
+          <div
+            class="flex items-center justify-center relative ml-10 slideUp transform translate-y-full"
+          >
             <div
               class="absolute -top-1 bg-[#6C1F00] w-32 h-3 rounded-full drop-shadow-lg"
             ></div>
@@ -1087,10 +1121,12 @@
           </div>
           <img
             src="img/element/panah.svg"
-            class="w-16 py-5 -rotate-45 scale-x-[-1]"
+            class="w-16 py-5 -rotate-45 scale-x-[-1] slideUp transform translate-y-full"
             alt=""
           />
-          <div class="flex items-center justify-center relative mr-10">
+          <div
+            class="flex items-center justify-center relative mr-10 slideUp transform translate-y-full"
+          >
             <div
               class="absolute -top-1 bg-[#CE178F] w-32 h-3 rounded-full drop-shadow-lg"
             ></div>
@@ -1112,8 +1148,14 @@
               class="absolute -bottom-1 bg-[#CE178F] w-32 h-3 rounded-full drop-shadow-lg"
             ></div>
           </div>
-          <img src="img/element/panah.svg" class="w-16 py-5 rotate-45" alt="" />
-          <div class="flex items-center justify-center relative ml-10">
+          <img
+            src="img/element/panah.svg"
+            class="w-16 py-5 rotate-45 slideUp transform translate-y-full"
+            alt=""
+          />
+          <div
+            class="flex items-center justify-center relative ml-10 slideUp transform translate-y-full"
+          >
             <div
               class="absolute -top-1 bg-[#A33EA1] w-32 h-3 rounded-full drop-shadow-lg"
             ></div>
@@ -1146,7 +1188,10 @@
       <!-- Start - Desktop -->
       <div class="hidden lg:block mt-10">
         <div class="flex items-center justify-center gap-3">
-          <div class="flex items-center justify-center relative">
+          <div
+            class="flex items-center justify-center relative fadeIn"
+            style="--fadeDuration: 1"
+          >
             <div
               class="absolute -top-3 bg-[#EDB108] w-48 h-7 rounded-full drop-shadow-lg"
             ></div>
@@ -1168,8 +1213,16 @@
               class="absolute -bottom-3 bg-[#EDB108] w-48 h-7 rounded-full drop-shadow-lg"
             ></div>
           </div>
-          <img src="img/element/panah.svg" class="w-24" alt="" />
-          <div class="flex items-center justify-center relative">
+          <img
+            src="img/element/panah.svg"
+            class="w-24 fadeIn"
+            style="--fadeDuration: 1"
+            alt=""
+          />
+          <div
+            class="flex items-center justify-center relative fadeIn"
+            style="--fadeDuration: 2"
+          >
             <div
               class="absolute -top-3 bg-[#E98F06] w-48 h-7 rounded-full drop-shadow-lg"
             ></div>
@@ -1191,8 +1244,16 @@
               class="absolute -bottom-3 bg-[#E98F06] w-48 h-7 rounded-full drop-shadow-lg"
             ></div>
           </div>
-          <img src="img/element/panah.svg" class="w-24" alt="" />
-          <div class="flex items-center justify-center relative">
+          <img
+            src="img/element/panah.svg"
+            class="w-24 fadeIn"
+            style="--fadeDuration: 2"
+            alt=""
+          />
+          <div
+            class="flex items-center justify-center relative fadeIn"
+            style="--fadeDuration: 3"
+          >
             <div
               class="absolute -top-3 bg-[#DD5017] w-48 h-7 rounded-full drop-shadow-lg"
             ></div>
@@ -1218,7 +1279,10 @@
         </div>
         <div class="py-4"></div>
         <div class="flex items-center justify-center gap-3 mt-5">
-          <div class="flex items-center justify-center relative">
+          <div
+            class="flex items-center justify-center relative fadeIn"
+            style="--fadeDuration: 6"
+          >
             <div
               class="absolute -top-3 bg-[#A33EA1] w-48 h-7 rounded-full drop-shadow-lg"
             ></div>
@@ -1243,8 +1307,16 @@
               class="absolute -bottom-3 bg-[#A33EA1] w-48 h-7 rounded-full drop-shadow-lg"
             ></div>
           </div>
-          <img src="img/element/panah.svg" class="w-24 scale-x-[-1]" alt="" />
-          <div class="flex items-center justify-center relative">
+          <img
+            src="img/element/panah.svg"
+            class="w-24 scale-x-[-1] fadeIn"
+            style="--fadeDuration: 4"
+            alt=""
+          />
+          <div
+            class="flex items-center justify-center relative fadeIn"
+            style="--fadeDuration: 5"
+          >
             <div
               class="absolute -top-3 bg-[#CE178F] w-48 h-7 rounded-full drop-shadow-lg"
             ></div>
@@ -1267,8 +1339,16 @@
               class="absolute -bottom-3 bg-[#CE178F] w-48 h-7 rounded-full drop-shadow-lg"
             ></div>
           </div>
-          <img src="img/element/panah.svg" class="w-24 scale-x-[-1]" alt="" />
-          <div class="flex items-center justify-center relative">
+          <img
+            src="img/element/panah.svg"
+            class="w-24 scale-x-[-1] fadeIn"
+            style="--fadeDuration: 3"
+            alt=""
+          />
+          <div
+            class="flex items-center justify-center relative fadeIn"
+            style="--fadeDuration: 4"
+          >
             <div
               class="absolute -top-3 bg-[#6C1F00] w-48 h-7 rounded-full drop-shadow-lg"
             ></div>
@@ -1311,7 +1391,9 @@
         </div>
       </div>
       <div class="relative z-10">
-        <div class="flex justify-center items-center mx-5 lg:mx-10">
+        <div
+          class="flex justify-center items-center mx-5 lg:mx-10 slideUp transform translate-y-full"
+        >
           <img src="./img/element/cahaya.svg" class="w-10 lg:w-20" alt="" />
           <div class="text-black">
             <h1 class="text-center mt-5 text-xs font-khdam">
@@ -1330,9 +1412,14 @@
         </div>
 
         <!-- Start - Juara -->
+
+        <!-- Start - Juara Mobile -->
+
         <div class="block lg:hidden">
           <div class="mt-5 items-center flex flex-col space-y-5">
-            <div class="items-center flex flex-col">
+            <div
+              class="items-center flex flex-col slideLeft transform translate-x-full"
+            >
               <img src="img/element/juara_1.svg" class="w-32" alt="" />
               <h1 class="font-jersey25 text-center text-xl mt-2">FIRST</h1>
               <div class="font-khdam text-center text-sm">
@@ -1348,7 +1435,9 @@
                 </div>
               </div>
             </div>
-            <div class="items-center flex flex-col">
+            <div
+              class="items-center flex flex-col slideRight transform translate-x-full"
+            >
               <img src="img/element/juara_2.svg" class="w-32" alt="" />
               <h1 class="font-jersey25 text-center text-xl mt-2">SECOND</h1>
               <div class="font-khdam text-center text-sm">
@@ -1364,7 +1453,9 @@
                 </div>
               </div>
             </div>
-            <div class="items-center flex flex-col">
+            <div
+              class="items-center flex flex-col slideLeft transform translate-x-full"
+            >
               <img src="img/element/juara_3.svg" class="w-32" alt="" />
               <h1 class="font-jersey25 text-center text-xl mt-2">THIRD</h1>
               <div class="font-khdam text-center text-sm">
@@ -1383,14 +1474,12 @@
           </div>
         </div>
 
-        <!-- Start - Juara Mobile -->
-
         <!-- End - Juara Mobile -->
 
         <!-- Start - Juara Desktop -->
         <div class="hidden lg:block">
           <div class="flex items-center justify-center gap-20 mt-10">
-            <div class="mt-20">
+            <div class="mt-20 slideUp translate-y-full">
               <img src="img/element/juara_2.svg" class="w-80" alt="" />
               <h1 class="font-jersey25 text-center text-3xl mt-2">SECOND</h1>
               <div class="font-khdam text-center">
@@ -1404,7 +1493,7 @@
                 </div>
               </div>
             </div>
-            <div>
+            <div class="slideUp translate-y-full">
               <img src="img/element/juara_1.svg" class="w-80" alt="" />
               <h1 class="font-jersey25 text-center text-3xl mt-2">FIRST</h1>
               <div class="font-khdam text-center">
@@ -1418,7 +1507,7 @@
                 </div>
               </div>
             </div>
-            <div class="mt-20">
+            <div class="mt-20 slideUp translate-y-full">
               <img src="img/element/juara_3.svg" class="w-80" alt="" />
               <h1 class="font-jersey25 text-center text-3xl mt-2">THIRD</h1>
               <div class="font-khdam text-center">
@@ -1444,7 +1533,7 @@
       class="w-full h-full lg:py-0 lg:h-[400px] bg-cover bg-center flex flex-col items-center justify-center"
       style="background-image: url('img/bg/sixth.svg')"
     >
-      <div class="flex justify-center items-center mx-5 lg:mx-10">
+      <div class="flex justify-center items-center mx-5 lg:mx-10 bounceIn">
         <img src="./img/element/cahaya.svg" class="w-10 lg:w-20" alt="" />
         <div class="text-black text-center">
           <h1 class="text-xs font-khdam mt-5">
@@ -1462,7 +1551,7 @@
         <img src="./img/element/cahaya.svg" class="w-10 lg:w-20" alt="" />
       </div>
       <div
-        class="w-full flex justify-center gap-5 font-roboto my-5 lg:my-0 lg:mt-10"
+        class="w-full flex justify-center gap-5 font-roboto my-5 lg:my-0 lg:mt-10 bounceIn"
       >
         <a href="#daftar">
           <div
@@ -1497,7 +1586,9 @@
         </div>
       </div>
 
-      <div class="relative z-10 flex justify-center items-center mx-5 lg:mx-10">
+      <div
+        class="relative z-10 flex justify-center items-center mx-5 lg:mx-10 slideUp transform translate-y-full"
+      >
         <img src="./img/element/cahaya.svg" class="w-10 lg:w-20 z-10" alt="" />
         <div class="text-black">
           <h1 class="text-center mt-5 text-xs font-khdam">
@@ -1517,7 +1608,7 @@
 
       <div class="relative z-10 flex justify-center mt-10 lg:mt-28 pb-10">
         <div
-          class="w-64 h-auto px-5 py-8 mx-5 rounded-2xl flex flex-col items-center justify-center"
+          class="w-64 h-auto px-5 py-8 mx-5 rounded-2xl flex flex-col items-center justify-center slideUp transform translate-y-full"
           style="background: radial-gradient(circle, #ffe864, #d4cf4a, #1b813d)"
         >
           <div class="mb-9">
