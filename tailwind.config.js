@@ -11,6 +11,7 @@ module.exports = {
         khdam: ["'Kdam Thmor Pro'", "serif"],
         inter: ["'Inter Tight'", "serif"],
         montserrat: ["Montserrat", "serif"],
+        interBold: ["Inter", "serif"],
       },
     },
   },
