@@ -1618,6 +1618,10 @@ video {
     overflow: visible;
   }
 
+  .lg\:p-10{
+    padding: 2.5rem;
+  }
+
   .lg\:py-0{
     padding-top: 0px;
     padding-bottom: 0px;
