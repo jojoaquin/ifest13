@@ -185,3 +185,18 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+const openModal = document.getElementById("openModal");
+const modal = document.getElementById("modal");
+
+// Open modal
+openModal.addEventListener("click", () => {
+  modal.classList.remove("hidden");
+});
+
+// Close modal on clicking outside the image
+modal.addEventListener("click", (event) => {
+  if (event.target === modal) {
+    modal.classList.add("hidden");
+  }
+});
