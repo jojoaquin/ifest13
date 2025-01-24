@@ -81,8 +81,23 @@
         }
       }
 
+      @keyframes moveLeft {
+        0% {
+          transform: translateX(0);
+        }
+        50% {
+          transform: translateY(-50px); /* Bergerak ke kanan */
+        }
+        100% {
+          transform: translateX(0); /* Kembali ke posisi semula */
+        }
+      }
+
       .animate-move {
         animation: moveLeftRight 3s infinite ease-in-out; /* Nama animasi, durasi, infinite, dan easing */
+      }
+      .animate-left {
+        animation: moveLeft 3s infinite ease-in-out; /* Nama animasi, durasi, infinite, dan easing */
       }
     </style>
   </head>
@@ -104,7 +119,7 @@
           <img
             src="img/element/awan.svg"
             alt="awan"
-            class="w-[150px] lg:w-[500px] animate-move"
+            class="w-[150px] lg:w-[500px] animate-left"
           />
         </div>
       </div>
@@ -404,7 +419,7 @@
         </marquee>
       </div>
       <div
-        class="py-5 flex items-center justify-center w-full fadeIn overflow-hidden"
+        class="py-5 flex items-center justify-center w-full fadeIn overflow-x-hidden"
       >
         <div
           class="swiper overflow-x-hidden lg:overflow-visible w-[90%] lg:w-[500px]"
@@ -484,7 +499,7 @@
           <img
             src="img/element/awan.svg"
             alt="awan"
-            class="w-[250px] lg:w-[700px] animate-move"
+            class="w-[250px] lg:w-[700px] animate-left"
           />
         </div>
         <div class="absolute left-0 scale-x-[-1]">
@@ -1667,7 +1682,7 @@
           <img
             src="img/element/awan.svg"
             alt="awan"
-            class="w-[250px] lg:w-[700px] animate-move"
+            class="w-[250px] lg:w-[700px] animate-left"
           />
         </div>
         <div class="absolute mt-20 left-0 scale-x-[-1]">
