@@ -68,9 +68,25 @@
       .swiper-slide-active {
         transform: scale(1); /* Gambar utama diperbesar */
       }
+
+      @keyframes moveLeftRight {
+        0% {
+          transform: translateX(0);
+        }
+        50% {
+          transform: translateX(50px); /* Bergerak ke kanan */
+        }
+        100% {
+          transform: translateX(0); /* Kembali ke posisi semula */
+        }
+      }
+
+      .animate-move {
+        animation: moveLeftRight 3s infinite ease-in-out; /* Nama animasi, durasi, infinite, dan easing */
+      }
     </style>
   </head>
-  <body>
+  <body class="overflow-x-hidden">
     <!-- Start - Slide 1 & Navbar -->
     <section
       class="w-full h-full bg-cover bg-center"
@@ -81,14 +97,14 @@
           <img
             src="img/element/awan.svg"
             alt="awan"
-            class="w-[250px] lg:w-[700px]"
+            class="w-[250px] lg:w-[700px] animate-move"
           />
         </div>
         <div class="absolute right-0 mt-64 lg:mt-80">
           <img
             src="img/element/awan.svg"
             alt="awan"
-            class="w-[150px] lg:w-[500px]"
+            class="w-[150px] lg:w-[500px] animate-move"
           />
         </div>
       </div>
@@ -468,14 +484,14 @@
           <img
             src="img/element/awan.svg"
             alt="awan"
-            class="w-[250px] lg:w-[700px]"
+            class="w-[250px] lg:w-[700px] animate-move"
           />
         </div>
         <div class="absolute left-0 scale-x-[-1]">
           <img
             src="img/element/awan.svg"
             alt="awan"
-            class="w-[150px] lg:w-[500px]"
+            class="w-[150px] lg:w-[500px] animate-move"
           />
         </div>
       </div>
@@ -1651,14 +1667,14 @@
           <img
             src="img/element/awan.svg"
             alt="awan"
-            class="w-[250px] lg:w-[700px]"
+            class="w-[250px] lg:w-[700px] animate-move"
           />
         </div>
         <div class="absolute mt-20 left-0 scale-x-[-1]">
           <img
             src="img/element/awan.svg"
             alt="awan"
-            class="w-[150px] lg:w-[500px]"
+            class="w-[150px] lg:w-[500px] animate-move"
           />
         </div>
       </div>
