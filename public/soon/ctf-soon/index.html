@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CTF - IFEST #13</title>
+  <link rel="icon" href="../../wdc/img/element/logo.svg" type="image/png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,700;1,14..32,700&family=Jersey+10&family=Jersey+25&family=Kdam+Thmor+Pro&family=Montserrat:ital,wght@0,700;1,700&family=Quantico:wght@700&family=Roboto&display=swap');
+    /* body {
+      font-family: 'Quantico', sans-serif;
+      height: 100vh;
+      margin: 0;
+    } */
+
+    @keyframes cloudLeft {
+
+      0%,
+      100% {
+        transform: translateX(0);
+      }
+
+      50% {
+        transform: translateX(30px);
+      }
+    }
+
+    .animate-cloud-left {
+      animation: cloudLeft 5s ease-in-out infinite;
+    }
+
+    @keyframes cloudRight {
+
+      0%,
+      100% {
+        transform: translateX(0);
+      }
+
+      50% {
+        transform: translateX(-30px);
+      }
+    }
+
+    .animate-cloud-right {
+      animation: cloudRight 5s ease-in-out infinite;
+    }
+
+    @keyframes fadeScale {
+      0% {
+        opacity: 0;
+        transform: scale(0.8);
+      }
+
+      50% {
+        opacity: 0.5;
+        transform: scale(1.05);
+      }
+
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .animate-heroes {
+      animation: fadeScale 2s ease-out forwards;
+    }
+
+    @keyframes starGlow {
+
+      0%,
+      100% {
+        filter: brightness(1);
+      }
+
+      50% {
+        filter: brightness(1.5);
+      }
+    }
+
+    .animate-star-glow {
+      animation: starGlow 1.5s ease-in-out infinite;
+    }
+
+    .slide-in-left {
+      animation: slideInLeft 2s ease-out forwards;
+    }
+
+    @keyframes cloudUpDown {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-20px);
+        /* Naik 20px */
+      }
+    }
+
+    .animate-cloud-updown {
+      animation: cloudUpDown 4s ease-in-out infinite;
+    }
+
+    @keyframes star-twinkle {
+
+      0%,
+      100% {
+        opacity: 0.5;
+        transform: scale(0.8);
+      }
+
+      50% {
+        opacity: 1;
+        transform: scale(1.2);
+      }
+    }
+
+    .animate-star-twinkle {
+      animation: star-twinkle 2s infinite ease-in-out;
+    }
+
+    .animate-star-twinkle-1 {
+      animation: star-twinkle 2s infinite ease-in-out;
+      animation-delay: 0.5s;
+    }
+
+    .animate-star-twinkle-2 {
+      animation: star-twinkle 2s infinite ease-in-out;
+      animation-delay: 1s;
+    }
+
+    .animate-star-twinkle-3 {
+      animation: star-twinkle 2s infinite ease-in-out;
+      animation-delay: 1.5s;
+    }
+
+    .animate-star-twinkle-4 {
+      animation: star-twinkle 2s infinite ease-in-out;
+      animation-delay: 2s;
+    }
+
+    .animate-star-twinkle-5 {
+      animation: star-twinkle 2s infinite ease-in-out;
+      animation-delay: 2.5s;
+    }
+
+    .animate-star-twinkle-6 {
+      animation: star-twinkle 2s infinite ease-in-out;
+      animation-delay: 3s;
+    }
+
+    @keyframes electricEffect {
+      0% {
+        text-shadow: 0 0 2px #ff9e00, 0 0 4px #ff9e00, 0 0 6px #ffae33, 0 0 8px #ffae33, 0 0 10px #ffc266;
+      }
+
+      25% {
+        text-shadow: 0 0 4px #ffae33, 0 0 8px #ffc266, 0 0 12px #ff9e00, 0 0 16px #ffc266, 0 0 20px #ffae33;
+      }
+
+      50% {
+        text-shadow: 0 0 6px #ffc266, 0 0 10px #ff9e00, 0 0 14px #ffae33, 0 0 18px #ffc266, 0 0 24px #ff9e00;
+      }
+
+      75% {
+        text-shadow: 0 0 8px #ffae33, 0 0 12px #ff9e00, 0 0 16px #ffc266, 0 0 20px #ff9e00, 0 0 28px #ffc266;
+      }
+
+      100% {
+        text-shadow: 0 0 10px #ff9e00, 0 0 14px #ffc266, 0 0 20px #ffae33, 0 0 24px #ffc266, 0 0 32px #ff9e00;
+      }
+    }
+
+    @keyframes slideUp {
+      0% {
+        transform: translateY(50px);
+        opacity: 0;
+      }
+
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    .animate-sponsor {
+      animation: slideUp 1.5s ease-out forwards,
+        /* Slide up effect */
+        electricEffect 1s infinite alternate;
+      /* Electric effect */
+      color: #ffffff;
+      /* Text color */
+      font-size: 3rem;
+      font-weight: bold;
+      text-align: center;
+      margin-top: 5%;
+    }
+
+    /* Custom Webkit Scrollbar */
+
+    ::-webkit-scrollbar {
+      width: 10px;
+      height: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #7A59D1;
+      /* Warna track */
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #ff651e;
+      /* Warna thumb */
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #ff8c44;
+      /* Warna hover thumb */
+    }
+
+    .swiper-slide {
+      transform: scale(0.9);
+      /* Gambar di kiri dan kanan lebih kecil */
+      transition: transform 0.3s ease;
+    }
+
+    .swiper-slide-active {
+      transform: scale(1);
+      /* Gambar utama diperbesar */
+    }
+
+    @keyframes pop {
+      0% {
+        transform: scale(1);
+      }
+
+      30% {
+        transform: scale(1.2);
+      }
+
+      60% {
+        transform: scale(0.9);
+      }
+
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    .animate-pop-once {
+      animation: pop 0.6s ease-in-out, pop-repeat 6s ease-in-out infinite;
+    }
+
+    @keyframes pop-repeat {
+      0% {
+        transform: scale(1);
+      }
+
+      10% {
+        transform: scale(1.2);
+      }
+
+      20% {
+        transform: scale(0.9);
+      }
+
+      30% {
+        transform: scale(1);
+      }
+
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    /* Animasi pertama berjalan langsung, lalu animasi kedua terjadi setiap 6 detik */
+
+    .animate-pop-once {
+      animation: pop 0.6s ease-in-out, pop-repeat 6s ease-in-out infinite;
+      animation-delay: 0s, 3s;
+    }
+  </style>
+
+  <!-- Script Custom Font -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            quantico: ["Quantico", "serif"],
+            jersey: ["'Jersey 10'", "serif"],
+            jersey25: ["'Jersey 25'", "serif"],
+            roboto: ["Roboto", "serif"],
+            khdam: ["'Kdam Thmor Pro'", "serif"],
+            inter: ["'Inter Tight'", "serif"],
+            montserrat: ["Montserrat", "serif"],
+            interBold: ["Inter", "serif"],
+          },
+        },
+      },
+    };
+  </script>
+</head>
+
+<body>
+  <!-- Mobile Navbar -->
+  <div class="w-full h-20 lg:hidden relative bg-[#8F69FF]">
+    <div class="h-full flex items-center font-quantico">
+      <div class="mx-5 flex w-full items-center">
+        <a href="/src/index.html">
+          <div class="flex items-center space-x-5">
+            <img src="img-soon-ctf/logo/LogoFinal.png" alt="" class="h-6" />
+            <span class="navbar-link">IFEST #13</span>
+          </div>
+        </a>
+        <!-- Update: Added z-index -->
+        <div class="flex items-center lg:hidden ml-auto z-50">
+          <button id="hamburger-btn"
+            class="bg-white p-3 rounded-full focus:outline-none shadow-xl border border-gray-300">
+            <svg id="hamburger-icon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-black" fill="none"
+              stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 12h18M3 6h18M3 18h18"></path>
+            </svg>
+            <svg id="close-icon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-black hidden" fill="none"
+              stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Menu Sliding from the Left -->
+  <div id="mobile-menu"
+    class="font-quantico hidden fixed top-0 right-0 h-full w-64 bg-white shadow-lg transform -translate-x-full transition-transform duration-300 z-40">
+    <div class="mt-16 p-5 space-y-4">
+      <div class="text-black hover:bg-gray-200 p-2 rounded flex items-center navbar-link" id="kompetisi-btn-mobile">
+        KOMPETISI
+        <svg id="dropdown-arrow-mobile" xmlns="http://www.w3.org/2000/svg"
+          class="h-4 w-4 ml-2 transform transition-transform duration-200" fill="none" stroke="currentColor"
+          viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <text x="5" y="15" id="arrow-text-mobile">v</text>
+        </svg>
+      </div>
+      <ul id="kompetisi-dropdown-mobile" class="hidden space-y-2 ml-5">
+        <li>
+          <a href="/muc" class="block text-black hover:bg-gray-200 p-2 rounded navbar-link">Mobile UI/UX Competition
+            (MUC)</a>
+        </li>
+        <li>
+          <a href="/wdc" class="block text-black hover:bg-gray-200 p-2 rounded navbar-link">Web Development Competition
+            (WDC)</a>
+        </li>
+        <li>
+          <a href="/ctf" class="block text-black hover:bg-gray-200 p-2 rounded navbar-link">Capture the Flag (CTF)</a>
+        </li>
+      </ul>
+      <a href="/semnas" class="block text-black hover:bg-gray-200 p-2 rounded navbar-link">SEMINAR NASIONAL</a>
+      <a href="/store" class="block text-black hover:bg-gray-200 p-2 rounded navbar-link">STORE</a>
+      <a href="/sponsorship" class="block text-black hover:bg-gray-200 p-2 rounded navbar-link">SPONSOR</a>
+      <a href="/galeri" class="block text-black hover:bg-gray-200 p-2 rounded navbar-link">GALERI</a>
+    </div>
+  </div>
+  <!-- End - Mobile Navbar -->
+
+  <!-- Desktop Navbar -->
+  <div class="w-full h-20 hidden lg:block bg-[#8F69FF]">
+    <div class="mx-10 bg-white h-full rounded-b-[35px] flex items-center font-quantico">
+      <div class="mx-10 flex w-full">
+        <a href="/src/index.html">
+          <div class="flex items-center space-x-5">
+            <img src="img-soon-ctf/logo/LogoFinal.png" alt="" class="h-6" />
+            <span class="navbar-link">IFEST #13</span>
+          </div>
+        </a>
+        <div class="ml-auto flex items-center gap-16">
+          <div class="relative">
+            <button id="kompetisi-btn-desktop" class="focus:outline-none flex items-center navbar-link">
+              KOMPETISI
+              <svg id="dropdown-arrow-desktop" xmlns="http://www.w3.org/2000/svg"
+                class="h-4 w-4 ml-2 transform transition-transform duration-200" fill="none" stroke="currentColor"
+                viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <text x="5" y="15" id="arrow-text-desktop">v</text>
+              </svg>
+            </button>
+            <div id="kompetisi-dropdown-desktop"
+              class="absolute hidden bg-white shadow-lg rounded-md p-4 mt-2 left-0 w-64 border border-gray-300 z-50">
+              <a href="/muc" class="block text-black hover:bg-gray-200 p-2 rounded navbar-link">Mobile UI/UX Competition
+                (MUC)</a>
+              <a href="/wdc" class="block text-black hover:bg-gray-200 p-2 rounded navbar-link">Web Development Competition
+                (WDC)</a>
+              <a href="/ctf" class="block text-black hover:bg-gray-200 p-2 rounded navbar-link">Capture the Flag (CTF)</a>
+            </div>
+          </div>
+          <a href="/semnas" class="navbar-link">SEMINAR NASIONAL</a>
+          <a href="/store" class="navbar-link">STORE</a>
+          <a href="/sponsorship" class="navbar-link">SPONSOR</a>
+          <a href="/galeri" class="navbar-link">GALERI</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End - Desktop Navbar -->
+
+  <!-- Main Content -->
+  <section class="w-full h-screen text-[#FFFFFF] relative flex flex-col justify-center items-center px-4"
+    style="background: linear-gradient(#8F69FF, #ff854c);">
+    <!-- Awan -->
+    <div class="absolute top-[5%] left-0 sm:top-[15%]">
+      <img src="img-soon-ctf/elemen/awan2.svg" alt="Awan 2"
+        class="w-[250px] sm:w-[300px] md:w-[400px] lg:w-[500px] opacity-70 animate-cloud-left">
+    </div>
+    <div class="absolute top-[5%] right-0 sm:top-[15%]">
+      <img src="img-soon-ctf/elemen/awan1.svg" alt="Awan 1"
+        class="w-[250px] sm:w-[300px] md:w-[400px] lg:w-[500px] opacity-70 animate-cloud-right">
+    </div>
+    <!-- Bintang -->
+    <div class="absolute inset-0 pointer-events-none">
+      <img src="img-soon-ctf/elemen/star.svg" alt="Star"
+        class="absolute w-[10px] sm:w-[15px] opacity-80 top-[10%] left-[20%] animate-star-twinkle-1">
+      <img src="img-soon-ctf/elemen/star.svg" alt="Star"
+        class="absolute w-[12px] sm:w-[18px] opacity-80 top-[15%] right-[25%] animate-star-twinkle-2">
+      <img src="img-soon-ctf/elemen/star.svg" alt="Star"
+        class="absolute w-[8px] sm:w-[12px] opacity-80 top-[25%] left-[10%] animate-star-twinkle-3">
+      <img src="img-soon-ctf/elemen/star.svg" alt="Star"
+        class="absolute w-[10px] sm:w-[15px] opacity-80 top-[40%] right-[15%] animate-star-twinkle-4">
+      <img src="img-soon-ctf/elemen/star.svg" alt="Star"
+        class="absolute w-[9px] sm:w-[14px] opacity-80 bottom-[30%] left-[18%] animate-star-twinkle-5">
+      <img src="img-soon-ctf/elemen/star.svg" alt="Star"
+        class="absolute w-[12px] sm:w-[16px] opacity-80 bottom-[20%] right-[12%] animate-star-twinkle-6">
+      <img src="img-soon-ctf/elemen/star.svg" alt="Star"
+        class="absolute w-[11px] sm:w-[17px] opacity-80 bottom-[10%] left-[40%] animate-star-twinkle-1">
+      <img src="img-soon-ctf/elemen/star.svg" alt="Star"
+        class="absolute w-[14px] sm:w-[20px] opacity-80 bottom-[15%] right-[35%] animate-star-twinkle-2">
+    </div>
+
+    <!-- Judul dan Informasi -->
+    <p class="text-sm tracking-wide text-center sm:text-xs md:text-base lg:text-xl mt-2 sm:mt-6 animate-heroes">
+      <span style="font-family: 'Kdam Thmor Pro';">IFEST #13 : HEROES OF INNOVATION</span>
+    </p>
+    <div class="flex flex-wrap items-center justify-center mt-4 sm:mt-5 gap-2">
+      <h1 class="text-3xl font-bold tracking-wide text-center sm:text-4xl md:text-5xl lg:text-6xl animate-sponsor"
+        style="font-family: 'Jersey 10';">
+        <span style="font-family: 'Jersey 10';">COMING SOON ...</span>
+      </h1>
+    </div>
+    <!-- About CTF -->
+    <div class="relative flex flex-wrap items-center justify-center mt-4 sm:mt-6 gap-2">
+      <img src="img-soon-ctf/elemen/star.svg" alt="Star"
+        class="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] md:w-[50px] md:h-[50px] animate-star-glow">
+      <p class="text-md font-semibold tracking-wide sm:text-lg md:text-xl lg:text-2xl text-center">
+        CAPTURE THE FLAG
+      </p>
+      <img src="img-soon-ctf/elemen/star.svg" alt="Star"
+        class="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] md:w-[50px] md:h-[50px] animate-star-glow">
+    </div>
+    <!-- Vector CTF -->
+    <div class="flex justify-center mt-4">
+      <img src="img-soon-ctf/elemen/vec-ctf.svg" alt="Vector Seminar"
+        class="w-[100px] h-auto sm:w-[150px] md:w-[200px] lg:w-[250px] animate-pop-once">
+    </div>
+
+    <!-- Separator -->
+    <div class="my-4 flex items-center justify-center">
+      <div class="w-[60px] h-[3px] bg-[#FFA500] sm:w-[80px] md:w-[100px] lg:w-[120px]"></div>
+    </div>
+    <!-- Awan Bawah -->
+    <div class="absolute bottom-20 left-0 w-full">
+      <img src="img-soon-ctf/elemen/awan-bawah.svg" alt="Awan Bawah" class="w-full opacity-70 animate-cloud-updown">
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+  <!-- Start - Mobile -->
+
+  <div class="lg:hidden">
+    <div class="bg-[#00296B] h-auto w-auto text-white">
+      <div class="relative z-0">
+        <div class="absolute w-36">
+          <img src="img-soon-ctf/icon/garis_footer.svg" alt="" class="opacity-85" />
+        </div>
+
+        <div class="absolute w-36 right-0 scale-x-[-1]">
+          <img src="img-soon-ctf/icon/garis_footer.svg" alt="" class="opacity-85" />
+        </div>
+      </div>
+
+      <div class="relative z-0">
+        <div class="px-10 pt-20 pb-10">
+          <div>
+            <a href="/">
+              <img src="img-soon-ctf/icon/logo_footer.svg" alt="" class="w-40" />
+              <h1 class="font-interBold mt-3 text-xl">IFest #13</h1>
+            </a>
+          </div>
+          <h1 class="font-inter mt-3 max-w-sm text-sm">
+            The premier annual IT event hosted by HIMAFORKA UAJY. Brings together technology enthusiasts for a week of
+            innovation, competition, and collaboration.
+          </h1>
+          <hr class="my-5" />
+          <div class="flex flex-col space-y-5">
+            <div class="flex flex-col">
+              <h1 class="font-interBold text-xl">EVENTS</h1>
+              <div class="mt-5 hover:underline">
+                <a href="/semnas" class="font-inter">Seminar nasional</a>
+              </div>
+            </div>
+            <hr class="my-5" />
+            <div class="flex flex-col space-y-5">
+              <h1 class="font-interBold text-xl">COMPETITION</h1>
+              <div class="hover:underline">
+                <a href="/muc" class="font-inter">Mobile UI/UX Competition (MUC)</a>
+              </div>
+              <div class="hover:underline">
+                <a href="/wdc" class="font-inter">Web Design Competition (WDC)</a>
+              </div>
+              <div class="hover:underline">
+                <a href="/ctf" class="font-inter">Capture The Flag (CTF)</a>
+              </div>
+            </div>
+            <hr class="my-5" />
+            <div class="flex flex-col space-y-3">
+              <h1 class="font-interBold text-xl">SOCIAL MEDIA</h1>
+              <div class="flex gap-2">
+                <a href="https://www.youtube.com/@ifestuajy" target="_blank"><img
+                    src="img-soon-ctf/icon/mingcute_youtube-fill.svg" alt="" class="w-10" /></a>
+
+                <a href="https://www.instagram.com/ifest_uajy/" target="_blank"><img
+                    src="img-soon-ctf/icon/mingcute_instagram-fill.svg" alt="" class="w-10" /></a>
+                <a href="https://line.me/ti/p/~@ykb1847q" target="_blank"><img
+                    src="img-soon-ctf/icon/mingcute_line-app-fill.svg" alt="" class="w-10" /></a>
+              </div>
+            </div>
+            <hr class="my-5" />
+            <div class="flex flex-col space-y-3">
+              <h1 class="font-interBold text-xl">OUR CONTACTS</h1>
+              <div class="hover:underline">
+                <a
+                  href="https://mail.google.com/mail/u/0/?view=cm&tf=1&fs=1&to=ifest.uajy1@gmail.com"
+                  class="font-inter"
+                  target="_blank"
+                  >ifest.uajy1@gmail.com</a
+                >
+              </div>
+              <a href="https://wa.me/+6287794005230" target="_blank"
+                ><h1 class="hover:underline mt-3">
+                  +6287794005230 - Ketua Pelaksana
+                </h1></a
+              >
+              <a href="https://wa.me/+6281393776678" target="_blank"
+                ><h1 class="hover:underline mt-3">
+                  +6281393776678 - Sponsorship
+                </h1></a
+              >
+            </div>
+            <hr class="my-5" />
+            <div class="text-center pt-10">
+              <h1 class="text-white font-extrabold text-center">
+                © 2025 IFEST #13 UAJY. All rights reserved. <br /> Organized by WD IFEST #13
+              </h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- End - Mobile -->
+
+  <!-- Start - Desktop -->
+  <div class="hidden lg:block">
+    <div class="bg-[#00296B] h-auto w-auto">
+      <div class="relative z-0">
+        <div class="absolute w-56">
+          <img src="img-soon-ctf/icon/garis_footer.svg" alt="" class="opacity-85" />
+        </div>
+
+        <div class="absolute w-56 right-0 scale-x-[-1]">
+          <img src="img-soon-ctf/icon/garis_footer.svg" alt="" class="opacity-85" />
+        </div>
+      </div>
+
+      <div class="relative z-10">
+        <div class="py-10 px-20 flex w-auto">
+          <div class="mx-auto text-white">
+            <div>
+              <a href="/">
+                <img src="img-soon-ctf/icon/logo_footer.svg" alt="" />
+                <h1 class="font-interBold mt-3 text-xl">IFest #13</h1>
+              </a>
+            </div>
+
+            <h1 class="font-inter mt-5 w-96">
+              The premier annual IT event hosted by HIMAFORKA UAJY. Brings together technology enthusiasts for a week of
+              innovation, competition, and collaboration.
+            </h1>
+            <h1 class="font-interBold mt-8 text-xl">Presented By</h1>
+            <img src="img-soon-ctf/icon/logo_hima.svg" class="w-28 mt-5" alt="" />
+          </div>
+          <div class="mx-auto text-white">
+            <h1 class="font-interBold text-xl">EVENTS</h1>
+            <div class="mt-5 hover:underline">
+              <a href="/semnas" class="font-inter">Seminar nasional</a>
+            </div>
+          </div>
+          <div class="mx-auto text-white">
+            <h1 class="font-interBold text-xl">COMPETITION</h1>
+            <div class="mt-5 hover:underline">
+              <a href="/muc" class="font-inter">Mobile UI/UX Competition <br />
+                (MUC)</a>
+            </div>
+            <div class="mt-3 hover:underline">
+              <a href="/wdc" class="font-inter">Web Design Competition <br />
+                (WDC)</a>
+            </div>
+            <div class="mt-3 hover:underline">
+              <a href="/ctf" class="font-inter">Capture The Flag <br />
+                (CTF)</a>
+            </div>
+          </div>
+          <div class="mx-auto text-white">
+            <div class="flex flex-col">
+              <h1 class="font-interBold text-xl">SOCIAL MEDIA</h1>
+              <div class="flex gap-2 mt-3">
+                <a href="https://www.youtube.com/@ifestuajy" target="_blank"><img
+                    src="img-soon-ctf/icon/mingcute_youtube-fill.svg" alt="" class="w-10" /></a>
+
+                <a href="https://www.instagram.com/ifest_uajy/" target="_blank"><img
+                    src="img-soon-ctf/icon/mingcute_instagram-fill.svg" alt="" class="w-10" /></a>
+                <a href="https://line.me/ti/p/~@ykb1847q" target="_blank"><img
+                    src="img-soon-ctf/icon/mingcute_line-app-fill.svg" alt="" class="w-10" /></a>
+              </div>
+              <div class="mt-10">
+                <h1 class="font-interBold text-xl">OUR CONTACTS</h1>
+                <div class="mt-3 hover:underline">
+                  <a
+                    href="https://mail.google.com/mail/u/0/?view=cm&tf=1&fs=1&to=ifest.uajy1@gmail.com"
+                    class="font-inter"
+                    target="_blank"
+                    >ifest.uajy1@gmail.com</a
+                  >
+                </div>
+                <a href="https://wa.me/+6287794005230" target="_blank"
+                  ><h1 class="hover:underline mt-3">
+                    +6287794005230 <br />
+                    - Ketua Pelaksana
+                  </h1></a
+                >
+                <a href="https://wa.me/+6281393776678" target="_blank"
+                  ><h1 class="hover:underline mt-3">
+                    +6281393776678 <br />
+                    - Sponsorship
+                  </h1></a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex items-center justify-center">
+        <hr class="mb-5 w-96" />
+      </div>
+      <h1 class="pb-5 text-white font-extrabold text-center">
+        © 2025 IFEST #13 UAJY. All rights reserved. | Organized by WD IFEST #13
+      </h1>
+    </div>
+  </div>
+  <!-- End - Desktop -->
+  </section>
+  <!-- End - Footer-->
+  <script src="script.js"></script>
+</body>

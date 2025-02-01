@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sponsor - IFEST #13</title>
+  <link rel="icon" href="../../wdc/img/element/logo.svg" type="image/png" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Inter+Tight:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,700;1,14..32,700&family=Jersey+10&family=Jersey+25&family=Kdam+Thmor+Pro&family=Montserrat:ital,wght@0,700;1,700&family=Quantico:wght@700&family=Roboto&display=swap");
+        @font-face {
+            font-family: 'Jersey 10';
+            src: url('https://example.com/path-to-jersey10-font.woff2') format('woff2');
+        }
+        
+        body {
+            overflow-x: hidden;
+            height: 100vh;
+            margin: 0;
+        }
+        
+        .font-kdam {
+            font-family: 'Kdam Thmor Pro', sans-serif;
+        }
+        
+        .font-jersey {
+            font-family: 'Jersey 10', sans-serif;
+        }
+        /* Custom Webkit Scrollbar */
+        
+         ::-webkit-scrollbar {
+            width: 10px;
+            height: 10px;
+        }
+        
+         ::-webkit-scrollbar-track {
+            background: #FFA500;
+            /* Warna track (oranye) */
+        }
+        
+         ::-webkit-scrollbar-thumb {
+            background: #00fa08;
+            /* Warna thumb (tosca) */
+        }
+        
+         ::-webkit-scrollbar-thumb:hover {
+            background: #56ff5c;
+            /* Warna hover thumb (tosca lebih terang) */
+        }
+        
+        @keyframes cloudLeft {
+            0%,
+            100% {
+                transform: translateX(0);
+            }
+            50% {
+                transform: translateX(30px);
+            }
+        }
+        
+        .animate-cloud-left {
+            animation: cloudLeft 5s ease-in-out infinite;
+        }
+        
+        @keyframes cloudRight {
+            0%,
+            100% {
+                transform: translateX(0);
+            }
+            50% {
+                transform: translateX(-30px);
+            }
+        }
+        
+        .animate-cloud-right {
+            animation: cloudRight 5s ease-in-out infinite;
+        }
+        
+        @keyframes slideUp {
+            0% {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        
+        .animate-sponsor {
+            animation: slideUp 1.5s ease-out forwards;
+        }
+        
+        @keyframes fadeScale {
+            0% {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            50% {
+                opacity: 0.5;
+                transform: scale(1.05);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        
+        .animate-heroes {
+            animation: fadeScale 2s ease-out forwards;
+        }
+        
+        @keyframes starGlow {
+            0%,
+            100% {
+                filter: brightness(1);
+            }
+            50% {
+                filter: brightness(1.5);
+            }
+        }
+        
+        .animate-star-glow {
+            animation: starGlow 1.5s ease-in-out infinite;
+        }
+        
+        @keyframes birdUpDownFast {
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-30px);
+            }
+            75% {
+                transform: translateY(20px);
+            }
+        }
+        
+        .animate-bird-up-down-fast {
+            animation: birdUpDownFast 3s ease-in-out infinite;
+        }
+        
+        @keyframes bounce-effect {
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-5px);
+            }
+        }
+        
+        .animate-bounce-button:hover {
+            animation: bounce-effect 0.6s ease-in-out;
+        }
+        
+        @keyframes float {
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+                /* Melayang ke atas */
+            }
+        }
+        
+        .branch {
+            animation: float 3s ease-in-out infinite;
+            /* Animasi melayang */
+            transition: transform 0.3s ease-in-out;
+            /* Transisi untuk interaksi */
+        }
+        
+        .branch:hover {
+            transform: scale(1.1);
+            /* Membesar saat di-hover */
+        }
+        
+        @keyframes slowMove {
+            0% {
+                transform: translateX(0);
+                /* Posisi awal */
+            }
+            50% {
+                transform: translateX(10px);
+                /* Bergerak maju sedikit */
+            }
+            100% {
+                transform: translateX(0);
+                /* Kembali ke posisi awal */
+            }
+        }
+        
+        .leaf-left {
+            animation: slowMove 3s ease-in-out infinite;
+            /* Animasi maju-mundur dengan gerakan halus */
+        }
+        
+        @keyframes slowMoveReverse {
+            0% {
+                transform: translateX(0);
+                /* Posisi awal */
+            }
+            50% {
+                transform: translateX(-10px);
+                /* Bergerak mundur sedikit */
+            }
+            100% {
+                transform: translateX(0);
+                /* Kembali ke posisi awal */
+            }
+        }
+        
+        .leaf-right {
+            animation: slowMoveReverse 3s ease-in-out infinite;
+            /* Animasi maju-mundur dengan gerakan halus */
+        }
+        
+        @keyframes slideInLeft {
+            from {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        
+        .slide-in-left {
+            animation: slideInLeft 2s ease-out forwards;
+        }
+        
+        @keyframes slideUp {
+            from {
+                transform: translateY(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        
+        .slide-up {
+            animation: slideUp 2s ease-out forwards;
+        }
+        
+        @keyframes slideInRight {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        
+        .slide-in-right {
+            animation: slideInRight 1s ease-out forwards;
+        }
+        
+        @keyframes rainbowUpDownFast {
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-30px);
+            }
+            75% {
+                transform: translateY(20px);
+            }
+        }
+        
+        .animate-rainbow-up-down-fast {
+            animation: rainbowUpDownFast 5s ease-in-out infinite;
+        }
+        
+        .hover-zoom {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .hover-zoom:hover {
+            transform: scale(1.05);
+            /* Zoom in 5% */
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+            /* Tambahkan efek bayangan */
+        }
+        
+        .hover-zoom:active {
+            transform: scale(0.98);
+            /* Sedikit mengecil saat klik */
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+            /* Bayangan lebih kecil */
+        }
+        /* Animasi Goyang */
+        
+        .frog-left,
+        .frog-right {
+            animation: shake 6s ease-in-out infinite;
+            /* Durasi 3 detik untuk goyang yang lebih lambat */
+        }
+        
+        @keyframes shake {
+            0% {
+                transform: rotate(0deg);
+                /* Mulai di posisi normal */
+            }
+            10% {
+                transform: rotate(-10deg);
+                /* Goyang ke kiri */
+            }
+            10% {
+                transform: rotate(10deg);
+                /* Goyang ke kanan */
+            }
+            75% {
+                transform: rotate(-10deg);
+                /* Goyang ke kiri */
+            }
+            100% {
+                transform: rotate(0deg);
+                /* Kembali ke posisi normal */
+            }
+        }
+    </style>
+
+    <!-- Script Custom Font -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        quantico: ["Quantico", "serif"],
+                        jersey: ["'Jersey 10'", "serif"],
+                        jersey25: ["'Jersey 25'", "serif"],
+                        roboto: ["Roboto", "serif"],
+                        khdam: ["'Kdam Thmor Pro'", "serif"],
+                        inter: ["'Inter Tight'", "serif"],
+                        montserrat: ["Montserrat", "serif"],
+                        interBold: ["Inter", "serif"],
+                    },
+                },
+            },
+        };
+    </script>
+</head>
+
+<body>
+    <!-- Mobile Navbar -->
+    <div class="w-full h-20 lg:hidden relative bg-[#50ffb9]">
+        <div class="h-full flex items-center font-quantico">
+            <div class="mx-5 flex w-full items-center">
+                <a href="/src/index.html">
+                    <div class="flex items-center space-x-5">
+                        <img src="img-sponsor/logo/LogoFinal.png" alt="" class="h-6" />
+                        <span class="navbar-link">IFEST #13</span>
+                    </div>
+                </a>
+                <!-- Update: Added z-index -->
+                <div class="flex items-center lg:hidden ml-auto z-50">
+                    <button id="hamburger-btn" class="bg-white p-3 rounded-full focus:outline-none shadow-xl border border-gray-300">
+            <svg id="hamburger-icon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-black" fill="none"
+              stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 12h18M3 6h18M3 18h18"></path>
+            </svg>
+            <svg id="close-icon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-black hidden" fill="none"
+              stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Menu Sliding from the Left -->
+    <div id="mobile-menu" class="font-quantico hidden fixed top-0 right-0 h-full w-64 bg-white shadow-lg transform -translate-x-full transition-transform duration-300 z-40">
+        <div class="mt-16 p-5 space-y-4">
+            <div class="text-black hover:bg-gray-200 p-2 rounded flex items-center navbar-link" id="kompetisi-btn-mobile">
+                KOMPETISI
+                <svg id="dropdown-arrow-mobile" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-2 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <text x="5" y="15" id="arrow-text-mobile">v</text>
+        </svg>
+            </div>
+            <ul id="kompetisi-dropdown-mobile" class="hidden space-y-2 ml-5">
+                <li>
+                  <a href="/muc" class="block text-black hover:bg-gray-200 p-2 rounded navbar-link">Mobile UI/UX Competition
+                    (MUC)</a>
+                </li>
+                <li>
+                  <a href="/wdc" class="block text-black hover:bg-gray-200 p-2 rounded navbar-link">Web Development Competition
+                    (WDC)</a>
+                </li>
+                <li>
+                  <a href="/ctf" class="block text-black hover:bg-gray-200 p-2 rounded navbar-link">Capture the Flag (CTF)</a>
+                </li>
+              </ul>
+              <a href="/semnas" class="block text-black hover:bg-gray-200 p-2 rounded navbar-link">SEMINAR NASIONAL</a>
+              <a href="/store" class="block text-black hover:bg-gray-200 p-2 rounded navbar-link">STORE</a>
+              <a href="/sponsorship" class="block text-black hover:bg-gray-200 p-2 rounded navbar-link">SPONSOR</a>
+              <a href="/galeri" class="block text-black hover:bg-gray-200 p-2 rounded navbar-link">GALERI</a>
+        </div>
+    </div>
+    <!-- End - Mobile Navbar -->
+
+    <!-- Desktop Navbar -->
+    <div class="w-full h-20 hidden lg:block bg-[#50ffb9]">
+        
+        <div class="mx-10 bg-white h-full rounded-b-[35px] flex items-center font-quantico">
+            <div class="mx-10 flex w-full">
+                <a href="/src/index.html">
+                    <div class="flex items-center space-x-5">
+                        <img src="img-sponsor/logo/LogoFinal.png" alt="" class="h-6" />
+                        <span class="navbar-link">IFEST #13</span>
+                    </div>
+                </a>
+                <div class="ml-auto flex items-center gap-16">
+                    <div class="relative">
+                      <button id="kompetisi-btn-desktop" class="focus:outline-none flex items-center navbar-link">
+                        KOMPETISI
+                        <svg id="dropdown-arrow-desktop" xmlns="http://www.w3.org/2000/svg"
+                          class="h-4 w-4 ml-2 transform transition-transform duration-200" fill="none" stroke="currentColor"
+                          viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <text x="5" y="15" id="arrow-text-desktop">v</text>
+                        </svg>
+                      </button>
+                      <div id="kompetisi-dropdown-desktop"
+                        class="absolute hidden bg-white shadow-lg rounded-md p-4 mt-2 left-0 w-64 border border-gray-300 z-50">
+                        <a href="/muc" class="block text-black hover:bg-gray-200 p-2 rounded navbar-link">Mobile UI/UX Competition
+                          (MUC)</a>
+                        <a href="/wdc" class="block text-black hover:bg-gray-200 p-2 rounded navbar-link">Web Development Competition
+                          (WDC)</a>
+                        <a href="/ctf" class="block text-black hover:bg-gray-200 p-2 rounded navbar-link">Capture the Flag (CTF)</a>
+                      </div>
+                    </div>
+                    <a href="/semnas" class="navbar-link">SEMINAR NASIONAL</a>
+                    <a href="/store" class="navbar-link">STORE</a>
+                    <a href="/sponsorship" class="navbar-link">SPONSOR</a>
+                    <a href="/galeri" class="navbar-link">GALERI</a>
+                  </div>
+            </div>
+        </div>
+    </div>
+    <!-- End - Desktop Navbar -->
+
+    <!-- Main Content -->
+    <!-- Section 1 Opening -->
+    <section class="w-full h-screen text-[#000086] relative flex flex-col justify-center items-center px-4" style="background: linear-gradient(#50ffb9, #d9f99d);">
+        <!-- Awan -->
+        <div class="absolute top-[5%] left-0 sm:top-[15%]">
+            <img src="img-sponsor/elemen/awan2.svg" alt="Awan 2" class="w-[250px] sm:w-[300px] md:w-[400px] lg:w-[500px] opacity-70 animate-cloud-left">
+        </div>
+        <div class="absolute top-[5%] right-0 sm:top-[15%]">
+            <img src="img-sponsor/elemen/awan1.svg" alt="Awan 1" class="w-[250px] sm:w-[300px] md:w-[400px] lg:w-[500px] opacity-70 animate-cloud-right">
+        </div>
+        <!-- Judul dan Informasi -->
+        <p class="text-sm font-mono tracking-wide text-center sm:text-xs md:text-base lg:text-xl mt-2 sm:mt-6 animate-heroes">
+            IFEST #13 : HEROES OF INNOVATION
+        </p>
+        <div class="flex flex-wrap items-center justify-center mt-4 sm:mt-5 gap-2">
+            <img src="img-sponsor/elemen/star.svg" alt="Star" class="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] md:w-[50px] md:h-[50px] animate-star-glow">
+            <h1 class="text-3xl font-bold tracking-wide text-center sm:text-4xl md:text-5xl lg:text-6xl animate-sponsor">
+                SPONSORSHIP IFEST #13
+            </h1>
+            <img src="img-sponsor/elemen/star.svg" alt="Star" class="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] md:w-[50px] md:h-[50px] animate-star-glow">
+        </div>
+        <p class="text-xs text-gray-800 text-center max-w-[90%] leading-relaxed mt-4 sm:max-w-[500px] sm:text-sm md:text-base lg:text-lg">
+            Tertarik dengan acara IFEST #13? Dukung kami dengan menjadi sponsor.
+        </p>
+        <!-- Burung -->
+        <div class="absolute left-0 top-[20%] sm:top-[10%]">
+            <img src="img-sponsor/elemen/branch-leftleaf.svg" alt="Branch Left" class="w-[150px] sm:w-[200px] md:w-[250px] lg:w-[300px] branch">
+            <img src="img-sponsor/elemen/bird-green.svg" alt="Bird Left" class="w-[100px] sm:w-[150px] md:w-[200px] lg:w-[250px] mt-[-40px] ml-4 sm:mt-[80px] animate-bird-up-down-fast">
+        </div>
+        <div class="absolute right-0 top-[20%] sm:top-[38%]">
+            <img src="img-sponsor/elemen/branch-rightleaf.svg" alt="Branch Right" class="w-[150px] sm:w-[200px] md:w-[250px] lg:w-[300px] branch">
+        </div>
+        <!-- Button Bergabung -->
+        <div class="flex justify-center mt-6 sm:mt-8">
+            <a href="#join" class="bg-[#FFA500] text-white font-semibold py-2 px-4 rounded-md shadow-md transition-all duration-300 hover:bg-[#FF8C00] hover:shadow-lg text-sm sm:text-base md:text-lg transition-all duration-300 ease-in-out animate-bounce-button">
+        Bergabung
+      </a>
+        </div>
+        <!-- About Sponsorship -->
+        <div class="relative flex flex-wrap items-center justify-center mt-8 sm:mt-10 gap-2">
+            <img src="img-sponsor/elemen/star.svg" alt="Star" class="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] md:w-[50px] md:h-[50px] animate-star-glow">
+            <p class="text-md font-semibold tracking-wide sm:text-lg md:text-xl lg:text-2xl text-center">
+                ABOUT SPONSORSHIP
+            </p>
+            <img src="img-sponsor/elemen/star.svg" alt="Star" class="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] md:w-[50px] md:h-[50px] animate-star-glow">
+        </div>
+        <!-- Separator -->
+        <div class="my-4 flex items-center justify-center">
+            <div class="w-[60px] h-[3px] bg-[#FFA500] sm:w-[80px] md:w-[100px] lg:w-[120px]"></div>
+        </div>
+    </section>
+
+
+    <!-- Section 2 Non-UMKM -->
+    <section class="py-5 bg-gradient-to-b from-[#d9f99d] to-[#fef08a] relative">
+        <!-- Leaf Images -->
+        <div class="absolute top-0 left-0 w-full flex justify-between items-start">
+            <img src="img-sponsor/elemen/leaf-left.svg" alt="Leaf Left" class="w-[150px] sm:w-[200px] md:w-[300px] lg:w-[400px] animate-fade-in">
+            <img src="img-sponsor/elemen/leaf-right.svg" alt="Leaf Right" class="w-[150px] sm:w-[200px] md:w-[300px] lg:w-[400px] animate-fade-in">
+        </div>
+
+        <!-- Content Section -->
+        <div class="relative flex flex-col items-center justify-center px-4 sm:px-8 md:px-16">
+            <p class="text-sm sm:text-base md:text-lg lg:text-xl font-mono tracking-wide mt-10 animate-heroes">
+                IFEST #13 : HEROES OF INNOVATION
+            </p>
+            <div class="flex items-center justify-center gap-2 mt-4 sm:mt-6">
+                <img src="img-sponsor/elemen/star.svg" alt="Star" class="w-[20px] sm:w-[30px] md:w-[40px] lg:w-[50px] animate-star-glow">
+                <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-wide animate-sponsor">
+                    SPONSORSHIP
+                </h1>
+                <img src="img-sponsor/elemen/star.svg" alt="Star" class="w-[20px] sm:w-[30px] md:w-[40px] lg:w-[50px] animate-star-glow">
+            </div>
+            <p class="text-xs sm:text-sm md:text-base lg:text-lg text-gray-800 leading-relaxed mt-4 mx-auto max-w-[90%] sm:max-w-[80%] lg:max-w-[70%] text-center animate-heroes">
+                Panitia IFEST #13 membuka kesempatan yang seluas-luasnya kepada semua pihak (baik instansi, perusahaan, maupun perorangan) untuk dapat berpartisipasi dalam mendukung suksesnya kegiatan kami. Adapun paket kerja sama yang disediakan sehubungan dengan kegiatan
+                IFEST #13 adalah paket Non-UMKM dan UMKM dengan rincian sebagai berikut:
+            </p>
+            <div class="flex items-center justify-center gap-2 mt-12 sm:mt-16">
+                <img src="img-sponsor/elemen/star.svg" alt="Star" class="w-[20px] sm:w-[30px] md:w-[40px] lg:w-[50px] animate-star-glow">
+                <h1 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold tracking-wide animate-sponsor">
+                    NON-UMKM
+                </h1>
+                <img src="img-sponsor/elemen/star.svg" alt="Star" class="w-[20px] sm:w-[30px] md:w-[40px] lg:w-[50px] animate-star-glow">
+            </div>
+        </div>
+
+        <div class="flex flex-col lg:flex-row justify-center items-center gap-12 lg:gap-4 mt-4 sm:mt-2 lg:mt-0">
+            <!-- Paket Diamond -->
+            <div class="relative bg-cover bg-center text-white rounded-xl shadow-lg p-6 w-80 sm:w-96 lg:w-80 mb-6 lg:mb-0 mt-6 sm:mt-10 lg:mt-16 slide-in-left" style="background-image: url('img-sponsor/elemen/frame-green.svg');">
+                <div class="absolute inset-x-0 -top-5 bg-blue-500 h-6 w-3/4 mx-auto rounded-t-full"></div>
+                <div class="bg-white rounded-lg shadow-lg p-6 mx-auto max-w-xl">
+                    <h3 class="text-center text-2xl font-extrabold mt-6 text-indigo-800">PAKET DIAMOND</h3>
+                    <p class="text-center text-base font-bold mt-2 mb-2 text-indigo-800 tracking-wider">Rp 5.500.000 - Rp 10.000.000
+                    </p>
+                    <p class="text-center text-xs font-light mb-6 leading-tight text-indigo-800">
+                        Paket Diamond adalah paket kerja sama dengan membayar kekurangan acara, yaitu sebesar Rp 5.500.000 (lima juta lima ratus ribu rupiah) – Rp 10.000.000 (sepuluh juta rupiah). Apabila pihak sponsor memilih Paket Diamond, maka kontraprestasi yang akan diberikan
+                        adalah seabgai berikut :
+                    </p>
+                    <div class="relative h-56 overflow-y-auto bg-white rounded-md p-4 border border-white">
+                        <ul class="space-y-4 text-sm leading-tight text-indigo-800">
+                            <li class="flex items-start gap-3">
+                                <span>✔</span> Bisa Mengutus Pembicara Ke Acara Semnas (Seminar Nasional) yaitu salah satu acara IFEST #13 pada tanggal 14 Juni 2025
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span>✔</span> Bisa Memasukkan Logo ke dalam korsa panitia IFEST #13
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span>✔</span> Pihak Sponsor dapat membuka Booth stand (nominal menunjukan berapa acara yang bisa ditempati)
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span>✔</span> Pencantuman logo di website, poster, sertifikat, after movie, merchandise, X-banner, banner (ukuran maksimal)
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span>✔</span> Panitia mengiklankan melalui sosial media masing – masing (beranggotakan 75 orang)
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span>✔</span> Iklan adlibs oleh MC saat acara berlangsung (di Semua Acara IFEST#13)
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span>✔</span> Penayangan iklan saat acara dalam bentuk video dan gambar
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span>✔</span> Pencantuman Link Website di sosial Media
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span>✔</span> Pembuatan konten terkait produk atau hal yang mau dipromosikan (durasi dan jumlah konten dapat dibahas lebih lanjut dengan CP)
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="absolute inset-x-0 -bottom-6 bg-white h-10 w-3/4 mx-auto rounded-b-full"></div>
+            </div>
+
+
+
+            <!-- Paket Platinum -->
+            <div class="relative bg-cover bg-center text-white rounded-xl shadow-lg p-6 w-80 sm:w-96 lg:w-80 mb-6 lg:mb-0 mt-6 sm:mt-10 lg:mt-16 slide-in-right" style="background-image: url('img-sponsor/elemen/frame-green.svg');">
+                <div class="absolute inset-x-0 -top-5 bg-blue-500 h-6 w-3/4 mx-auto rounded-t-full"></div>
+                <div class="bg-white rounded-lg shadow-lg p-6 mx-auto max-w-xl">
+                    <h3 class="text-center text-2xl font-extrabold mt-6 text-indigo-800">PAKET PLATINUM</h3>
+                    <p class="text-center text-base font-bold mt-2 mb-2 text-indigo-800 tracking-wider">Rp 3.500.000 - Rp 5.000.000
+                    </p>
+                    <p class="text-center text-xs font-light mb-6 leading-tight text-indigo-800">
+                        Paket Platinum adalah paket kerja sama dengan membayar kekurangan acara, yaitu sebesar Rp 3.500.000 (tiga juta lima ratus ribu rupiah) – Rp 5.000.000,- (lima juta rupiah). Apabila pihak sponsor memilih Paket Platinum, maka kontraprestasi yang akan diberikan
+                        adalah sebagai berikut :
+                    </p>
+                    <div class="relative h-56 overflow-y-auto bg-white rounded-md p-4 border border-white">
+                        <ul class="space-y-4 text-sm leading-tight text-indigo-800">
+                            <li class="flex items-start gap-3">
+                                <span>✔</span> Pihak sponsor dapat membuka Booth stand (1 acara)
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span>✔</span> Pencantuman logo di website, poster, sertifikat, after movie, merchandise, (ukuran maksimal)
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span>✔</span> Panitia mengiklankan melalui sosial media masing – masing (beranggotakan 75 orang)
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span>✔</span> Iklan adlibs oleh MC saat acara berlangsung (Disemua Acara IFEST#13)
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span>✔</span> Penayangan iklan saat acara dalam bentuk video dan gambar
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span>✔</span> Pencantuman Link Website di social Media
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span>✔</span> Pembuatan konten terkait produk atau hal yang mau dipromosikan (durasi dan jumlah konten dapat dibahas lebih lanjut dengan CP)
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="absolute inset-x-0 -bottom-6 bg-white h-10 w-3/4 mx-auto rounded-b-full"></div>
+            </div>
+
+            <!-- Paket Gold -->
+            <div class="relative bg-cover bg-center text-white rounded-xl shadow-lg p-6 w-80 sm:w-96 lg:w-80 mb-6 lg:mb-0 mt-6 sm:mt-10 lg:mt-16 slide-in-left" style="background-image: url('img-sponsor/elemen/frame-green.svg');">
+                <div class="absolute inset-x-0 -top-5 bg-blue-500 h-6 w-3/4 mx-auto rounded-t-full"></div>
+                <div class="bg-white rounded-lg shadow-lg p-6 mx-auto max-w-xl">
+                    <h3 class="text-center text-2xl font-extrabold mt-6 text-indigo-800">PAKET GOLD</h3>
+                    <p class="text-center text-base font-bold mt-2 mb-2 text-indigo-800 tracking-wider">Rp 2.500.000 - Rp 3.000.000
+                    </p>
+                    <p class="text-center text-xs font-light mb-6 leading-tight text-indigo-800">
+                        Paket Gold adalah paket kerja sama dengan membayar kekurangan acara, yaitu sebesar Rp 2.500.000 (dua juta lima ratus ribu rupiah) - Rp. 3.000.000,- (tiga juta rupiah). Apabila pihak sponsor memilih Paket Platinum, maka kontraprestasi yang akan diberikan
+                        adalah sebagai berikut :
+                    </p>
+                    <div class="relative h-56 overflow-y-auto bg-white rounded-md p-4 border border-white">
+                        <ul class="space-y-4 text-sm leading-tight text-indigo-800">
+                            <li class="flex items-start gap-3">
+                                <span>✔</span> Pencantuman logo di website, poster, sertifikat, after movie, merchandise, (ukuran berdasarkan nominal)
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span>✔</span> Panitia mengiklankan melalui sosial media masing – masing (beranggotakan 75 orang)
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span>✔</span> Iklan adlibs oleh MC saat acara berlangsung (Disemua Acara IFEST#13)
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span>✔</span> Penayangan iklan saat acara dalam bentuk video dan gambar
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span>✔</span> Pencantuman Link Website di social Media
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="absolute inset-x-0 -bottom-6 bg-white h-10 w-3/4 mx-auto rounded-b-full"></div>
+            </div>
+
+            <!-- Paket Silver  -->
+            <div class="relative bg-cover bg-center text-white rounded-xl shadow-lg p-6 w-80 sm:w-96 lg:w-80 mb-6 lg:mb-0 mt-6 sm:mt-10 lg:mt-16 slide-in-right" style="background-image: url('img-sponsor/elemen/frame-green.svg');">
+                <div class="absolute inset-x-0 -top-5 bg-blue-500 h-6 w-3/4 mx-auto rounded-t-full"></div>
+                <div class="bg-white rounded-lg shadow-lg p-6 mx-auto max-w-xl">
+                    <h3 class="text-center text-2xl font-extrabold mt-6 text-indigo-800">PAKET SILVER</h3>
+                    <p class="text-center text-base font-bold mt-2 mb-2 text-indigo-800 tracking-wider">Rp 1.500.000 - Rp 2.000.000
+                    </p>
+                    <p class="text-center text-xs font-light mb-6 leading-tight text-indigo-800">
+                        Paket Silver adalah paket kerja sama dengan membayar kekurangan acara, yaitu sebesar Rp 1.500.000 (satu juta lima ratus ribu rupiah) - Rp 2.000.000,- (dua juta rupiah). Apabila pihak sponsor memilih Paket Platinum, maka kontraprestasi yang akan diberikan
+                        adalah sebagai berikut :
+                    </p>
+                    <div class="relative h-56 overflow-y-auto bg-white rounded-md p-4 border border-white">
+                        <ul class="space-y-4 text-sm leading-tight text-indigo-800">
+                            <li class="flex items-start gap-3">
+                                <span>✔</span> Pencantuman logo di website, poster, sertifikat,, merchandise, (ukuran berdasarkan nominal)
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span>✔</span> Panitia mengiklankan melalui sosial media masing – masing (beranggotakan 75 orang)
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span>✔</span> Iklan adlibs oleh MC saat acara berlangsung (Di Semua acara IFEST#13)
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span>✔</span> Pencantuman Link Website di social Media
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="absolute inset-x-0 -bottom-6 bg-white h-10 w-3/4 mx-auto rounded-b-full"></div>
+            </div>
+    </section>
+
+    <!-- Section 3 UMKM-->
+    <section class="py-5 bg-gradient-to-b from-[#fef08a] to-[#86efac] relative">
+        <div class="flex items-center justify-center gap-2 mt-12 sm:mt-16">
+            <img src="img-sponsor/elemen/star.svg" alt="Star" class="w-[20px] sm:w-[30px] md:w-[40px] lg:w-[50px] animate-star-glow">
+            <h1 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold tracking-wide animate-sponsor">
+                UMKM
+            </h1>
+            <img src="img-sponsor/elemen/star.svg" alt="Star" class="w-[20px] sm:w-[30px] md:w-[40px] lg:w-[50px] animate-star-glow">
+        </div>
+        </div>
+
+        <div class="flex flex-col lg:flex-row justify-center items-center gap-12 lg:gap-4 mt-4 sm:mt-2 lg:mt-0">
+            <!-- Paket A -->
+            <div class="relative bg-cover bg-center text-white rounded-xl shadow-lg p-6 w-80 sm:w-96 lg:w-80 mb-6 lg:mb-0 mt-6 sm:mt-10 lg:mt-16 slide-in-right" style="background-image: url('img-sponsor/elemen/frame-blue.svg');">
+                <div class="absolute inset-x-0 -top-5 bg-green-500 h-6 w-3/4 mx-auto rounded-t-full"></div>
+                <div class="bg-white rounded-lg shadow-lg p-6 mx-auto max-w-xl">
+                    <h3 class="text-center text-2xl font-extrabold mt-6 text-indigo-800">PAKET A</h3>
+                    <p class="text-center text-base font-bold mt-2 mb-2 text-indigo-800 tracking-wider">Rp 750.000</p>
+                    <p class="text-center text-xs font-light mb-6 leading-tight text-indigo-800">
+                        Benefit yang didapatkan jika pihak sponsor memilih Paket A :
+                    </p>
+                    <div class="relative h-56 overflow-y-auto bg-white rounded-md p-4 border border-white">
+                        <ul class="space-y-4 text-sm leading-tight text-indigo-800">
+                            <li class="flex items-start gap-3">
+                                <span>✔</span> Pencantuman Logo Pada Poster, banner, media sosial (Ukuran Maksimal)
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span>✔</span> Pembuatan Konten Di tempat UMKM tersebut (dan di posting oleh seluruh anggota IFEST#13 yang beranggotakan 75 orang)
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span>✔</span> Memposting produk atau makanan yang mau di promosikan oleh seluruh anggota IFEST#13 ( yang beranggotakan 75 orang)
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span>✔</span> Iklan adlibs oleh MC saat acara berlangsung (Disemua Acara IFEST#13)
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span>✔</span> Pencantuman Link Website/Instagram di social Media
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span>✔</span> Produk dari Pihak UMKM dapat kami jual (Tergantung produk dapat dibahas lebih lanjut dengan CP)
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="absolute inset-x-0 -bottom-6 bg-white h-10 w-3/4 mx-auto rounded-b-full"></div>
+            </div>
+
+            <!-- Paket B -->
+            <div class="relative bg-cover bg-center text-white rounded-xl shadow-lg p-6 w-80 sm:w-96 lg:w-80 mb-6 lg:mb-0 mt-6 sm:mt-10 lg:mt-16 slide-in-right" style="background-image: url('img-sponsor/elemen/frame-blue.svg');">
+                <div class="absolute inset-x-0 -top-5 bg-green-500 h-6 w-3/4 mx-auto rounded-t-full"></div>
+                <div class="bg-white rounded-lg shadow-lg p-6 mx-auto max-w-xl">
+                    <h3 class="text-center text-2xl font-extrabold mt-6 text-indigo-800">PAKET B</h3>
+                    <p class="text-center text-base font-bold mt-2 mb-2 text-indigo-800 tracking-wider">Rp 500.000</p>
+                    <p class="text-center text-xs font-light mb-6 leading-tight text-indigo-800">
+                        Benefit yang didapatkan jika pihak sponsor memilih Paket B :
+                    </p>
+                    <div class="relative h-56 overflow-y-auto bg-white rounded-md p-4 border border-white">
+                        <ul class="space-y-4 text-sm leading-tight text-indigo-800">
+                            <li class="flex items-start gap-3">
+                                <span>✔</span> Pencantuman Logo Pada Poster, banner, media sosial (Ukuran Sedang)
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span>✔</span> Memposting produk atau makanan yang mau di promosikan oleh seluruh anggota IFEST#13 ( yang beranggotakan 75 orang)
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span>✔</span> Iklan adlibs oleh MC saat acara berlangsung (Disemua Acara IFEST#13)
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span>✔</span> Pencantuman Link Website/Instagram di social Media
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="absolute inset-x-0 -bottom-6 bg-white h-10 w-3/4 mx-auto rounded-b-full"></div>
+            </div>
+
+            <!-- Paket C -->
+            <div class="relative bg-cover bg-center text-white rounded-xl shadow-lg p-6 w-80 sm:w-96 lg:w-80 mb-6 lg:mb-0 mt-6 sm:mt-10 lg:mt-16 slide-in-left" style="background-image: url('img-sponsor/elemen/frame-blue.svg');">
+                <div class="absolute inset-x-0 -top-5 bg-green-500 h-6 w-3/4 mx-auto rounded-t-full"></div>
+                <div class="bg-white rounded-lg shadow-lg p-6 mx-auto max-w-xl">
+                    <h3 class="text-center text-2xl font-extrabold mt-6 text-indigo-800">PAKET C</h3>
+                    <p class="text-center text-base font-bold mt-2 mb-2 text-indigo-800 tracking-wider">Rp 200.000</p>
+                    <p class="text-center text-xs font-light mb-6 leading-tight text-indigo-800">
+                        Benefit yang didapatkan jika pihak sponsor memilih Paket C :
+                    </p>
+                    <div class="relative h-56 overflow-y-auto bg-white rounded-md p-4 border border-white">
+                        <ul class="space-y-4 text-sm leading-tight text-indigo-800">
+                            <li class="flex items-start gap-3">
+                                <span>✔</span> Iklan adlibs oleh MC saat acara berlangsung (Di 2 Acara IFEST#13)
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span>✔</span> Pencantuman Link Website/Instagram di social media
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="absolute inset-x-0 -bottom-6 bg-white h-10 w-3/4 mx-auto rounded-b-full"></div>
+            </div>
+    </section>
+
+    <!-- Section 3 Contact -->
+    <section id="contact-person" class="w-full min-h-screen text-center flex flex-col justify-center items-center relative bg-gradient-to-b from-[#86efac] to-[#fde047]">
+        <p class="text-sm font-mono tracking-wide text-center sm:text-xs md:text-base lg:text-xl mt-[-20px] sm:mt-[40px] md:mt-[-50px] lg:mt-[-60px] animate-heroes">
+            IFEST #13 : HEROES OF INNOVATION
+        </p>
+        <div class="flex flex-wrap items-center justify-center mt-4 sm:mt-5 gap-2">
+            <img src="img-sponsor/elemen/star.svg" alt="Star" class="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] md:w-[50px] md:h-[50px] animate-star-glow">
+            <h1 class="text-3xl font-bold tracking-wide text-center sm:text-4xl md:text-5xl lg:text-6xl animate-sponsor">
+                SPONSORSHIP</h1>
+            <img src="img-sponsor/elemen/star.svg" alt="Star" class="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] md:w-[50px] md:h-[50px] animate-star-glow">
+        </div>
+        <p class="text-xs text-gray-800 max-w-[90%] leading-relaxed mt-2 sm:max-w-[500px] sm:text-sm md:text-base lg:text-lg animate-heroes">
+            Jika Anda memiliki pertanyaan lebih lanjut atau membutuhkan bantuan terkait Sponsorship IFEST #13, jangan ragu untuk menghubungi kami!!
+        </p>
+
+        <!-- Contact Frame -->
+        <div class="bg-gradient-to-r from-green-400 to-green-600 shadow-xl rounded-lg p-6 w-[250px] sm:w-[300px] md:w-[350px] mt-6 flex flex-col items-center gap-6 ">
+            <div class="flex items-center justify-center gap-2 w-full">
+                <img width="32" height="32" src="https://img.icons8.com/external-flaticons-flat-flat-icons/64/external-sponsorship-traditional-marketing-flaticons-flat-flat-icons.png" alt="sponsor-icon" />
+                <h2 class="text-xl font-bold text-white mb-2">Sponsor</h2>
+                <img width="32" height="32" src="https://img.icons8.com/external-flaticons-flat-flat-icons/64/external-sponsorship-traditional-marketing-flaticons-flat-flat-icons.png" alt="sponsor-icon" />
+            </div>
+            <div class="flex flex-col gap-4 w-full">
+                <!-- Eric -->
+                <div class="flex items-center p-4 bg-white rounded-lg shadow-md hover-zoom">
+                    <a href="https://wa.me/6282283259667" target="_blank" class="flex items-center">
+                        <img width="24" height="24" src="https://img.icons8.com/material/24/whatsapp--v1.png" alt="whatsapp-icon" class="mr-4" />
+                        <div class="flex flex-col text-left">
+                            <p class="text-base font-semibold text-green-800">Eric</p>
+                            <p class="text-gray-700">082283259667</p>
+                        </div>
+                    </a>
+                </div>
+                <!-- Ferrin -->
+                <div class="flex items-center p-4 bg-white rounded-lg shadow-md hover-zoom">
+                    <a href="https://wa.me/6281393776678" target="_blank" class="flex items-center">
+                        <img width="24" height="24" src="https://img.icons8.com/material/24/whatsapp--v1.png" alt="whatsapp-icon" class="mr-4" />
+                        <div class="flex flex-col text-left">
+                            <p class="text-base font-semibold text-green-800">Ferrin</p>
+                            <p class="text-gray-700">081393776678</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Decorative Images -->
+                <div class="absolute top-20 left-0">
+                    <img src="img-sponsor/elemen/rainbow-left.svg" alt="Rainbow Left" class="w-[100px] sm:w-[150px] md:w-[250px] lg:w-[300px] xl:w-[350px] animate-rainbow-up-down-fast">
+                </div>
+                <div class="absolute top-20 right-0">
+                    <img src="img-sponsor/elemen/rainbow-right.svg" alt="Rainbow Right" class="w-[100px] sm:w-[150px] md:w-[250px] lg:w-[300px] xl:w-[350px] animate-rainbow-up-down-fast">
+                </div>
+
+                <div class="absolute bottom-5 left-8 frog-left">
+                    <img src="img-sponsor/elemen/frog-left.svg" alt="Frog Left" class="w-[80px] sm:w-[120px] md:w-[170px] lg:w-[200px]">
+                </div>
+                <div class="absolute bottom-5 right-3 frog-right">
+                    <img src="img-sponsor/elemen/frog-right.svg" alt="Frog Right" class="w-[100px] sm:w-[180px] md:w-[230px] lg:w-[260px]">
+                </div>
+    </section>
+
+    <!-- Footer -->
+    <!-- Start - Mobile -->
+
+    <div class="lg:hidden">
+        <div class="bg-[#00296B] h-auto w-auto text-white">
+            <div class="relative z-0">
+                <div class="absolute w-36">
+                    <img src="img-sponsor/icon/garis_footer.svg" alt="" class="opacity-85" />
+                </div>
+
+                <div class="absolute w-36 right-0 scale-x-[-1]">
+                    <img src="img-sponsor/icon/garis_footer.svg" alt="" class="opacity-85" />
+                </div>
+            </div>
+
+            <div class="relative z-0">
+                <div class="px-10 pt-20 pb-10">
+                    <div>
+                        <a href="/">
+                            <img src="img-sponsor/icon/logo_footer.svg" alt="" class="w-40" />
+                            <h1 class="font-interBold mt-3 text-xl">IFest #13</h1>
+                        </a>
+                    </div>
+                    <h1 class="font-inter mt-3 max-w-sm text-sm">
+                        The premier annual IT event hosted by HIMAFORKA UAJY. Brings together technology enthusiasts for a week of innovation, competition, and collaboration.
+                    </h1>
+                    <hr class="my-5" />
+                    <div class="flex flex-col space-y-5">
+                        <div class="flex flex-col">
+                            <h1 class="font-interBold text-xl">EVENTS</h1>
+                            <div class="mt-5 hover:underline">
+                                <a href="/semnas" class="font-inter">Seminar nasional</a>
+                            </div>
+                        </div>
+                        <hr class="my-5" />
+                        <div class="flex flex-col space-y-5">
+                            <h1 class="font-interBold text-xl">COMPETITION</h1>
+                            <div class="hover:underline">
+                                <a href="/muc" class="font-inter">Mobile UI/UX Competition (MUC)</a>
+                            </div>
+                            <div class="hover:underline">
+                                <a href="/wdc" class="font-inter">Web Design Competition (WDC)</a>
+                            </div>
+                            <div class="hover:underline">
+                                <a href="/ctf" class="font-inter">Capture The Flag (CTF)</a>
+                            </div>
+                        </div>
+                        <hr class="my-5" />
+                        <div class="flex flex-col space-y-3">
+                            <h1 class="font-interBold text-xl">SOCIAL MEDIA</h1>
+                            <div class="flex gap-2">
+                                <a href="https://www.youtube.com/@ifestuajy" target="_blank"><img src="img-sponsor/icon/mingcute_youtube-fill.svg" alt="" class="w-10" /></a>
+
+                                <a href="https://www.instagram.com/ifest_uajy/" target="_blank"><img src="img-sponsor/icon/mingcute_instagram-fill.svg" alt="" class="w-10" /></a>
+                                <a href="https://line.me/ti/p/~@ykb1847q" target="_blank"><img src="img-sponsor/icon/mingcute_line-app-fill.svg" alt="" class="w-10" /></a>
+                            </div>
+                        </div>
+                        <hr class="my-5" />
+                        <div class="flex flex-col space-y-3">
+                            <h1 class="font-interBold text-xl">OUR CONTACTS</h1>
+                            <div class="hover:underline">
+                              <a
+                                href="https://mail.google.com/mail/u/0/?view=cm&tf=1&fs=1&to=ifest.uajy1@gmail.com"
+                                class="font-inter"
+                                target="_blank"
+                                >ifest.uajy1@gmail.com</a
+                              >
+                            </div>
+                            <a href="https://wa.me/+6287794005230" target="_blank"
+                              ><h1 class="hover:underline mt-3">
+                                +6287794005230 - Ketua Pelaksana
+                              </h1></a
+                            >
+                            <a href="https://wa.me/+6281393776678" target="_blank"
+                              ><h1 class="hover:underline mt-3">
+                                +6281393776678 - Sponsorship
+                              </h1></a
+                            >
+                          </div>
+                        <hr class="my-5" />
+                        <div class="text-center pt-10">
+                            <h1 class="text-white font-extrabold text-center">
+                                © 2025 IFEST #13 UAJY. All rights reserved. <br /> Organized by WD IFEST #13
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- End - Mobile -->
+
+    <!-- Start - Desktop -->
+    <div class="hidden lg:block">
+        <div class="bg-[#00296B] h-auto w-auto">
+            <div class="relative z-0">
+                <div class="absolute w-56">
+                    <img src="img-sponsor/icon/garis_footer.svg" alt="" class="opacity-85" />
+                </div>
+
+                <div class="absolute w-56 right-0 scale-x-[-1]">
+                    <img src="img-sponsor/icon/garis_footer.svg" alt="" class="opacity-85" />
+                </div>
+            </div>
+
+            <div class="relative z-10">
+                <div class="py-10 px-20 flex w-auto">
+                    <div class="mx-auto text-white">
+                        <div>
+                            <a href="/">
+                                <img src="img-sponsor/icon/logo_footer.svg" alt="" />
+                                <h1 class="font-interBold mt-3 text-xl">IFest #13</h1>
+                            </a>
+                        </div>
+
+                        <h1 class="font-inter mt-5 w-96">
+                            The premier annual IT event hosted by HIMAFORKA UAJY. Brings together technology enthusiasts for a week of innovation, competition, and collaboration.
+                        </h1>
+                        <h1 class="font-interBold mt-8 text-xl">Presented By</h1>
+                        <img src="img-sponsor/icon/logo_hima.svg" class="w-28 mt-5" alt="" />
+                    </div>
+                    <div class="mx-auto text-white">
+                        <h1 class="font-interBold text-xl">EVENTS</h1>
+                        <div class="mt-5 hover:underline">
+                            <a href="/semnas" class="font-inter">Seminar nasional</a>
+                        </div>
+                    </div>
+                    <div class="mx-auto text-white">
+                        <h1 class="font-interBold text-xl">COMPETITION</h1>
+                        <div class="mt-5 hover:underline">
+                            <a href="/muc" class="font-inter">Mobile UI/UX Competition <br />
+                (MUC)</a>
+                        </div>
+                        <div class="mt-3 hover:underline">
+                            <a href="/wdc" class="font-inter">Web Design Competition <br />
+                (WDC)</a>
+                        </div>
+                        <div class="mt-3 hover:underline">
+                            <a href="/ctf" class="font-inter">Capture The Flag <br />
+                (CTF)</a>
+                        </div>
+                    </div>
+                    <div class="mx-auto text-white">
+                        <div class="flex flex-col">
+                            <h1 class="font-interBold text-xl">SOCIAL MEDIA</h1>
+                            <div class="flex gap-2 mt-3">
+                                <a href="https://www.youtube.com/@ifestuajy" target="_blank"><img src="img-sponsor/icon/mingcute_youtube-fill.svg" alt="" class="w-10" /></a>
+
+                                <a href="https://www.instagram.com/ifest_uajy/" target="_blank"><img src="img-sponsor/icon/mingcute_instagram-fill.svg" alt="" class="w-10" /></a>
+                                <a href="https://line.me/ti/p/~@ykb1847q" target="_blank"><img src="img-sponsor/icon/mingcute_line-app-fill.svg" alt="" class="w-10" /></a>
+                            </div>
+                            <div class="mt-10">
+                                <h1 class="font-interBold text-xl">OUR CONTACTS</h1>
+                                <div class="mt-3 hover:underline">
+                                  <a
+                                    href="https://mail.google.com/mail/u/0/?view=cm&tf=1&fs=1&to=ifest.uajy1@gmail.com"
+                                    class="font-inter"
+                                    target="_blank"
+                                    >ifest.uajy1@gmail.com</a
+                                  >
+                                </div>
+                                <a href="https://wa.me/+6287794005230" target="_blank"
+                                  ><h1 class="hover:underline mt-3">
+                                    +6287794005230 <br />
+                                    - Ketua Pelaksana
+                                  </h1></a
+                                >
+                                <a href="https://wa.me/+6281393776678" target="_blank"
+                                  ><h1 class="hover:underline mt-3">
+                                    +6281393776678 <br />
+                                    - Sponsorship
+                                  </h1></a
+                                >
+                              </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex items-center justify-center">
+                <hr class="mb-5 w-96" />
+            </div>
+            <h1 class="pb-5 text-white font-interBold text-center">
+                © 2025 IFEST #13 UAJY. All rights reserved. | Organized by WD IFEST #13
+            </h1>
+        </div>
+    </div>
+    <!-- End - Desktop -->
+    </section>
+    <!-- End - Footer-->
+    <script src="script.js"></script>
+</body>

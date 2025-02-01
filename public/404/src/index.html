@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 Page</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,700;1,14..32,700&family=Jersey+10&family=Jersey+25&family=Kdam+Thmor+Pro&family=Montserrat:ital,wght@0,700;1,700&family=Quantico:wght@700&family=Roboto&display=swap"
+    rel="stylesheet" />
+  <style>
+    body {
+      background: linear-gradient(180deg, #b9c6ff, #00e8c2);
+      font-family: 'Quantico', sans-serif;
+      height: 100vh;
+      margin: 0;
+      overflow: hidden;
+    }
+
+    .error-container {
+      display: flex;
+      position: relative;
+      z-index: -1;
+      padding-right: 10px;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+      padding: 0 10px;
+      box-sizing: border-box;
+      width: 100%;
+    }
+
+    .error-code {
+      font-family: 'Robotic Cyborg', sans-serif;
+      font-size: 10rem;
+      color: #605bff;
+      position: relative;
+      max-width: 100%;
+      line-height: 1;
+      display: inline-block;
+      text-shadow: 4px 4px 0 #b3e734, 6px 6px 0 #9ce234, 8px 8px 0 #7fc034;
+      animation: electric 1.5s infinite alternate, move-together 1.5s infinite alternate;
+    }
+
+    .oops-text {
+      font-family: 'GiantRobotArmy', sans-serif;
+      font-size: 2rem;
+      color: #201c9c;
+      margin-top: 1rem;
+    }
+
+    .error-message {
+      font-family: 'GiantRobotArmy', sans-serif;
+      font-size: 1.25rem;
+      color: #201c9c;
+      margin-top: 0.5rem;
+    }
+
+    .home-link {
+      font-size: 1.25rem;
+      color: #ffffff;
+      margin-top: 1.5rem;
+      text-decoration: underline;
+    }
+
+    .home-link:hover {
+      color: #7134e2;
+    }
+
+    @keyframes electric {
+      0% {
+        text-shadow: 4px 4px 0 #b3e734, 6px 6px 0 #9ce234, 8px 8px 0 #7fc034;
+        transform: scale(1) rotate(0deg);
+      }
+
+      50% {
+        text-shadow: 8px 8px 0 #ff9900, 10px 10px 0 #ff6200, 12px 12px 0 #00ff99;
+        transform: scale(1.1) rotate(10deg);
+      }
+
+      100% {
+        text-shadow: 4px 4px 0 #b3e734, 6px 6px 0 #9ce234, 8px 8px 0 #7fc034;
+        transform: scale(1) rotate(0deg);
+      }
+    }
+
+    @keyframes move-together {
+      0% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-20px);
+      }
+
+      100% {
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .error-code {
+        font-size: 6rem;
+      }
+
+      .oops-text {
+        font-size: 1.5rem;
+      }
+
+      .error-message {
+        font-size: 1rem;
+      }
+
+      .home-link {
+        font-size: 1.1rem;
+      }
+
+      .error-container img {
+        max-width: 10%;
+        height: auto;
+        top: -2.4rem;
+        animation: electric 1.5s infinite alternate, move-together 1.5s infinite alternate;
+      }
+    }
+
+    @media (min-width: 641px) {
+      .error-code {
+        font-size: 10rem;
+      }
+
+      .error-container img {
+        max-width: 50%;
+        animation: electric 1.5s infinite alternate, move-together 1.5s infinite alternate;
+      }
+    }
+  </style>
+
+  <!-- Script Custom Font -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            quantico: ["Quantico", "serif"],
+            jersey: ["'Jersey 10'", "serif"],
+            jersey25: ["'Jersey 25'", "serif"],
+            roboto: ["Roboto", "serif"],
+            khdam: ["'Kdam Thmor Pro'", "serif"],
+            inter: ["'Inter Tight'", "serif"],
+            montserrat: ["Montserrat", "serif"],
+            interBold: ["Inter", "serif"],
+          },
+        },
+      },
+    };
+  </script>
+</head>
+
+<body>
+  <!-- Start - Mobile Navbar -->
+  <div class="w-full h-20 lg:hidden relative">
+    <div class="h-full flex items-center font-quantico">
+      <div class="mx-5 flex w-full items-center">
+        <a href="/src/index.html">
+          <div class="flex items-center space-x-5">
+            <img src="img-error/logo/LogoFinal.png" alt="" class="h-6" />
+            <span class="navbar-link">IFEST #13</span>
+          </div>
+        </a>
+        <div class="flex items-center lg:hidden ml-auto z-10">
+          <button id="hamburger-btn"
+            class="bg-white p-3 rounded-full focus:outline-none shadow-xl border border-gray-300">
+            <svg id="hamburger-icon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-black" fill="none"
+              stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 12h18M3 6h18M3 18h18"></path>
+            </svg>
+            <svg id="close-icon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-black hidden" fill="none"
+              stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Menu Sliding from the Left -->
+  <div id="mobile-menu"
+    class="font-quantico hidden fixed top-0 right-0 h-full w-64 bg-white shadow-lg transform -translate-x-full transition-transform duration-300">
+    <div class="mt-16 p-5 space-y-4">
+      <div class="text-black hover:bg-gray-200 p-2 rounded flex items-center navbar-link" id="kompetisi-btn-mobile">
+        KOMPETISI
+        <svg id="dropdown-arrow-mobile" xmlns="http://www.w3.org/2000/svg"
+          class="h-4 w-4 ml-2 transform transition-transform duration-200" fill="none" stroke="currentColor"
+          viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <text x="5" y="15" id="arrow-text-mobile">v</text>
+        </svg>
+      </div>
+      <ul id="kompetisi-dropdown-mobile" class="hidden space-y-2 ml-5">
+        <li>
+          <a href="#" class="block text-black hover:bg-gray-200 p-2 rounded navbar-link">Mobile UI/UX Competition
+            (MUC)</a>
+        </li>
+        <li>
+          <a href="#" class="block text-black hover:bg-gray-200 p-2 rounded navbar-link">Web Development Competition
+            (WDC)</a>
+        </li>
+        <li>
+          <a href="#" class="block text-black hover:bg-gray-200 p-2 rounded navbar-link">Capture the Flag (CTF)</a>
+        </li>
+      </ul>
+      <a href="#semnas" class="block text-black hover:bg-gray-200 p-2 rounded navbar-link">SEMINAR NASIONAL</a>
+      <a href="#store" class="block text-black hover:bg-gray-200 p-2 rounded navbar-link">STORE</a>
+      <a href="#sponsorship" class="block text-black hover:bg-gray-200 p-2 rounded navbar-link">SPONSOR</a>
+      <a href="#galeri" class="block text-black hover:bg-gray-200 p-2 rounded navbar-link">GALERI</a>
+    </div>
+  </div>
+  <!-- End - Mobile Navbar -->
+
+  <!-- Desktop Navbar -->
+  <div class="w-full h-20 hidden lg:block">
+    <div class="mx-10 bg-white h-full rounded-b-[35px] flex items-center font-quantico">
+      <div class="mx-10 flex w-full">
+        <a href="/src/index.html">
+          <div class="flex items-center space-x-5">
+            <img src="img-error/logo/LogoFinal.png" alt="" class="h-6" />
+            <span class="navbar-link">IFEST #13</span>
+          </div>
+        </a>
+        <div class="ml-auto flex items-center gap-16">
+          <div class="relative">
+            <button id="kompetisi-btn-desktop" class="focus:outline-none flex items-center navbar-link">
+              KOMPETISI
+              <svg id="dropdown-arrow-desktop" xmlns="http://www.w3.org/2000/svg"
+                class="h-4 w-4 ml-2 transform transition-transform duration-200" fill="none" stroke="currentColor"
+                viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <text x="5" y="15" id="arrow-text-desktop">v</text>
+              </svg>
+            </button>
+            <div id="kompetisi-dropdown-desktop"
+              class="absolute hidden bg-white shadow-lg rounded-md p-4 mt-2 left-0 w-64 border border-gray-300">
+              <a href="#" class="block text-black hover:bg-gray-200 p-2 rounded navbar-link">Mobile UI/UX Competition
+                (MUC)</a>
+              <a href="#" class="block text-black hover:bg-gray-200 p-2 rounded navbar-link">Web Development Competition
+                (WDC)</a>
+              <a href="#" class="block text-black hover:bg-gray-200 p-2 rounded navbar-link">Capture the Flag (CTF)</a>
+            </div>
+          </div>
+          <a href="#semnas" class="navbar-link">SEMINAR NASIONAL</a>
+          <a href="#store" class="navbar-link">STORE</a>
+          <a href="#sponsorship" class="navbar-link">SPONSOR</a>
+          <a href="#galeri" class="navbar-link">GALERI</a>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End - Desktop Navbar -->
+
+  <!-- Main Content -->
+  <div class="error-container">
+    <div class="relative">
+      <span class="error-code">404</span>
+      <img src="img-error/elemen/404-ErrorPage.svg" alt="Illustration"
+        class="absolute top-[-4rem] left-[11%] transform -translate-x-1/2"
+        style="width: 70%; max-width: 600px; height: auto;" />
+    </div>
+    <p class="oops-text">Oops!</p>
+    <p class="error-message">The page you're looking for wasn't found.</p>
+    <a href="#" class="home-link">Please go to the home page</a>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
