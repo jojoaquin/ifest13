@@ -14,12 +14,21 @@
       {
         "source": "/ctf-soon",
         "destination": "/ctf-soon/index.html"
+      },
+      {
+        "source": "/semnas-soon",
+        "destination": "/semnas-soon/index.html"
       }
     ],
     "redirects": [
       {
         "source": "/ctf",
         "destination": "/ctf-soon",
+        "type": 301
+      },
+      {
+        "source": "/semnas",
+        "destination": "/semnas-soon",
         "type": 301
       }
     ]
