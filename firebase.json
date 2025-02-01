@@ -18,6 +18,14 @@
       {
         "source": "/semnas-soon",
         "destination": "/semnas-soon/index.html"
+      },
+      {
+        "source": "/sponsor-soon",
+        "destination": "/sponsor-soon/index.html"
+      },
+      {
+        "source": "/store-soon",
+        "destination": "/store-soon/index.html"
       }
     ],
     "redirects": [
@@ -29,6 +37,16 @@
       {
         "source": "/semnas",
         "destination": "/semnas-soon",
+        "type": 301
+      },
+      {
+        "source": "/sponsor",
+        "destination": "/sponsor-soon",
+        "type": 301
+      },
+      {
+        "source": "/store",
+        "destination": "/store-soon",
         "type": 301
       }
     ]
