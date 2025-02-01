@@ -14,10 +14,13 @@
       {
         "source": "/ctf-soon",
         "destination": "/ctf-soon/index.html"
-      },
+      }
+    ],
+    "redirects": [
       {
         "source": "/ctf",
-        "destination": "/ctf-soon"
+        "destination": "/ctf-soon",
+        "type": 301
       }
     ]
   }
