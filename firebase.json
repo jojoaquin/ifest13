@@ -10,10 +10,11 @@
       {
         "source": "/wdc",
         "destination": "/wdc/index.html"
+      },
+      {
+        "source": "/ctf",
+        "destination": "/soon/ctf-soon/index.html"
       }
-    ],
-    "errorOverrides": {
-      "404": "/404/src/index.html"
-    }
+    ]
   }
 }
