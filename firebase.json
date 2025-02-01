@@ -11,6 +11,7 @@
         "source": "/wdc",
         "destination": "/wdc/index.html"
       }
-    ]
+    ],
+    "errorPage": "/404/src/index.html"
   }
 }
