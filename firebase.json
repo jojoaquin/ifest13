@@ -13,7 +13,7 @@
       },
       {
         "source": "/ctf",
-        "destination": "/soon/ctf-soon/index.html"
+        "destination": "/ctf-soon/index.html"
       }
     ]
   }
