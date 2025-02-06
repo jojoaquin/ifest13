@@ -1,0 +1,1475 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MUC - IFEST #13</title>
+  <link rel="icon" href="../wdc/img/element/logo.svg" type="image/png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jersey+10&family=Jersey+25&family=Kdam+Thmor+Pro&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <link rel="stylesheet" href="./style/index.css">
+  <link rel="stylesheet" href="./src/output.css">
+
+
+</head>
+
+<body>
+  <section id="landing" class="w-full bg-cover h-full landing "
+    style="background-image: linear-gradient(#0684FA, #12C3FF);">
+    <div class="">
+      <div class="absolute fade-left left-0 lg:bottom-[30rem] bottom-[35rem]">
+        <img class="w-[350px] lg:w-[550px]  " src="./asset/awan-left.svg" alt="">
+      </div>
+      <div class="absolute fade-right right-0 top-[15rem] lg:top-[16rem]">
+        <img class="w-[350px] lg:w-[600px] " src="./asset/awan-right.svg" alt="">
+      </div>
+
+    </div>
+    <!-- Start - Navbar -->
+
+    <!-- Start - Mobile -->
+    <div class="w-full h-20 lg:hidden relative">
+      <div class="h-full flex items-center font-quantico font-bold">
+        <div class="mx-5 flex w-full items-center">
+          <a href="/">
+            <div class="flex items-center space-x-5">
+              <img src="./asset/logo.svg" alt="" class="h-6" />
+              <span class="">IFEST #13</span>
+            </div>
+          </a>
+          <div class="flex items-center lg:hidden ml-auto z-20">
+            <button id="hamburger-btn"
+              class="bg-white p-3 rounded-full focus:outline-none shadow-xl border border-gray-300">
+              <svg id="hamburger-icon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-black" fill="none"
+                stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M3 12h18M3 6h18M3 18h18"></path>
+              </svg>
+              <svg id="close-icon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-black hidden" fill="none"
+                stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M6 18L18 6M6 6l12 12"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="mobile-menu"
+      class="z-10 font-quantico font-bold hidden fixed top-0 right-0 h-full w-64 bg-white shadow-lg transform -translate-x-full transition-transform duration-300">
+      <div class="mt-16 p-5 space-y-4">
+        <div class="text-black hover:bg-gray-200 p-2 rounded flex items-center" id="kompetisi-btn-mobile" role="button">
+          KOMPETISI
+          <svg id="dropdown-arrow-mobile" xmlns="http://www.w3.org/2000/svg"
+            class="h-4 w-4 ml-2 transform transition-transform duration-200" fill="none" stroke="currentColor"
+            viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <text x="5" y="15" id="arrow-text-mobile">v</text>
+          </svg>
+        </div>
+        <ul id="kompetisi-dropdown-mobile" class="hidden space-y-2 ml-5">
+          <li>
+            <a href="/muc" class="block text-black hover:bg-gray-200 p-2 rounded">Mobile UI/UX Competition
+              (MUC)</a>
+          </li>
+          <li>
+            <a href="/wdc" class="block text-black hover:bg-gray-200 p-2 rounded">Web Development Competition
+              (WDC)</a>
+          </li>
+          <li>
+            <a href="/ctf" class="block text-black hover:bg-gray-200 p-2 rounded">Capture the Flag (CTF)</a>
+          </li>
+        </ul>
+        <a href="/semnas" class="block text-black hover:bg-gray-200 p-2 rounded">SEMINAR NASIONAL</a>
+        <a href="/store" class="block text-black hover:bg-gray-200 p-2 rounded">STORE</a>
+        <a href="/sponsor" class="block text-black hover:bg-gray-200 p-2 rounded">SPONSOR</a>
+        <a href="/galeri" class="block text-black hover:bg-gray-200 p-2 rounded">GALERI</a>
+      </div>
+    </div>
+    <!-- End - Mobile -->
+
+    <!-- Start - Desktop -->
+    <div class="w-full h-20 hidden lg:block">
+      <div class="mx-10 bg-white h-full rounded-b-[35px] flex items-center font-bold font-quantico">
+        <div class="mx-10 flex w-full">
+          <a href="/">
+            <div class="flex items-center space-x-5">
+              <img src="./asset/logo.svg" alt="" class="h-6" />
+              <span class="">IFEST #13</span>
+            </div>
+          </a>
+          <div class="ml-auto flex items-center gap-16">
+            <div class="relative">
+              <button id="kompetisi-btn-desktop" class="focus:outline-none flex items-center">
+                KOMPETISI
+                <svg id="dropdown-arrow-desktop" xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4 ml-2 transform transition-transform duration-200" fill="none" stroke="currentColor"
+                  viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <text x="5" y="15" id="arrow-text-desktop">v</text>
+                </svg>
+              </button>
+              <div id="kompetisi-dropdown-desktop"
+                class="absolute z-20 hidden bg-white shadow-lg rounded-md p-4 mt-2 left-0 w-64 border border-gray-300">
+                <a href="/muc" class="block text-black hover:bg-gray-200 p-2 rounded">Mobile UI/UX
+                  Competition (MUC)</a>
+                <a href="/wdc" class="block text-black hover:bg-gray-200 p-2 rounded">Web Development
+                  Competition (WDC)</a>
+                <a href="/ctf" class="block text-black hover:bg-gray-200 p-2 rounded">Capture the Flag
+                  (CTF)</a>
+              </div>
+            </div>
+            <a href="/semnas">SEMINAR NASIONAL</a>
+            <a href="/store">STORE</a>
+            <a href="/sponsor">SPONSOR</a>
+            <a href="/galeri">GALERI</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End - Desktop -->
+
+    <!-- End - Navbar -->
+
+    <!-- landing start mobile -->
+    <div class="container-landing lg:pt-[8rem] pt-[5rem] flex flex-col justify-center items-center ">
+      <div class="text-center items-center justify-center flex flex-col relative z-0 landingReveal">
+        <img src="./asset/landing-vec.png" alt="" class="mt-0 mb-2 w-80 lg:w-[40rem] " />
+        <h1 class="font-jersey text-white text-6xl lg:text-7xl mx-3">
+          MOBILE UI/UX COMPETITION
+        </h1>
+      </div>
+
+
+      <div class="flex flex-row mt-12 btnReveal">
+        <button
+          class="bg-btnbase-0 rounded-full text-white text-sm mr-3 lg:px-3 lg:text-base px-2 py-2">Rp.100.000,00</button>
+        <button
+          class="bg-btnbase-0 rounded-full text-white text-sm  mr-3 lg:px-5  lg:text-base px-3 py-2">SMA/Sederajat</button>
+        <button class="bg-btnbase-0 rounded-full text-white text-sm  px-2 lg:px-3 lg:text-base py-2">Max. 2
+          Orang</button>
+      </div>
+      <div class="flex justify-center items-center mt-10 reveal flex-col">
+        <p class="text-white font-khdam text-center ">IFEST #13 : HEROES OF INNOVATION</p>
+        <div class="flex justify-center items-center mx-5 lg:mx-20">
+          <img class="w-10 lg:w-16 lg:mb-[1rem] " src="./asset/star.svg" alt="">
+          <h1 class="text-4xl lg:text-6xl mt-5 text-white text-center font-jersey">MOBILE UI/UX COMPETITION</h1>
+          <img class="w-10 lg:w-16 lg:mb-[1rem]" src="./asset/star.svg" alt="">
+        </div>
+        <p class="text-white font-khdam mt-5 lg:text-base text-sm text-center">“Building a Digital Approach to Mental
+          Wellness”</p>
+        <p class="text-white mt-10 lg:text-lg mb-10 px-8 lg:px-56 text-center">
+
+
+
+          Subtema ini berfokus kepada desain platform Kesehatan Mental yang mampu menjadikan pengalaman penggunanya
+          menjadi lebih berkesan. Desain aplikasi harus transformatif, unik, dan berbeda dari yang sudah ada. Perlombaan
+          ini mengajak para siswa/i untuk membuat desain platform Kesehatan Mental berbentuk aplikasi handphone yang
+          menarik.</p>
+      </div>
+
+
+
+    </div>
+
+  </section>
+
+  <section class="w-full h-full slider pt-28" id="MUC-slider"
+    style="background-image: linear-gradient(#12C3FF, #A0DAFF);">
+    <div class="reveal">
+
+      <div class="flex justify-center items-center mx-5 lg:mx-10 reveal">
+        <img class="w-10 lg:w-20" src="./asset/star.svg" alt="">
+        <h1 class="text-4xl lg:text-6xl mt-10 text-white text-center font-jersey">ABOUT MOBILE UI/UX COMPETITION</h1>
+        <img class="w-10 lg:w-20" src="./asset/star.svg" alt="">
+      </div>
+      <p class="reveal text-center px-10 lg:px-48 lg:text-lg text-white lg:mt-16 lg:mb-10 mt-8 mb-8 txtReveal">Mobile
+        UI/UX
+        Competition merupakan sebuah kompetisi /
+        perlombaan untuk menampilkan sebuah desain visual / interface
+        dari sebuah aplikasi mobile. Perlombaan ini juga merupakan
+        bagian dari rangkaian acara pada kegiatan Informatics Festival
+        (IFest) #13 dengan tema “Heroes of Innovation: Empowering
+        Change in a Dynamic World”. Tujuan utama dari MUC itu sendiri
+        merupakan sebagai wadah para siswa/i untuk menuangkan ide -
+        ide mereka dalam interface aplikasi mobile dari portal siswa/i yang
+        diharapkan dapat membantu mereka sendiri.
+        <br>
+        Tema Mobile UI/UX Competition 2025 ini adalah “Heroes of
+        Innovation: Empowering Change in a Dynamic World” dengan
+        subtema yang diangkat adalah “Building a Digital Approach to
+        Mental Wellness”, perlombaan ini juga akan dibagi menjadi dua
+        tahap yaitu tahap seleksi dan tahap final. Tahap seleksi akan
+        diambil 10 (sepuluh) tim yang berhak untuk menuju ke tahap final,
+        dan 10 (sepuluh) tim tersebut akan mempresentasikan apa yang
+        telah mereka buat pada tahap final.</p>
+
+
+
+      <div class="bg-white w-full h-10 flex items-center mt-5    lg:mt-20">
+        <marquee behavior="scroll" direction="right" class="text-[#12c3ff] text-2xl font-khdam">
+          <div class="flex gap-48">
+            <h1>MUC</h1>
+            <h1>MUC</h1>
+            <h1>MUC</h1>
+            <h1>MUC</h1>
+            <h1>MUC</h1>
+          </div>
+        </marquee>
+      </div>
+      <div class="container-slide reveal">
+
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide swiper-slide-active">
+              <img class="img-swp" src="./asset/Carousel (1).JPG" alt="">
+            </div>
+            <div class="swiper-slide swiper-slide-active">
+              <img class="img-swp" src="./asset/Carousel (2).JPG" alt="">
+            </div>
+            <div class="swiper-slide swiper-slide-active">
+              <img class="img-swp" src="./asset/Carousel (3).JPG" alt="">
+            </div>
+            <div class="swiper-slide swiper-slide-active">
+              <img class="img-swp" src="./asset/Carousel (4).JPG" alt="">
+            </div>
+            <div class="swiper-slide swiper-slide-active">
+              <img class="img-swp" src="./asset/Carousel (5).JPG" alt="">
+            </div>
+          </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
+      <div class="bg-white w-full h-10 flex items-center mt-5 lg:mt-10">
+        <marquee behavior="scroll" direction="right" class="text-[#12c3ff] text-2xl font-khdam">
+          <div class="flex gap-48">
+            <h1>MUC</h1>
+            <h1>MUC</h1>
+            <h1>MUC</h1>
+            <h1>MUC</h1>
+            <h1>MUC</h1>
+          </div>
+        </marquee>
+      </div>
+    </div>
+    </div>
+
+
+  </section>
+
+  <section class="w-full h-full tahapan pt-16 pb-40" style="background-image: linear-gradient(#A0DAFF,#8AF7FF );">
+
+    <div class="container-tahap flex flex-col justify-center items-center reveal">
+      <p class="text-white font-khdam reveal ">IFEST #13 : HEROES OF INNOVATION</p>
+      <div class="flex justify-center items-center mx-10 lg:mx-15 reveal">
+        <img class="w-[2rem] lg:w-[4rem] mb-10 lg:mb-5" src="./asset/star.svg" alt="">
+        <h1 class="text-4xl lg:text-6xl mt-5 text-white font-jersey text-center">KETENTUAN DAN SYARAT MOBILE UI/UX COMPETITION</h1>
+        <img class="w-[2rem] lg:w-[4rem] mb-10 lg:mb-5 " src="./asset/star.svg" alt="">
+      </div>
+      <p class="text-white reveal t px-6 lg:px-0 font-khdam text-center uppercase mt-5">Berikut ketentuan umum dan
+        ketentuan
+        karya untuk lomba mobile UI/UX Competition
+      </p>
+
+      <div class="py-20">
+        <div class="absolute right-0 ">
+          <img class="w-[200px] lg:w-[500px] reveal" src="./asset/awan-right.svg" alt="">
+        </div>
+        <img class="relative w-[5rem] lg:top-[8rem] lg:w-[14rem] reveal" src="./asset/sunset.svg" alt="">
+        <div class="absolute left-0">
+          <img class="w-[200px] lg:w-[500px] reveal" src="./asset/awan-left.svg" alt="">
+        </div>
+      </div>
+
+
+      <!-- Start - Ketentuan Mobile -->
+      <div class="lg:hidden  reveal">
+      <div class="flex flex-col mx-10 items-center">
+        <div class="bg-white w-full h-auto rounded-xl max-h-[500px] overflow-y-scroll fadeIn" style="
+                box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2),
+                  0 4px 25px rgba(255, 255, 255, 0.15),
+                  0 -4px 25px rgba(255, 255, 255, 0.15),
+                  -4px 0 15px rgba(255, 255, 255, 0.15),
+                  4px 0 15px rgba(255, 255, 255, 0.15);
+                --fade-duration: 1;
+              ">
+          <div class="p-5">
+            <h1 class="text-center font-jersey25 text-3xl text-[#2D678C]">
+              KETENTUAN UMUM
+            </h1>
+            <div class="font-inter mt-2 text-xs">
+              <ul class="space-y-2">
+                <li>
+                  1. Peserta adalah
+                  <span class="font-inter">Siswa /i tingkat SMA /SMK /Sederajat</span>
+                  dari
+                  <span class="font-inter">Seluruh Indonesia</span>.
+                </li>
+                <li>
+                  2. Peserta lomba adalah satu tim yang terdiri dari minimal
+                  1 (satu) orang dan maksimal 2 (dua) orang.
+                </li>
+                <li>
+                  3. Tim yang terdiri dari 2 (dua) orang
+                  peserta
+                  <span class="font-inter">harus berasal dari SMA/SMK/MA/Sederajat yang sama.</span>
+                </li>
+                <li>
+                  4. Tidak diperkenankan ada peserta yang terdaftar dalam
+                  dua tim atau lebih yang berbeda.
+                </li>
+                <li>
+                  5. Melakukan pendaftaran online melalui
+                  <a href="https://bit.ly/Pendaftaran--MUC2025"
+                    class="text-blue-500">https://bit.ly/Pendaftaran--MUC2025</a>,
+                  pendaftaran dibuka mulai
+                  <span class="font-inter">Kamis, 6 Februari 2025</span>
+                  hingga
+                  <span class="font-inter">Jumat, 28 Februari 2025 pukul 23.59 WIB.</span>
+                </li>
+                <li>
+                  6. Melampirkan scan/foto Kartu Pelajar, Surat
+                  Persetujuan Sekolah, dan Bukti Pembayaran pada
+                  formulir pendaftaran.
+                </li>
+                <li>
+                  7. Peserta membayar biaya pendaftaran sebesar Rp50.000,00
+                  melalui: <br />Nama: Alexander Wongso, <br />
+                  Bank: BCA, <br />
+                  No Rekening: 8305549980.
+                </li>
+                <li>
+                  8. Batas pembayaran dan pengumpulan karya:
+                  <span class="font-inter">Jumat, 28 Februari 2025 pukul 23.59 WIB.</span>
+                </li>
+                <li>
+                  9. Semua peserta yang mengirimkan karya akan mendapatkan
+                  e-certificate.
+                </li>
+                <li>
+                  10. Peserta yang mendaftar tetapi tidak mengumpulkan karya
+                  setelah batas waktu dianggap mengundurkan diri.
+                </li>
+                <li>
+                  11. Panitia berhak mengeliminasi peserta yang tidak
+                  mematuhi ketentuan di atas.
+                </li>
+                <li>
+                  12. <span class="italic">Setiap peserta Mobile UI/UX Competition (MUC)</span> 2025 wajib membaca,
+                  memahami, dan
+                  mengikuti syarat dan ketentuan dalam rulebook.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <img src="./asset/garis_horizontal.svg" alt="" class="my-5 w-96" />
+        <div class="bg-white w-full max-h-[500px] overflow-y-scroll rounded-xl fadeIn" style="
+                box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2),
+                  0 4px 25px rgba(255, 255, 255, 0.15),
+                  0 -4px 25px rgba(255, 255, 255, 0.15),
+                  -4px 0 15px rgba(255, 255, 255, 0.15),
+                  4px 0 15px rgba(255, 255, 255, 0.15);
+                --fade-duration: 2;
+              ">
+          <div class="p-5">
+            <h1 class="text-center font-jersey25 text-3xl text-[#2D678C]">
+              KETENTUAN KARYA
+            </h1>
+            <div class="font-inter mt-2 text-xs">
+              <ul class="space-y-2">
+                <li>1. Karya desain berupa desain mobile app.</li>
+                <li>
+                  2. Peserta dibebaskan menggunakan software apapun dalam
+                  pembuatan desain.
+                </li>
+                <li>3. Hasil karya harus sesuai dengan tema MUC 2025.</li>
+                <li>
+                  4. Mobile UI/UX mengandung konten sesuai tema, diantaranya mencakup:
+                  <ol class="list-[lower-alpha] list-inside ml-5">
+                    <li>
+                      Profile User
+                      <br>
+                      Berisikan informasi pribadi pengguna yang digunakan untuk keperluan platform Mentah Health.
+                    </li>
+                    <li>
+                      Fitur Login
+                      <br>
+                      Berisikan fitur untuk menginput informasi pribadi pengguna di sebuah akun untuk menyimpan data.
+                      Login dimaksudkan untuk mengatur proses identifikasi pengguna agar pengguna dapat mengakses
+                      sebuah sistem.
+                    </li>
+                    <li>
+                      Fitur Pelacakan Suasana hati
+                      <br>
+                      Fitur ini berfungsi untuk mengetahui catatan harian pengguna terkait mood/suasana hari dengan
+                      analisis grafik perubahan emosional.
+                    </li>
+                    <li>
+                      Fitur Meditasi Terpadu
+                      <br>
+                      Fitur ini bertujuan memberikan waktu pengguna untuk sesi meditasi fleksibel untuk relaksasi,
+                      fokus, dan pengelolaan stres yang bertujuan untuk mengontrol Mental Health pengguna.
+                    </li>
+                    <li>
+                      Fitur Saran Manajemen Stress
+                      <br>
+                      Fitur ini bertujuan untuk Manajemen Stress Pengguna dengan memberikan saran olahraga, makanan
+                      sehat, dan pola hidup yang sehat.
+                    </li>
+                    <li>
+                      Fitur Target Kesehatan Mental
+                      <br>
+                      Fitur ini berfungsi untuk memberikan target kesehatan mental yang harus dicapai oleh pengguna
+                      yang telah diukur dari pola hidup dan ukuran stres pengguna.
+                    </li>
+                  </ol>
+
+                  <p>Note : Selain daripada fitur diatas, peserta diperbolehkan untuk menambahkan fitur tambahan yang
+                    berkaitan dengan tema agar mendapatkan nilai plus. </p>
+                <li>
+                  5. Bahasa utama yang digunakan dalam pembuatan desain aplikasi mobile adalah Bahasa Indonesia dan
+                  diperbolehkan menggunakan istilah dalam bahasa asing.
+
+
+                </li>
+                <li>
+                  6. Desain aplikasi mobile dilarang mengandung unsur SARA, kekerasan, pornografi, dan melanggar UU yang
+                  berlaku.
+
+
+                </li>
+                <li>
+                  7. Desain aplikasi mobile yang diperlombakan menjadi hak panitia
+                </li>
+                <li>
+                  8. Panitia MUC 2025 berhak mendiskualifikasi peserta jika diketahui Hak Atas Kekayaan Intelektualnya
+                  diragukan, sedang dalam sengketa, mengambil karya orang lain, atau mendapat klaim dari pihak lain.h
+                </li>
+                <li>
+                  9. Keputusan panitia bersifat mutlak dan tidak dapat diganggu gugat.
+                </li>
+                <li>
+                  10. Penilaian karya didasarkan pada kriteria berikut.
+                  <br>
+                  1. Babak Penyisihan
+                  <br />
+                  &nbsp;<span class="font-inter">a. Tampilan Layout/Antarmuka (30%)</span>
+                  <br />Memperhatikan tampilan antarmuka desain aplikasi mobile dengan struktur yang tepat. Hal ini
+                  berkaitan dengan estetika user interface dan konsistensi komponen desain.<br /><br />
+                  &nbsp;<span class="font-inter">b. Tema dan Brand Guidelines (40%)</span>
+                  <br />Desain aplikasi yang didesain berkaitan dengan tema yang telah ditentukan. <br /><br />
+                  &nbsp;<span class="font-inter">c. Skenario Penggunaan (30%)</span>
+                  <br />Memperhatikan penguraian peserta dalam bagaimana menyampaikan deskripsi fungsi penjelasan
+                  tekstual yang menyajikan sudut pandang pengguna <br /><br />
+
+                  2. Babak Final
+                  <br>
+                  &nbsp;<span class="font-inter">a. Demo Prototype (30%)</span>
+                  <br />Finalis melakukan demonstrasi karya/prototype keseluruhan desain high fidelity mockup yang telah
+                  dibuat dihadapan dewan juri<br /><br />
+                  &nbsp;<span class="font-inter">b. Presentasi (50%)</span>
+                  <br />Penjelasan peserta mengenai karya kepada dewan juri
+
+                  <br /><br />
+                  &nbsp;<span class="font-inter">c. Tanya Jawab (20%)</span>
+                  <br />Finalis menjawab pertanyaan dari dewan juri mengenai hasil karya dengan baik dan sesuai konteks
+                  <br /><br />
+                </li>
+              </ul>
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="">
+          <div class="absolute left-0 mt-5">
+            <img class="w-[13rem]" src="./asset/awan-left.svg" alt="">
+          </div>
+          <div class="absolute right-0 mt-10">
+            <img class="w-[13rem]" src="./asset/awan-right.svg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="hidden lg:block">
+      <div class="flex flex-row justify-center items-center pt-44">
+        <div class="flex flex-col">
+          <div class="bg-white w-[40vw] h-auto rounded-xl reveal" style="
+                  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2),
+                    0 4px 25px rgba(255, 255, 255, 0.15),
+                    0 -4px 25px rgba(255, 255, 255, 0.15),
+                    -4px 0 15px rgba(255, 255, 255, 0.15),
+                    4px 0 15px rgba(255, 255, 255, 0.15);
+                ">
+            <div class="p-5 flex flex-col">
+              <h1 class="text-center font-jersey25 text-3xl text-[#2D678C]">
+                KETENTUAN UMUM
+              </h1>
+              <div class="font-inter mt-2 text-sm">
+                <ul class="space-y-2">
+                  <li>
+                    1. Peserta adalah
+                    <span class="font-inter">Siswa /i tingkat SMA /SMK /Sederajat</span>
+                    dari
+                    <span class="font-inter">Seluruh Indonesia</span>.
+                  </li>
+                  <li>
+                    2. Peserta lomba adalah satu tim yang terdiri dari minimal
+                    1 (satu) orang dan maksimal 2 (dua) orang.
+                  </li>
+                  <li>
+                    3. Tim yang terdiri dari 2 (dua) orang
+                    peserta
+                    <span class="font-inter">harus berasal dari SMA/SMK/MA/Sederajat yang sama.</span>
+                  </li>
+                  <li>
+                    4. Tidak diperkenankan ada peserta yang terdaftar dalam
+                    dua tim atau lebih yang berbeda.
+                  </li>
+                  <li>
+                    5. Melakukan pendaftaran online melalui
+                    <a href="https://bit.ly/Pendaftaran--MUC2025"
+                      class="text-blue-500">https://bit.ly/Pendaftaran--MUC2025</a>,
+                    pendaftaran dibuka mulai
+                    <span class="font-inter">Kamis, 6 Februari 2025</span>
+                    hingga
+                    <span class="font-inter">Jumat, 28 Februari 2025 pukul 23.59 WIB.</span>
+                  </li>
+                  <li>
+                    6. Melampirkan scan/foto Kartu Pelajar, Surat
+                    Persetujuan Sekolah, dan Bukti Pembayaran pada
+                    formulir pendaftaran.
+                  </li>
+                  <li>
+                    7. Peserta membayar biaya pendaftaran sebesar Rp50.000,00
+                    melalui: <br />Nama: Alexander Wongso, <br />
+                    Bank: BCA, <br />
+                    No Rekening: 8305549980.
+                  </li>
+                  <li>
+                    8. Batas pembayaran dan pengumpulan karya:
+                    <span class="font-inter">Jumat, 28 Februari 2025 pukul 23.59 WIB.</span>
+                  </li>
+                  <li>
+                    9. Semua peserta yang mengirimkan karya akan mendapatkan
+                    e-certificate.
+                  </li>
+                  <li>
+                    10. Peserta yang mendaftar tetapi tidak mengumpulkan karya
+                    setelah batas waktu dianggap mengundurkan diri.
+                  </li>
+                  <li>
+                    11. Panitia berhak mengeliminasi peserta yang tidak
+                    mematuhi ketentuan di atas.
+                  </li>
+                  <li>
+                    12. <span class="italic">Setiap peserta Mobile UI/UX Competition (MUC)</span> 2025 wajib membaca,
+                    memahami, dan
+                    mengikuti syarat dan ketentuan dalam rulebook.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="">
+            <div class="absolute left-0 mt-5">
+              <img class="w-[20rem]" src="./asset/awan-left.svg" alt="">
+            </div>
+
+          </div>
+        </div>
+
+
+
+
+
+        <img src="./asset/garis.svg" alt="" class="w-10 mt-16 mr-5 ml-5" />
+        <div class="flex flex-col">
+
+
+          <div class="bg-white w-[40vw] h-auto rounded-xl z-10 max-h-[690px] overflow-y-scroll reveal " style="
+                  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2),
+                    0 4px 25px rgba(255, 255, 255, 0.15),
+                    0 -4px 25px rgba(255, 255, 255, 0.15),
+                    -4px 0 15px rgba(255, 255, 255, 0.15),
+                    4px 0 15px rgba(255, 255, 255, 0.15);
+                ">
+            <div class="p-5">
+              <h1 class="text-center font-jersey25 text-3xl text-[#2D678C]">
+                KETENTUAN KARYA
+              </h1>
+              <div class="font-inter mt-2 text-sm">
+                <ul class="space-y-2">
+                  <li>1. Karya desain berupa desain mobile app.</li>
+                  <li>
+                    2. Peserta dibebaskan menggunakan software apapun dalam
+                    pembuatan desain.
+                  </li>
+                  <li>3. Hasil karya harus sesuai dengan tema MUC 2025.</li>
+                  <li>
+                    4. Mobile UI/UX mengandung konten sesuai tema, diantaranya mencakup:
+                    <ol class="list-[lower-alpha] list-inside ml-5">
+                      <li>
+                        Profile User
+                        <br>
+                        Berisikan informasi pribadi pengguna yang digunakan untuk keperluan platform Mentah Health.
+                      </li>
+                      <li>
+                        Fitur Login
+                        <br>
+                        Berisikan fitur untuk menginput informasi pribadi pengguna di sebuah akun untuk menyimpan data.
+                        Login dimaksudkan untuk mengatur proses identifikasi pengguna agar pengguna dapat mengakses
+                        sebuah sistem.
+                      </li>
+                      <li>
+                        Fitur Pelacakan Suasana hati
+                        <br>
+                        Fitur ini berfungsi untuk mengetahui catatan harian pengguna terkait mood/suasana hari dengan
+                        analisis grafik perubahan emosional.
+                      </li>
+                      <li>
+                        Fitur Meditasi Terpadu
+                        <br>
+                        Fitur ini bertujuan memberikan waktu pengguna untuk sesi meditasi fleksibel untuk relaksasi,
+                        fokus, dan pengelolaan stres yang bertujuan untuk mengontrol Mental Health pengguna.
+                      </li>
+                      <li>
+                        Fitur Saran Manajemen Stress
+                        <br>
+                        Fitur ini bertujuan untuk Manajemen Stress Pengguna dengan memberikan saran olahraga, makanan
+                        sehat, dan pola hidup yang sehat.
+                      </li>
+                      <li>
+                        Fitur Target Kesehatan Mental
+                        <br>
+                        Fitur ini berfungsi untuk memberikan target kesehatan mental yang harus dicapai oleh pengguna
+                        yang telah diukur dari pola hidup dan ukuran stres pengguna.
+                      </li>
+                    </ol>
+
+                    <p>Note : Selain daripada fitur diatas, peserta diperbolehkan untuk menambahkan fitur tambahan yang
+                      berkaitan dengan tema agar mendapatkan nilai plus. </p>
+                  <li>
+                    5. Bahasa utama yang digunakan dalam pembuatan desain aplikasi mobile adalah Bahasa Indonesia dan
+                    diperbolehkan menggunakan istilah dalam bahasa asing.
+
+
+                  </li>
+                  <li>
+                    6. Desain aplikasi mobile dilarang mengandung unsur SARA, kekerasan, pornografi, dan melanggar UU
+                    yang berlaku.
+
+
+                  </li>
+                  <li>
+                    7. Desain aplikasi mobile yang diperlombakan menjadi hak panitia
+                  </li>
+                  <li>
+                    8. Panitia MUC 2025 berhak mendiskualifikasi peserta jika diketahui Hak Atas Kekayaan Intelektualnya
+                    diragukan, sedang dalam sengketa, mengambil karya orang lain, atau mendapat klaim dari pihak lain.h
+                  </li>
+                  <li>
+                    9. Keputusan panitia bersifat mutlak dan tidak dapat diganggu gugat.
+                  </li>
+                  <li>
+                    10. Penilaian karya didasarkan pada kriteria berikut.
+                    <br>
+                    1. Babak Penyisihan
+                    <br />
+                    &nbsp;<span class="font-inter">a. Tampilan Layout/Antarmuka (30%)</span>
+                    <br />Memperhatikan tampilan antarmuka desain aplikasi mobile dengan struktur yang tepat. Hal ini
+                    berkaitan dengan estetika user interface dan konsistensi komponen desain.<br /><br />
+                    &nbsp;<span class="font-inter">b. Tema dan Brand Guidelines (40%)</span>
+                    <br />Desain aplikasi yang didesain berkaitan dengan tema yang telah ditentukan. <br /><br />
+                    &nbsp;<span class="font-inter">c. Skenario Penggunaan (30%)</span>
+                    <br />Memperhatikan penguraian peserta dalam bagaimana menyampaikan deskripsi fungsi penjelasan
+                    tekstual yang menyajikan sudut pandang pengguna <br /><br />
+
+                    2. Babak Final
+                    <br>
+                    &nbsp;<span class="font-inter">a. Demo Prototype (30%)</span>
+                    <br />Finalis melakukan demonstrasi karya/prototype keseluruhan desain high fidelity mockup yang
+                    telah dibuat dihadapan dewan juri<br /><br />
+                    &nbsp;<span class="font-inter">b. Presentasi (50%)</span>
+                    <br />Penjelasan peserta mengenai karya kepada dewan juri
+
+                    <br /><br />
+                    &nbsp;<span class="font-inter">c. Tanya Jawab (20%)</span>
+                    <br />Finalis menjawab pertanyaan dari dewan juri mengenai hasil karya dengan baik dan sesuai
+                    konteks <br /><br />
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="">
+            <div class="absolute mt-10 right-0">
+              <img class="w-[25rem]" src="./asset/awan-right.svg" alt="">
+            </div>
+          </div>
+
+        </div>
+
+
+
+
+      </div>
+    </div>
+
+    <div class="flex flex-row justify-center items-center mt-24 lg:mt-10">
+      <a class="bg-btnbase-0 text-white px-5 py-2 mr-4 rounded-full" href="https://bit.ly/PosterMUC2025">Poster</a>
+      <a class="bg-btnbase-0 text-white px-5 py-2 mr-4 rounded-full"
+        href="https://bit.ly/Pendaftaran--MUC2025">Daftar</a>
+      <a class="bg-btnbase-0 text-white px-5 py-2 rounded-full " href="https://bit.ly/Rulebook-MUC2025">Rulebook</a>
+    </div>
+
+  </section>
+
+  <section class="w-full h-full timeline py-20" style="background-image: linear-gradient(#8AF7FF,#CBFCFF);">
+    <div class="reveal">
+      <p class=" text-center font-khdam text-sm lg:text-base ">IFEST #13 : HEROES OF INNOVATION</p>
+      <div class="flex items-center justify-center mx-10 lg:mx-24">
+        <img class="w-10 lg:w-20 lg:mb-5" src="./asset/star.svg" alt="">
+        <h1 class="lg:text-6xl text-4xl text-center mt-5 font-jersey">TIMELINE MOBILE UI/UX COMPETITION</h1>
+        <img class="w-10 lg:w-20 lg:mb-5" src="./asset/star.svg" alt="">
+      </div>
+      <p class=" text-center text-sm px-10 lg:text-base lg:px-0 font-khdam uppercase mt-5">Berikut Timeline
+       untuk lomba Mobile UI/UX (MUC)</p>
+
+      <div class="block reveal lg:hidden p-5">
+        <div class="mx-5 items-center justify-center flex flex-col">
+          <div class="flex items-center justify-center relative mr-10 slideUp transform translate-y-full">
+            <div class="absolute -top-1 bg-[#EDB108] w-32 h-3 rounded-full drop-shadow-lg"></div>
+            <div class="border-4 border-[#EDB108] w-auto h-auto p-3 rounded-xl">
+              <div
+                class="bg-[white] p-5 w-56 rounded-xl flex flex-col items-center justify-center font-khdam text-center">
+                <span class="text-sm">6 Feb - 28 Feb 2025</span>
+                <div class="py-2 flex gap-2 items-center">
+                  <img src="./asset/web.png" class="w-8" alt="" />
+                  <h1 class="text-xs">Link Pendaftaran MUC</h1>
+                </div>
+                <h1 class="font-jersey25 text-base text-center">
+                  PENDAFTARAN
+                </h1>
+              </div>
+            </div>
+            <div class="absolute -bottom-1 bg-[#EDB108] w-32 h-3 rounded-full drop-shadow-lg"></div>
+          </div>
+          <img src="./asset/panah.svg" class="w-16 pt-24 pb-5 rotate-45 slideUp transform translate-y-full" alt="" />
+          <div class="flex items-center justify-center relative ml-10 slideUp transform translate-y-full">
+            <div class="absolute -top-1 bg-[#E98F06] w-32 h-3 rounded-full drop-shadow-lg"></div>
+            <div class="border-4 border-[#E98F06] w-auto h-auto p-3 rounded-xl">
+              <div
+                class="bg-[white] p-5 w-48 rounded-xl flex flex-col items-center justify-center font-khdam text-center">
+                <span class="text-sm">6 Feb - 28 Feb 2025</span>
+                <div class="py-2 flex gap-2 items-center">
+                  <img src="./asset/form.png" class="w-8" alt="" />
+                  <h1 class="text-xs">Google Form</h1>
+                </div>
+                <h1 class="font-jersey25 text-xl text-center">
+                  PENGUMPULAN <br />KARYA
+                </h1>
+              </div>
+            </div>
+            <div class="absolute -bottom-1 bg-[#E98F06] w-32 h-3 rounded-full drop-shadow-lg"></div>
+          </div>
+          <img src="./asset/panah.svg"
+            class="w-16 pt-24 pb-5 -rotate-45 scale-x-[-1] slideUp transform translate-y-full" alt="" />
+          <div class="flex items-center justify-center relative mr-10 slideUp transform translate-y-full">
+            <div class="absolute -top-1 bg-[#DD5017] w-32 h-3 rounded-full drop-shadow-lg"></div>
+            <div class="border-4 border-[#DD5017] w-auto h-auto p-3 rounded-xl">
+              <div
+                class="bg-[white] p-5 w-48 rounded-xl flex flex-col items-center justify-center font-khdam text-center">
+                <span class="text-sm">5 Mar - 13 Mar 2025</span>
+                <div class="py-2 flex gap-2 items-center">
+                  <img src="./asset/online.png" class="w-8" alt="" />
+                  <h1 class="text-xs">Online</h1>
+                </div>
+                <h1 class="font-jersey25 text-xl text-center">
+                  PENJURIAN & <br />PENILAIAN
+                </h1>
+              </div>
+            </div>
+            <div class="absolute -bottom-1 bg-[#DD5017] w-32 h-3 rounded-full drop-shadow-lg"></div>
+          </div>
+          <img src="./asset/panah.svg" class="w-16 pt-24 pb-5 rotate-45 slideUp transform translate-y-full" alt="" />
+          <div class="flex items-center justify-center relative ml-10 slideUp transform translate-y-full">
+            <div class="absolute -top-1 bg-[#6C1F00] w-32 h-3 rounded-full drop-shadow-lg"></div>
+            <div class="border-4 border-[#6C1F00] w-auto h-auto p-3 rounded-xl">
+              <div
+                class="bg-[white] p-5 w-48 rounded-xl flex flex-col items-center justify-center font-khdam text-center">
+                <span class="text-sm">15 Mar 2025</span>
+                <div class="py-2 flex gap-2 items-center">
+                  <img src="./asset/ig.png" class="w-8" alt="" />
+                  <h1 class="text-xs">@ifest_uajy</h1>
+                </div>
+                <h1 class="font-jersey25 text-xl text-center">
+                  PENGUMUMAN <br />FINALIS
+                </h1>
+              </div>
+            </div>
+            <div class="absolute -bottom-1 bg-[#6C1F00] w-32 h-3 rounded-full drop-shadow-lg"></div>
+          </div>
+          <img src="./asset/panah.svg"
+            class="w-16 pt-24 pb-5 -rotate-45 scale-x-[-1] slideUp transform translate-y-full" alt="" />
+          <div class="flex items-center justify-center relative mr-10 slideUp transform translate-y-full">
+            <div class="absolute -top-1 bg-[#CE178F] w-32 h-3 rounded-full drop-shadow-lg"></div>
+            <div class="border-4 border-[#CE178F] w-auto h-auto p-3 rounded-xl">
+              <div
+                class="bg-[white] p-5 w-48 rounded-xl flex flex-col items-center justify-center font-khdam text-center">
+                <span class="text-sm">15 Mar 2025</span>
+                <div class="py-2 flex gap-2 items-center">
+                  <img src="./asset/zoom.png" class="w-8" alt="" />
+                  <h1 class="text-xs">Zoom Meeting</h1>
+                </div>
+                <h1 class="font-jersey25 text-xl text-center">
+                  TECHNICAL <br />MEETING
+                </h1>
+              </div>
+            </div>
+            <div class="absolute -bottom-1 bg-[#CE178F] w-32 h-3 rounded-full drop-shadow-lg"></div>
+          </div>
+          <img src="./asset/panah.svg" class="w-16 pt-24 pb-5 rotate-45 slideUp transform translate-y-full" alt="" />
+          <div class="flex items-center justify-center relative ml-10 slideUp transform translate-y-full">
+            <div class="absolute -top-1 bg-[#A33EA1] w-32 h-3 rounded-full drop-shadow-lg"></div>
+            <div class="border-4 border-[#A33EA1] w-auto h-auto p-3 rounded-xl">
+              <div
+                class="bg-[white] p-5 w-56 rounded-xl flex flex-col items-center justify-center font-khdam text-center">
+                <span class="text-sm">21 Mar 2025</span>
+                <div class="py-2 flex gap-2 items-center">
+                  <img src="./asset/univ.png" class="w-8" alt="" />
+                  <h1 class="text-xs">
+                    Lobby Utama Kampus 3 Gedung Santo Bonaventura Universitas Atma Jaya Yogyakarta
+                  </h1>
+                </div>
+                <h1 class="font-jersey25 text-xl text-center">
+                  PRESENTASI <br />
+                  FINALIS
+                </h1>
+              </div>
+            </div>
+            <div class="absolute -bottom-1 bg-[#A33EA1] w-32 h-3 rounded-full drop-shadow-lg"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- End - Mobile -->
+
+    <!-- Start - Desktop -->
+
+
+    <div class="hidden lg:block reveal mt-32">
+      <div class="flex items-center justify-center gap-3">
+
+        <div class="flex items-center justify-center relative fadeIn" style="--fadeDuration: 1">
+          <div class="absolute -top-3 bg-[#EDB108] w-48 h-7 rounded-full drop-shadow-lg"></div>
+          <div class="border-4 border-[#EDB108] w-72 h-auto p-7 rounded-3xl">
+            <div
+              class="bg-[white] p-5 h-44 rounded-3xl flex flex-col items-center justify-center font-khdam text-center">
+              <span>6 Feb - 28 Feb 2025</span>
+              <div class="py-2 flex gap-2 items-center">
+                <img src="./asset/web.png" class="w-8" alt="" />
+                <h1 class="text-sm">Link Pendaftaran MUC</h1>
+              </div>
+              <h1 class="font-jersey25 text-lg text-center mt-1">
+                PENDAFTARAN
+              </h1>
+            </div>
+          </div>
+          <div class="absolute -bottom-3 bg-[#EDB108] w-48 h-7 rounded-full drop-shadow-lg"></div>
+        </div>
+        <img src="./asset/panah.svg" class="w-24 fadeIn" style="--fadeDuration: 1" alt="" />
+        <div class="flex items-center justify-center relative fadeIn" style="--fadeDuration: 2">
+          <div class="absolute -top-3 bg-[#E98F06] w-48 h-7 rounded-full drop-shadow-lg"></div>
+          <div class="border-4 border-[#E98F06] w-72 h-auto p-7 rounded-3xl">
+            <div
+              class="bg-[white] p-5 h-44 rounded-3xl flex flex-col items-center justify-center font-khdam text-center">
+              <span>6 Feb - 28 Feb 2025</span>
+              <div class="py-2 flex gap-2 items-center">
+                <img src="./asset/form.png" class="w-8" alt="" />
+                <h1 class="text-sm">Google Form</h1>
+              </div>
+              <h1 class="font-jersey25 text-lg text-center mt-1">
+                PENGUMPULAN <br />KARYA
+              </h1>
+            </div>
+          </div>
+          <div class="absolute -bottom-3 bg-[#E98F06] w-48 h-7 rounded-full drop-shadow-lg"></div>
+        </div>
+        <img src="./asset/panah.svg" class="w-24 fadeIn" style="--fadeDuration: 2" alt="" />
+        <div class="flex items-center justify-center relative fadeIn" style="--fadeDuration: 3">
+          <div class="absolute -top-3 bg-[#DD5017] w-48 h-7 rounded-full drop-shadow-lg"></div>
+          <div class="border-4 border-[#DD5017] w-72 h-auto p-7 rounded-3xl">
+            <div
+              class="bg-[white] p-5 h-44 rounded-3xl flex flex-col items-center justify-center font-khdam text-center">
+              <span>5 Mar - 13 Mar 2025</span>
+              <div class="py-2 flex gap-2 items-center">
+                <img src="./asset/online.png" class="w-8" alt="" />
+                <h1 class="text-sm">Online</h1>
+              </div>
+              <h1 class="font-jersey25 text-lg text-center">
+                PENJURIAN & <br />
+                PENILAIAN
+              </h1>
+            </div>
+          </div>
+          <div class="absolute -bottom-3 bg-[#DD5017] w-48 h-7 rounded-full drop-shadow-lg"></div>
+        </div>
+      </div>
+      <div class="py-4"></div>
+      <div class="flex items-center justify-center gap-3 mt-5">
+        <div class="flex items-center justify-center relative fadeIn" style="--fadeDuration: 6">
+          <div class="absolute -top-3 bg-[#A33EA1] w-48 h-7 rounded-full drop-shadow-lg"></div>
+          <div class="border-4 border-[#A33EA1] w-72 h-auto p-7 rounded-3xl">
+            <div
+              class="bg-[white] p-5 h-44 rounded-3xl flex flex-col items-center justify-center font-khdam text-center">
+              <span>21 Maret 2025</span>
+              <div class="py-2 flex gap-2 items-center">
+                <img src="./asset/univ.png" class="w-8" alt="" />
+                <h1 class="text-xs">
+                  Lobby Utama Kampus 3 Gedung Santo Bonaventura Universitas Atma Jaya Yogyakarta
+                </h1>
+              </div>
+              <h1 class="font-jersey25 text-xl text-center">
+                PRESENTASI <br />
+                FINALIS
+              </h1>
+            </div>
+          </div>
+          <div class="absolute -bottom-3 bg-[#A33EA1] w-48 h-7 rounded-full drop-shadow-lg"></div>
+        </div>
+        <img src="./asset/panah.svg" class="w-24 scale-x-[-1] fadeIn" style="--fadeDuration: 4" alt="" />
+        <div class="flex items-center justify-center relative fadeIn" style="--fadeDuration: 5">
+          <div class="absolute -top-3 bg-[#CE178F] w-48 h-7 rounded-full drop-shadow-lg"></div>
+          <div class="border-4 border-[#CE178F] w-72 h-auto p-7 rounded-3xl">
+            <div
+              class="bg-[white] p-5 h-44 rounded-3xl flex flex-col items-center justify-center font-khdam text-center">
+              <span>15 Mar 2025</span>
+              <div class="py-2 flex gap-2 items-center">
+                <img src="./asset/zoom.png" class="w-8" alt="" />
+                <h1 class="text-sm">Zoom Meeting</h1>
+              </div>
+              <h1 class="font-jersey25 text-lg text-center">
+                TECHNICAL <br />
+                MEETING
+              </h1>
+            </div>
+          </div>
+          <div class="absolute -bottom-3 bg-[#CE178F] w-48 h-7 rounded-full drop-shadow-lg"></div>
+        </div>
+        <img src="./asset/panah.svg" class="w-24 scale-x-[-1] fadeIn" style="--fadeDuration: 3" alt="" />
+        <div class="flex items-center justify-center relative fadeIn" style="--fadeDuration: 4">
+          <div class="absolute -top-3 bg-[#6C1F00] w-48 h-7 rounded-full drop-shadow-lg"></div>
+          <div class="border-4 border-[#6C1F00] w-72 h-auto p-7 rounded-3xl">
+            <div
+              class="bg-[white] p-5 h-44 rounded-3xl flex flex-col items-center justify-center font-khdam text-center">
+              <span>15 Mar 2025</span>
+              <div class="py-2 flex gap-2 items-center">
+                <img src="./asset/ig.png" class="w-8" alt="" />
+                <h1 class="text-sm">@ifest_uajy</h1>
+              </div>
+              <h1 class="font-jersey25 text-lg text-center">
+                PENGUMUMAN <br />
+                FINALIS
+              </h1>
+            </div>
+          </div>
+          <div class="absolute -bottom-3 bg-[#6C1F00] w-48 h-7 rounded-full drop-shadow-lg"></div>
+        </div>
+      </div>
+    </div>
+
+    </div>
+    <!-- End - Desktop -->
+
+
+  </section>
+
+  <section class="w-full h-full lg:pb-10 lg:pt-0 pb-20 pt-24"
+    style="background-image: linear-gradient(#cbfcff,#EBFDFF)">
+
+    <div class="relative z-10 reveal">
+      <div class="flex justify-center items-center mx-5 lg:mx-10 slideUp transform translate-y-full">
+        <img src="./asset/star.svg" class="w-10 lg:w-20" alt="" />
+        <div class="text-black">
+          <h1 class="text-center mt-5 text-xs font-khdam">
+            IFEST #13 : HEROES OF INNOVATION
+          </h1>
+          <h1 class="t text-center font-jersey text-4xl lg:text-5xl mx-2 mt-3">
+            PRIZEPOOL
+          </h1>
+          <h1 class="text-center mt-2 text-sm lg:text-base font-khdam">
+            Total hadiah Rp9.500.000,00
+          </h1>
+        </div>
+        <img src="./asset/star.svg" class="w-10 lg:w-20" alt="" />
+      </div>
+
+      <!-- Start - Juara -->
+
+      <!-- Start - Juara Mobile -->
+
+      <div class="block lg:hidden">
+        <div class="mt-5 items-center flex flex-col space-y-5">
+          <div class="items-center flex flex-col transform translate-y-full reveal">
+            <img src="./asset/juara_1.svg" class="w-32" alt="" />
+            <h1 class="font-jersey25 text-center text-xl mt-2">FIRST</h1>
+            <div class="font-khdam text-center text-sm">
+              <div class="flex gap-1 items-center text-center justify-center">
+                <img src="./asset/money.png" class="w-5" alt="" />
+                <p>Rp4.000.000,00</p>
+              </div>
+              <div class="flex gap-2 items-center text-center justify-normal mt-1">
+                <img src="./asset/certificate.png" class="w-5" alt="" />
+                <p>Sertifikat Nasional dan Trophy</p>
+              </div>
+            </div>
+          </div>
+          <div class="items-center flex flex-col  translate-y-full reveal">
+            <img src="./asset/juara_2.svg" class="w-32" alt="" />
+            <h1 class="font-jersey25 text-center text-xl mt-2">SECOND</h1>
+            <div class="font-khdam text-center text-sm">
+              <div class="flex gap-1 items-center text-center justify-center">
+                <img src="./asset/money.png" class="w-5" alt="" />
+                <p>Rp3.000.000,00</p>
+              </div>
+              <div class="flex gap-2 items-center text-center justify-normal mt-1">
+                <img src="./asset/certificate.png" class="w-5" alt="" />
+                <p>Sertifikat Nasional dan Trophy</p>
+              </div>
+            </div>
+          </div>
+          <div class="items-center flex flex-col  translate-y-full reveal">
+            <img src="./asset/juara_3.svg" class="w-32" alt="" />
+            <h1 class="font-jersey25 text-center text-xl mt-2">THIRD</h1>
+            <div class="font-khdam text-center text-sm">
+              <div class="flex gap-1 items-center text-center justify-center">
+                <img src="./asset/money.png" class="w-5" alt="" />
+                <p>Rp2.000.000,00</p>
+              </div>
+              <div class="flex gap-2 items-center text-center justify-normal mt-1">
+                <img src="./asset/certificate.png" class="w-5" alt="" />
+                <p>Sertifikat Nasional dan Trophy</p>
+              </div>
+            </div>
+          </div>
+          <div class="items-center flex flex-col  translate-y-full reveal">
+            <img src="./asset/juarafav.png" class="w-32" alt="" />
+            <h1 class="font-jersey25 text-center text-xl mt-2">Juara Favorit</h1>
+            <div class="font-khdam text-center text-sm">
+              <div class="flex gap-1 items-center text-center justify-center">
+                <img src="./asset/money.png" class="w-5" alt="" />
+                <p>Rp500.000,00</p>
+              </div>
+              <div class="flex gap-2 items-center text-center justify-normal mt-1">
+                <img src="./asset/certificate.png" class="w-5" alt="" />
+                <p>Sertifikat Nasional dan Trophy</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- End - Juara Mobile -->
+
+      <!-- Start - Juara Desktop -->
+      <div class="hidden lg:block">
+        <div class="flex items-center justify-center gap-20 mt-32">
+          <div class="mt-20 slideUp reveal">
+            <img src="./asset/juara_2.svg" class="w-80" alt="" />
+            <h1 class="font-jersey25 text-center text-3xl mt-2">SECOND</h1>
+            <div class="font-khdam text-center">
+              <div class="flex gap-1 items-center text-center justify-center">
+                <img src="./asset/money.png" class="w-8" alt="" />
+                <p>Rp3.000.000,00</p>
+              </div>
+              <div class="flex gap-2 items-center text-center justify-center">
+                <img src="./asset/certificate.png" class="w-8" alt="" />
+                <p>Sertifikat Nasional dan Trophy</p>
+              </div>
+            </div>
+          </div>
+          <div class="slideUp reveal ">
+            <img src="./asset/juara_1.svg" class="w-80" alt="" />
+            <h1 class="font-jersey25 text-center text-3xl mt-2">FIRST</h1>
+            <div class="font-khdam text-center">
+              <div class="flex gap-1 items-center text-center justify-center">
+                <img src="./asset/money.png" class="w-8" alt="" />
+                <p>Rp4.000.000,00</p>
+              </div>
+              <div class="flex gap-2 items-center text-center justify-center">
+                <img src="./asset/certificate.png" class="w-8" alt="" />
+                <p>Sertifikat Nasional dan Trophy</p>
+              </div>
+            </div>
+          </div>
+          <div class="mt-20 slideUp reveal">
+            <img src="./asset/juara_3.svg" class="w-80" alt="" />
+            <h1 class="font-jersey25 text-center text-3xl mt-2">THIRD</h1>
+            <div class="font-khdam text-center">
+              <div class="flex gap-1 items-center text-center justify-center">
+                <img src="./asset/money.png" class="w-8" alt="" />
+                <p>Rp2.000.000,00</p>
+              </div>
+              <div class="flex gap-2 items-center text-center justify-center">
+                <img src="./asset/certificate.png" class="w-8" alt="" />
+                <p>Sertifikat Nasional dan trophy</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-row justify-center items-center">
+          <div class="mt-20 slideUp reveal">
+            <img src="./asset/juarafav.png" class="w-80" alt="" />
+            <h1 class="font-jersey25 text-center text-3xl mt-2">Juara Favorit</h1>
+            <div class="font-khdam text-center">
+              <div class="flex gap-1 items-center text-center justify-center">
+                <img src="./asset/money.png" class="w-8" alt="" />
+                <p>Rp500.000,00</p>
+              </div>
+              <div class="flex gap-2 items-center text-center justify-center">
+                <img src="./asset/certificate.png" class="w-8" alt="" />
+                <p>Sertifikat Nasional dan trophy</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- End - Juara Desktop -->
+
+    <!-- End - Juara-->
+    </div>
+  </section>
+
+
+  <section class="w-full h-full pt-28 pb-20" style="background-image: linear-gradient(#EBFDFF,#EBFDFF);">
+    <div class="flex justify-center items-center flex-col cta mt-20 reveal">
+      <div class="text-black text-center">
+        <h1 class="lg:text-base font-khdam mt-5 reveal">
+          IFEST #13 : HEROES OF INNOVATION
+        </h1>
+        <div class="flex justify-center items-center mx-10 lg:mx-24 reveal">
+          <img class="w-9 lg:w-20 lg:mb-8" src="./asset/star.svg" alt="">
+          <h1 class="font-jersey text-4xl lg:text-6xl">
+            TERTARIK? AYO SEGERA DAFTAR!
+          </h1>
+          <img class="w-9 lg:w-20 lg:mb-8" src="./asset/star.svg" alt="">
+
+        </div>
+
+        <h1 class="mt-2 text-sm lg:text-base px-10 font-khdam reveal">
+          Apakah kamu siap menghadapi tantangan di dunia teknologi informasi?
+          Ayo, jangan lewatkan kesempatan untuk menunjukkan kreativitas
+          dan keahlianmu di IFEST #13! 🌐
+        </h1>
+      </div>
+      <a class="bg-btnbase-0 rounded-full text-white px-10 py-2 mt-10"
+        href="https://bit.ly/Pendaftaran--MUC2025">Daftar</a>
+
+    </div>
+    </div>
+  </section>
+
+  <section class="w-full h-full pt-20 pb-20" style="background-image: linear-gradient(#EBFDFF,#85DAFF);">
+    <div class="flex flex-col justify-center items-center reveal">
+      <div class="text-black text-center">
+        <h1 class="text-xs lg:text-base font-khdam mt-5">
+          IFEST #13 : HEROES OF INNOVATION
+        </h1>
+        <div class="flex justify-center items-center">
+          <img class="w-10 lg:w-20" src="./asset/star.svg" alt="">
+          <h1 class="font-jersey text-4xl lg:text-6xl mx-2 mt-3">
+            CONTACT PERSON
+          </h1>
+          <img class="w-10 lg:w-20" src="./asset/star.svg" alt="">
+
+        </div>
+
+        <h1 class="mt-2 text-sm px-10 lg:px-96 lg:text-base font-khdam">
+          Jika Anda memiliki pertanyaan lebih lanjut atau membutuhkan bantuan terkait
+          Mobile UI/UX Competition IFEST #13, jangan ragu untuk menghubungi kami!!
+        </h1>
+      </div>
+
+
+      <div class="relative z-10 flex justify-center mt-10 lg:mt-28 pb-10">
+        <div class="w-64 h-auto px-5 py-8 mx-5 rounded-2xl flex flex-col items-center justify-center fadeIn reveal"
+          style="
+            background: radial-gradient(circle, #ffe864, #d4cf4a, #1b813d);
+            --fade-duration: 2;
+          ">
+          <div class="mb-5">
+            <div class="flex gap-2 items-end justify-center text-center mb-1">
+              <h1 class="text-2xl text-[#00296B] text-center font-jersey25">
+                MUC
+              </h1>
+              <img src="./asset/wdc.png" class="w-10" alt="" />
+            </div>
+
+            <h1 class="text-[#00296B] font-inter text-center text-sm">
+              Mobile UI/UX Competition
+            </h1>
+          </div>
+          <div class="mt-0">
+            <a href="https://wa.me/+6285752867028
+            " target="_blank">
+              <h1 class="text-[#00296B] font-interBold text-center text-sm">
+                Dinna
+              </h1>
+              <div class="rounded-2xl bg-[#5ECC85] py-2 px-3 mt-2 flex gap-2">
+                <img src="./asset/wa.png" class="w-5" alt="" />
+                <h1 class="text-[#00296B] font-inter font-bold text-center text-sm">
+                  0857-5286-7028
+                </h1>
+              </div>
+            </a>
+          </div>
+          <div class="mt-5">
+            <a href="https://wa.me/+6282228198418
+            " target="_blank">
+              <h1 class="text-[#00296B] font-interBold text-center text-sm">
+                Cindy
+              </h1>
+              <div class="rounded-2xl bg-[#5ECC85] py-2 px-3 mt-2 flex gap-2">
+                <img src="./asset/wa.png" class="w-5" alt="" />
+                <h1 class="text-[#00296B] font-inter font-bold text-center text-sm">
+                  0822-2819-8418
+                </h1>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+
+
+  <!-- Start - Footer-->
+  <section>
+    <!-- <div class="relative z-0">
+      <div class="absolute bottom-0 w-full">
+        <img src="img/element/pohon_kelapa.svg" class="w-40 lg:w-72 opacity-75" alt="" />
+      </div>
+      <div class="absolute bottom-0 right-0 scale-x-[-1] w-full">
+        <img src="img/element/pohon_kelapa.svg" class="w-60 lg:w-96 opacity-75" alt="" />
+      </div>
+    </div> -->
+    <!-- Start - Mobile -->
+
+    <div class="lg:hidden">
+      <div class="bg-[#00296B] h-auto w-auto text-white">
+        <div class="relative z-0">
+          <div class="absolute w-36">
+            <img src="./asset/garis_footer.svg" alt="" class="opacity-85" />
+          </div>
+
+          <div class="absolute w-36 right-0 scale-x-[-1]">
+            <img src="./asset/garis_footer.svg" alt="" class="opacity-85" />
+          </div>
+        </div>
+
+        <div class="relative z-0">
+          <div class="px-10 pt-20 pb-10">
+            <div>
+              <a href="/">
+                <img src="./asset/logo_footer.svg" alt="" class="w-40 rounded-xl" />
+                <h1 class="font-interBold mt-3 text-xl">IFest #13</h1>
+              </a>
+            </div>
+            <h1 class="font-inter mt-3 max-w-sm text-sm">
+              The premier annual IT event hosted by HIMAFORKA UAJY. Brings
+              together technology enthusiasts for a week of innovation,
+              competition, and collaboration.
+            </h1>
+            <hr class="my-5" />
+            <div class="flex flex-col space-y-5">
+              <div class="flex flex-col">
+                <h1 class="font-interBold text-xl">EVENTS</h1>
+                <div class="mt-5 hover:underline">
+                  <a href="/semnas" class="font-inter">Seminar nasional</a>
+                </div>
+              </div>
+              <hr class="my-5" />
+              <div class="flex flex-col space-y-5">
+                <h1 class="font-interBold text-xl">COMPETITION</h1>
+                <div class="hover:underline">
+                  <a href="/muc" class="font-inter">Mobile UI/UX Competition (MUC)</a>
+                </div>
+                <div class="hover:underline">
+                  <a href="/wdc" class="font-inter">Web Design Competition (WDC)</a>
+                </div>
+                <div class="hover:underline">
+                  <a href="/ctf" class="font-inter">Capture The Flag (CTF)</a>
+                </div>
+              </div>
+              <hr class="my-5" />
+              <div class="flex flex-col space-y-3">
+                <h1 class="font-inter text-xl">SOCIAL MEDIA</h1>
+                <div class="flex gap-2">
+                  <a href=""><img src="./asset/mingcute_youtube-fill.svg" alt="" class="w-10" /></a>
+
+                  <a href="https://www.instagram.com/ifest_uajy/"><img src="./asset/mingcute_instagram-fill.svg" alt=""
+                      class="w-10" /></a>
+                  <a href=""><img src="./asset/mingcute_line-app-fill.svg" alt="" class="w-10" /></a>
+                </div>
+              </div>
+              <hr class="my-5" />
+              <div class="flex flex-col space-y-3">
+                <h1 class="font-inter text-xl">OUR CONTACTS</h1>
+                <div class="mt-3 hover:underline">
+                  <a href="/" class="font-inter">ifestuajy@gmail.com</a>
+                </div>
+                <h1 class="mt-2">+6212345678</h1>
+              </div>
+              <hr class="my-5" />
+              <div class="text-center pt-10">
+                <h1 class="text-white font-extrabold text-center">
+                  © 2025 IFEST #13 UAJY. All rights reserved. <br />
+                  Organized by WD IFEST #13
+                </h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- End - Mobile -->
+
+    <!-- Start - Desktop -->
+    <div class="hidden lg:block">
+      <div class="bg-[#00296B] h-auto w-auto">
+        <div class="relative z-0">
+          <div class="absolute w-56">
+            <img src="./asset/garis_footer.svg" alt="" class="opacity-85" />
+          </div>
+
+          <div class="absolute w-56 right-0 scale-x-[-1]">
+            <img src="./asset/garis_footer.svg" alt="" class="opacity-85" />
+          </div>
+        </div>
+
+        <div class="relative z-10">
+          <div class="py-10 px-20 flex w-auto">
+            <div class="mx-auto text-white">
+              <div>
+                <a href="/">
+                  <img class="w-40 rounded-xl" src="./asset/logo_footer.svg" alt="" />
+                  <h1 class="font-interBold mt-3 text-xl">IFest #13</h1>
+                </a>
+              </div>
+
+              <h1 class="font-inter mt-5 w-96">
+                The premier annual IT event hosted by HIMAFORKA UAJY. Brings
+                together technology enthusiasts for a week of innovation,
+                competition, and collaboration.
+              </h1>
+              <h1 class="font-interBold mt-8 text-xl">Presented By</h1>
+              <img src="./asset/logo_hima.svg" class="w-28 mt-5" alt="" />
+            </div>
+            <div class="mx-auto text-white">
+              <h1 class="font-interBold text-xl">EVENTS</h1>
+              <div class="mt-5 hover:underline">
+                <a href="/semnas" class="font-inter">Seminar nasional</a>
+              </div>
+            </div>
+            <div class="mx-auto text-white">
+              <h1 class="font-interBold text-xl">COMPETITION</h1>
+              <div class="mt-5 hover:underline">
+                <a href="/muc" class="font-inter">Mobile UI/UX Competition <br />
+                  (MUC)</a>
+              </div>
+              <div class="mt-3 hover:underline">
+                <a href="/wdc" class="font-inter">Web Design Competition <br />
+                  (WDC)</a>
+              </div>
+              <div class="mt-3 hover:underline">
+                <a href="/ctf" class="font-inter">Capture The Flag <br />
+                  (CTF)</a>
+              </div>
+            </div>
+            <div class="mx-auto text-white">
+              <div class="flex flex-col">
+                <h1 class="font-inter text-xl">SOCIAL MEDIA</h1>
+                <div class="flex gap-2 mt-3">
+                  <a href="https://www.youtube.com/@ifestuajy" target="_blank"><img src="./asset/mingcute_youtube-fill.svg" alt="" class="w-10" /></a>
+                  <a href="https://www.instagram.com/ifest_uajy/" target="_blank"><img
+                      src="./asset/mingcute_instagram-fill.svg" alt="" class="w-10" /></a>
+                  <a href="https://line.me/ti/p/~@ykb1847q" target="_blank"><img src="./asset/mingcute_line-app-fill.svg" alt="" class="w-10" /></a>
+                </div>
+                <div class="mt-10">
+                  <h1 class="font-interBold text-xl">OUR CONTACTS</h1>
+                  <div class="mt-3 hover:underline">
+                    <a
+                      href="https://mail.google.com/mail/u/0/?view=cm&tf=1&fs=1&to=ifest.uajy1@gmail.com"
+                      class="font-inter"
+                      target="_blank"
+                      >ifest.uajy1@gmail.com</a
+                    >
+                  </div>
+                  <a href="https://wa.me/+6287794005230" target="_blank"
+                    ><h1 class="hover:underline mt-3">
+                      +6287794005230 <br />
+                      - Ketua Pelaksana
+                    </h1></a
+                  >
+                  <a href="https://wa.me/+6281393776678" target="_blank"
+                    ><h1 class="hover:underline mt-3">
+                      +6281393776678 <br />
+                      - Sponsorship
+                    </h1></a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-center">
+          <hr class="mb-5 w-96 " />
+        </div>
+        <h1 class="pb-5 text-white font-extrabold text-center">
+          © 2025 IFEST #13 UAJY. All rights reserved. | Organized by WD IFEST
+          #13
+        </h1>
+      </div>
+    </div>
+    <!-- End - Desktop -->
+  </section>
+  <!-- End - Footer-->
+
+
+
+
+
+  <script src="./src/index.js"></script>
+</body>
+
+</html>
