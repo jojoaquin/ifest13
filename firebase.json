@@ -12,6 +12,10 @@
         "destination": "/wdc/index.html"
       },
       {
+        "source": "/muc",
+        "destination": "/muc/index.html"
+      },
+      {
         "source": "/ctf-soon",
         "destination": "/ctf-soon/index.html"
       },
