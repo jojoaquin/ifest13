@@ -17,7 +17,7 @@
       },
       {
         "source": "/galeri",
-        "destination": "/galeri/src/index.html"
+        "destination": "/galeri/index.html"
       },
       {
         "source": "/ctf-soon",
