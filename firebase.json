@@ -16,6 +16,10 @@
         "destination": "/muc/index.html"
       },
       {
+        "source": "/galeri",
+        "destination": "/galeri/src/index.html"
+      },
+      {
         "source": "/ctf-soon",
         "destination": "/ctf-soon/index.html"
       },
