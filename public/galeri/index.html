@@ -1,0 +1,1643 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Galeri - IFEST #13</title>
+    <link rel="icon" href="../../wdc/img/element/logo.svg" type="image/png" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="./output.css" rel="stylesheet" />
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      /* Custom Webkit Scrollbar */
+      ::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: #09d0f8;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: #ff7900;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background: #ffa500;
+      }
+
+      .swiper-slide {
+        transform: scale(
+          0.85
+        ) !important; /* Gambar di kiri dan kanan lebih kecil */
+        transition: transform 0.3s ease;
+        border: 1px solid gray;
+        border-radius: 1rem;
+      }
+      .swiper-slide-next {
+        transform: scale(0.9) !important; /* Gambar utama diperbesar */
+      }
+      .swiper-slide-prev {
+        transform: scale(0.9) !important; /* Gambar utama diperbesar */
+      }
+      .swiper-slide-active {
+        transform: scale(1) !important; /* Gambar utama diperbesar */
+      }
+    </style>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const swiper = new Swiper(".swiper", {
+          slidesPerView: "auto", // Tampilkan sebagian slide kiri dan kanan
+          spaceBetween: 0, // Jarak antar slide
+          initialSlide: 1,
+          centeredSlides: true, // Slide tengah menjadi fokus
+          loop: true,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          // autoplay: {
+          //   delay: 3000, // Interval waktu antara peralihan slide (dalam milidetik)
+          //   disableOnInteraction: false, // Mengizinkan autoplay tetap berjalan meski ada interaksi
+          // },
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+          scrollbar: {
+            el: ".swiper-scrollbar",
+            draggable: true,
+          },
+        });
+      });
+    </script>
+  </head>
+  <body class="overflow-x-hidden">
+    <!-- Start - Slide 1 & Navbar -->
+    <section
+      class="w-full h-full bg-cover bg-center"
+      style="background: linear-gradient(180deg, #ffc96a -0%, #fff7cb 100%)"
+    >
+      <div>
+        <!-- Start - Navbar -->
+
+        <!-- Start - Mobile -->
+        <div class="w-full h-20 lg:hidden relative">
+          <div class="h-full flex items-center font-quantico">
+            <div class="mx-5 flex w-full items-center">
+              <a href="/">
+                <div class="flex items-center space-x-5">
+                  <img src="img/element/logo.svg" alt="" class="h-6" />
+                  <span class="">IFEST #13</span>
+                </div>
+              </a>
+              <div class="flex items-center lg:hidden ml-auto z-20">
+                <button
+                  id="hamburger-btn"
+                  class="bg-white p-3 rounded-full focus:outline-none shadow-xl border border-gray-300"
+                >
+                  <svg
+                    id="hamburger-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-6 w-6 text-black"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M3 12h18M3 6h18M3 18h18"></path>
+                  </svg>
+                  <svg
+                    id="close-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-6 w-6 text-black hidden"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M6 18L18 6M6 6l12 12"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          id="mobile-menu"
+          class="z-10 font-quantico hidden fixed top-0 right-0 h-full w-64 bg-white shadow-lg transform -translate-x-full transition-transform duration-300"
+        >
+          <div class="mt-16 p-5 space-y-4">
+            <div
+              class="text-black hover:bg-gray-200 p-2 rounded flex items-center"
+              id="kompetisi-btn-mobile"
+              role="button"
+            >
+              KOMPETISI
+              <svg
+                id="dropdown-arrow-mobile"
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-4 w-4 ml-2 transform transition-transform duration-200"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <text x="5" y="15" id="arrow-text-mobile">v</text>
+              </svg>
+            </div>
+            <ul id="kompetisi-dropdown-mobile" class="hidden space-y-2 ml-5">
+              <li>
+                <a
+                  href="/muc"
+                  class="block text-black hover:bg-gray-200 p-2 rounded"
+                  >Mobile UI/UX Competition (MUC)</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/wdc"
+                  class="block text-black hover:bg-gray-200 p-2 rounded"
+                  >Web Development Competition (WDC)</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/ctf"
+                  class="block text-black hover:bg-gray-200 p-2 rounded"
+                  >Capture the Flag (CTF)</a
+                >
+              </li>
+            </ul>
+            <a
+              href="/semnas"
+              class="block text-black hover:bg-gray-200 p-2 rounded"
+              >SEMINAR NASIONAL</a
+            >
+            <a
+              href="/store"
+              class="block text-black hover:bg-gray-200 p-2 rounded"
+              >STORE</a
+            >
+            <a
+              href="/sponsor"
+              class="block text-black hover:bg-gray-200 p-2 rounded"
+              >SPONSOR</a
+            >
+            <a
+              href="/galeri"
+              class="block text-black hover:bg-gray-200 p-2 rounded"
+              >GALERI</a
+            >
+          </div>
+        </div>
+        <!-- End - Mobile -->
+
+        <!-- Start - Desktop -->
+        <div class="w-full h-20 hidden lg:block">
+          <div
+            class="mx-10 bg-white h-full rounded-b-[35px] flex items-center font-quantico"
+          >
+            <div class="mx-10 flex w-full">
+              <a href="index.html">
+                <div class="flex items-center space-x-5">
+                  <img src="img/element/logo.svg" alt="" class="h-6" />
+                  <span class="">IFEST #13</span>
+                </div>
+              </a>
+              <div class="ml-auto flex items-center gap-16">
+                <div class="relative">
+                  <button
+                    id="kompetisi-btn-desktop"
+                    class="focus:outline-none flex items-center"
+                  >
+                    KOMPETISI
+                    <svg
+                      id="dropdown-arrow-desktop"
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-4 w-4 ml-2 transform transition-transform duration-200"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <text x="5" y="15" id="arrow-text-desktop">v</text>
+                    </svg>
+                  </button>
+                  <div
+                    id="kompetisi-dropdown-desktop"
+                    class="absolute z-20 hidden bg-white shadow-lg rounded-md p-4 mt-2 left-0 w-64 border border-gray-300"
+                  >
+                    <a
+                      href="/muc"
+                      class="block text-black hover:bg-gray-200 p-2 rounded"
+                      >Mobile UI/UX Competition (MUC)</a
+                    >
+                    <a
+                      href="/wdc"
+                      class="block text-black hover:bg-gray-200 p-2 rounded"
+                      >Web Development Competition (WDC)</a
+                    >
+                    <a
+                      href="/ctf"
+                      class="block text-black hover:bg-gray-200 p-2 rounded"
+                      >Capture the Flag (CTF)</a
+                    >
+                  </div>
+                </div>
+                <a href="/semnas">SEMINAR NASIONAL</a>
+                <a href="/store">STORE</a>
+                <a href="/sponsor">SPONSOR</a>
+                <a href="/galeri">GALERI</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End - Desktop -->
+
+        <!-- End - Navbar -->
+      </div>
+      <div class="hidden lg:block">
+        <div class="absolute mt-[4dvw] left-[5dvw] fadeIn">
+          <img
+            src="img/element/haze1.svg"
+            alt="haze1"
+            class="w-[230px] lg:w-[20dvw]"
+          />
+        </div>
+        <div class="absolute mt-[4dvw] right-[5dvw] fadeIn">
+          <img
+            src="img/element/haze2.svg"
+            alt="haze1"
+            class="w-[250px] lg:w-[20dvw]"
+          />
+        </div>
+      </div>
+      <br />
+      <div class="md:hidden"><br /><br /></div>
+      <div class="flex w-[100px] relative" style="margin: auto">
+        <img
+          src="img/element/flag.svg"
+          alt="flag"
+          class="static w-[70px] lg:w-[100px] fadeIn"
+          style="margin: auto"
+        />
+        <img
+          src="img/element/crab.svg"
+          alt="crab"
+          class="absolute w-[80px] lg:w-[120px] fadeIn bottom-0 move_side"
+        />
+      </div>
+
+      <div>
+        <div>
+          <div
+            class="flex justify-center items-center mx-5 lg:mx-10 mt-[20px] lg:mt-[20px] slideUp translate-y-full transform"
+          >
+            <img src="./img/element/cahaya.svg" class="w-10 lg:w-20" alt="" />
+            <div>
+              <h1
+                class="text-center text-black mt-5 text-sm lg:text-lg font-khdam"
+              >
+                IFEST #13 : HEROES OF INNOVATION
+              </h1>
+              <h1
+                class="text-black text-center font-jersey text-5xl lg:text-7xl mx-2"
+              >
+                GALERI IFEST #13
+              </h1>
+            </div>
+            <img src="./img/element/cahaya.svg" class="w-10 lg:w-20" alt="" />
+          </div>
+        </div>
+      </div>
+      <h1
+        class="text-center text-black mx-5 text-sm lg:text-base lg:mx-36 font-inter fadeIn max-w-sm mx-auto p-5"
+        style="--fade-duration: 1 max-width: 600px; margin: auto;"
+      >
+        Yuk, lihat keseruan kompetisi di IFEST #13! Mulai dari aksi seru peserta
+        MUC, CTF, dan WDC, penilaian juri yang bikin deg-degan, sampai momen
+        kemenangan para peserta yang keren-keren nih!
+      </h1>
+      <br />
+      <div
+        class="w-full grid justify-center gap-5 font-roboto fadeIn overflow-hidden"
+      >
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-5">
+          <a href="#galeri-MUC">
+            <div
+              class="px-6 bg-[#F4347F] rounded-3xl h-10 flex gap-1 place-items-center justify-center"
+            >
+              <h1 class="text-white text-xs lg:text-lg text-center">MUC</h1>
+            </div>
+          </a>
+          <a href="#galeri-WDC">
+            <div
+              class="px-6 bg-[#F4347F] rounded-3xl h-10 flex gap-1 place-items-center justify-center"
+            >
+              <h1 class="text-white text-xs lg:text-lg text-center">WDC</h1>
+            </div>
+          </a>
+          <a href="#galeri-CTF">
+            <div
+              class="px-6 bg-[#F4347F] rounded-3xl h-10 flex gap-1 place-items-center justify-center"
+            >
+              <h1 class="text-white text-xs lg:text-lg text-center">CTF</h1>
+            </div>
+          </a>
+          <a href="#galeri-SEMNAS">
+            <div
+              class="px-6 bg-[#F4347F] rounded-3xl h-10 flex gap-1 place-items-center justify-center"
+            >
+              <h1 class="text-white text-xs lg:text-lg text-center">SEMNAS</h1>
+            </div>
+          </a>
+        </div>
+      </div>
+      <br /><br /><br /><br /><br /><br /><br /><br />
+    </section>
+    <!-- Start - slide 2 MUC -->
+    <section
+      class="w-full h-full bg-cover bg-center items-center justify-center"
+      style="background: linear-gradient(180deg, #fff7cb 0%, #88fff3 100%)"
+      id="galeri-MUC"
+    >
+      <img
+        src="./img/element/kelp.svg"
+        class="absolute w-20 md:w-[10dvw] -translate-y-[30px] left-0 fadeIn"
+        alt="kelp"
+      />
+      <div
+        class="flex justify-center items-center mx-5 lg:mx-10 slideUp translate-y-full transform"
+      >
+        <img src="./img/element/cahaya.svg" class="w-10 lg:w-20" alt="cahaya" />
+        <div>
+          <h1 class="text-center text-black mt-5 text-sm lg:text-lg font-khdam">
+            IFEST #13 : HEROES OF INNOVATION
+          </h1>
+          <h1
+            class="text-black text-center font-jersey text-5xl lg:text-7xl mx-2"
+          >
+            MOBILE UI/UX COMPETITION
+          </h1>
+          <h1 class="text-center text-black mt-2 text-sm lg:text-lg font-inter">
+            "Building a Digital Approach to Mental Wellness"
+          </h1>
+        </div>
+        <img src="./img/element/cahaya.svg" class="w-10 lg:w-20" alt="cahaya" />
+      </div>
+      <br />
+      <h1
+        class="text-center text-black mx-5 text-sm lg:text-base lg:mx-36 font-inter fadeIn"
+        style="--fade-duration: 1"
+      >
+        Lihat bagaimana para siswa SMA/sederajat merancang aplikasi keren yang
+        relate banget dengan kesehatan mental! Dari desain yang interaktif
+        hingga solusi digital yang berdampak, mereka semua adalah pahlawan
+        inovasi masa depan. Jangan lewatkan juga wajah-wajah ceria para pemenang
+        dan para juri yang keren banget!
+      </h1>
+      <br /><br />
+      <div class="max-w-full overflow-hidden">
+        <img
+          src="./img/element/stingray1.svg"
+          class="absolute w-20 md:w-[13dvw] -translate-y-[30px] right-0 scale-x-[-1] fadeIn"
+          alt="stingray1"
+        />
+      </div>
+      <div
+        class="flex justify-center items-center mx-5 lg:mx-10 mt-5 slideUp translate-y-full transform"
+      >
+        <img src="./img/element/cahaya.svg" class="w-10 lg:w-20" alt="" />
+        <h1
+          class="text-black text-center font-jersey mt-2 text-4xl lg:text-5xl mx-2"
+        >
+          DOKUMENTASI MUC IFEST #13
+        </h1>
+        <img src="./img/element/cahaya.svg" class="w-10 lg:w-20" alt="" />
+      </div>
+      <!-- Start - Carousel -->
+      <div class="py-5 flex items-center justify-center w-full fadeIn">
+        <div class="swiper lg:overflow-visible w-[90%] md:w-96 lg:w-[500px]">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img
+                src="img/element/placeholder.svg"
+                alt=""
+                class="w-full rounded-2xl"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="img/element/placeholder.svg"
+                alt=""
+                class="w-full rounded-2xl"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="img/element/placeholder.svg"
+                alt=""
+                class="w-full rounded-2xl"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="img/element/placeholder.svg"
+                alt=""
+                class="w-full rounded-2xl"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="img/element/placeholder.svg"
+                alt=""
+                class="w-full rounded-2xl"
+              />
+            </div>
+          </div>
+          <div class="swiper-pagination bullet-"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-scrollbar"></div>
+        </div>
+      </div>
+      <!-- End - Carousel -->
+      <br />
+      <div
+        class="flex justify-center items-center mx-5 lg:mx-10 slideUp transform translate-y-full"
+      >
+        <img src="./img/element/cahaya.svg" class="w-10 lg:w-20" alt="" />
+        <div>
+          <h1 class="text-center text-black mt-5 text-xs font-khdam">
+            IFEST #13 : HEROES OF INNOVATION
+          </h1>
+          <h1
+            class="text-black text-center font-jersey text-4xl lg:text-5xl mx-2 mt-3"
+          >
+            JURI MUC IFEST #13
+          </h1>
+          <br /><br />
+        </div>
+        <img src="./img/element/cahaya.svg" class="w-10 lg:w-20" alt="" />
+      </div>
+      <!-- Card pc -->
+      <div class="flex justify-center items-center mx-5 lg:mx-10">
+        <div
+          class="grid grid-cols-1 lg:grid-cols-3 gap-6 flex items-center justify-center"
+        >
+          <!-- Card 1 -->
+          <div
+            class="lg:overflow-visible w-[200px] md:w-96 lg:w-[300px] slideUp translate-y-full transform fadeIn"
+          >
+            <img
+              src="img/element/placeholder.svg"
+              alt="Photo 1"
+              class="rounded-2xl"
+            />
+            <div class="p-4 text-center">
+              <p class="text-3xl font-bold text-gray-800">John Doe</p>
+              <p class="text-lg font-medium text-pink-600 mt-2">
+                Uvukilen University
+              </p>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div
+            class="lg:overflow-visible w-[200px] md:w-96 lg:w-[300px] slideUp translate-y-full transform fadeIn"
+          >
+            <img
+              src="img/element/placeholder.svg"
+              alt="Photo 2"
+              class="rounded-2xl"
+            />
+            <div class="p-4 text-center">
+              <p class="text-3xl font-bold text-gray-800">John Doe</p>
+              <p class="text-lg font-medium text-pink-600 mt-2">
+                Uvukilen University
+              </p>
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div
+            class="lg:overflow-visible w-[200px] md:w-96 lg:w-[300px] slideUp translate-y-full transform fadeIn"
+          >
+            <img
+              src="img/element/placeholder.svg"
+              alt="Photo 3"
+              class="rounded-2xl"
+            />
+            <div class="p-4 text-center">
+              <p class="text-3xl font-bold text-gray-800">John Doe</p>
+              <p class="text-lg font-medium text-pink-600 mt-2">
+                Uvukilen University
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br />
+      <div class="-translate-y-[40px]">
+        <div class="absolute left-0 mt-[40px]">
+          <img
+            src="img/element/Clip path group.svg"
+            alt="Clip"
+            class="w-[6dvw] min-w-[50px] fadeIn"
+          />
+        </div>
+        <div class="absolute right-0 mt-[40px] scale-x-[-1]">
+          <img
+            src="img/element/Clip path group.svg"
+            alt="Clip"
+            class="w-[6dvw] min-w-[50px] fadeIn"
+          />
+        </div>
+      </div>
+      <div
+        class="flex justify-center items-center mx-5 lg:mx-10 slideUp transform translate-y-full"
+      >
+        <img src="./img/element/cahaya.svg" class="w-10 lg:w-20" alt="" />
+        <div>
+          <h1 class="text-center text-black mt-5 text-xs font-khdam">
+            IFEST #13 : HEROES OF INNOVATION
+          </h1>
+          <h1
+            class="text-black text-center font-jersey text-4xl lg:text-5xl mx-2 mt-3"
+          >
+            PEMENANG MUC IFEST #13
+          </h1>
+          <br /><br />
+        </div>
+        <img src="./img/element/cahaya.svg" class="w-10 lg:w-20" alt="" />
+      </div>
+      <!-- Card pc -->
+      <div class="flex justify-center items-center mx-5 lg:mx-10">
+        <div
+          class="flex grid grid-cols-1 lg:grid-cols-3 gap-6 flex items-center justify-center"
+        >
+          <!-- Card 1 -->
+          <div
+            class="lg:overflow-visible w-[200px] md:w-96 lg:w-[300px] slideUp translate-y-full transform fadeIn"
+          >
+            <img
+              src="img/element/placeholder.svg"
+              alt="Photo 1"
+              class="rounded-2xl"
+            />
+            <div class="p-4 text-center">
+              <p class="text-3xl font-bold text-gray-800">John Doe</p>
+              <p class="text-lg font-medium text-pink-600 mt-2">
+                Uvukilen University
+              </p>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div
+            class="lg:overflow-visible w-[200px] md:w-96 lg:w-[300px] slideUp translate-y-full transform fadeIn"
+          >
+            <img
+              src="img/element/placeholder.svg"
+              alt="Photo 2"
+              class="rounded-2xl"
+            />
+            <div class="p-4 text-center">
+              <p class="text-3xl font-bold text-gray-800">John Doe</p>
+              <p class="text-lg font-medium text-pink-600 mt-2">
+                Uvukilen University
+              </p>
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div
+            class="lg:overflow-visible w-[200px] md:w-96 lg:w-[300px] slideUp translate-y-full transform fadeIn"
+          >
+            <img
+              src="img/element/placeholder.svg"
+              alt="Photo 3"
+              class="rounded-2xl"
+            />
+            <div class="p-4 text-center">
+              <p class="text-3xl font-bold text-gray-800">John Doe</p>
+              <p class="text-lg font-medium text-pink-600 mt-2">
+                Uvukilen University
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Start - slide 3 WDC-->
+    <section
+      class="w-full h-full bg-cover bg-center items-center justify-center"
+      style="background: linear-gradient(180deg, #88fff3 0%, #a2d4ff 100%)"
+      id="galeri-WDC"
+    >
+      <div class="max-w-full overflow-hidden">
+        <img
+          src="./img/element/kelp.svg"
+          class="absolute w-20 md:w-[10dvw] -translate-y-[30px] right-0 scale-x-[-1] fadeIn"
+          alt="kelp"
+        />
+      </div>
+      <div
+        class="flex justify-center items-center mx-5 lg:mx-10 slideUp translate-y-full transform"
+      >
+        <img src="./img/element/cahaya.svg" class="w-10 lg:w-20" alt="" />
+        <div>
+          <h1 class="text-center text-black mt-5 text-sm lg:text-lg font-khdam">
+            IFEST #13 : HEROES OF INNOVATION
+          </h1>
+          <h1
+            class="text-black text-center font-jersey text-5xl lg:text-7xl mx-2"
+          >
+            Web Development Competition
+          </h1>
+          <h1 class="text-center text-black mt-2 text-sm lg:text-lg font-inter">
+            "Stitch Loop: Where Every Thread Tells a New Story"
+          </h1>
+        </div>
+        <img src="./img/element/cahaya.svg" class="w-10 lg:w-20" alt="" />
+      </div>
+      <br />
+      <h1
+        class="text-center text-black mx-5 text-sm lg:text-base lg:mx-36 font-inter fadeIn"
+        style="--fade-duration: 1"
+      >
+        Mahasiswa dari seluruh penjuru negeri bersatu untuk menciptakan website
+        yang mendukung keberlanjutan fashion. Intip bagaimana mereka menjahit
+        code demi code untuk masa depan yang lebih hijau. Siapa tahu, kamu bisa
+        terinspirasi dari karya-karya luar biasa ini!
+      </h1>
+      <br /><br />
+      <img
+        src="./img/element/stingray2.svg"
+        class="absolute w-20 md:w-[13dvw] -translate-y-[30px] left-0 fadeIn"
+        alt="stingray2"
+      />
+      <div
+        class="flex justify-center items-center mx-5 lg:mx-10 mt-5 slideUp translate-y-full transform"
+      >
+        <img src="./img/element/cahaya.svg" class="w-10 lg:w-20" alt="" />
+        <h1
+          class="text-black text-center font-jersey mt-2 text-4xl lg:text-5xl mx-2"
+        >
+          DOKUMENTASI WDC IFEST #13
+        </h1>
+        <img src="./img/element/cahaya.svg" class="w-10 lg:w-20" alt="" />
+      </div>
+      <!-- Start - Carousel -->
+      <div class="py-5 flex items-center justify-center w-full fadeIn">
+        <div class="swiper lg:overflow-visible w-[90%] md:w-96 lg:w-[500px]">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img
+                src="img/element/placeholder.svg"
+                alt=""
+                class="w-full rounded-2xl"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="img/element/placeholder.svg"
+                alt=""
+                class="w-full rounded-2xl"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="img/element/placeholder.svg"
+                alt=""
+                class="w-full rounded-2xl"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="img/element/placeholder.svg"
+                alt=""
+                class="w-full rounded-2xl"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="img/element/placeholder.svg"
+                alt=""
+                class="w-full rounded-2xl"
+              />
+            </div>
+          </div>
+          <div class="swiper-pagination bullet-"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-scrollbar"></div>
+        </div>
+      </div>
+      <!-- End - Carousel -->
+      <br />
+      <div
+        class="flex justify-center items-center mx-5 lg:mx-10 slideUp transform translate-y-full"
+      >
+        <img src="./img/element/cahaya.svg" class="w-10 lg:w-20" alt="" />
+        <div>
+          <h1 class="text-center text-black mt-5 text-xs font-khdam">
+            IFEST #13 : HEROES OF INNOVATION
+          </h1>
+          <h1
+            class="text-black text-center font-jersey text-4xl lg:text-5xl mx-2 mt-3"
+          >
+            JURI WDC IFEST #13
+          </h1>
+          <br /><br />
+        </div>
+        <img src="./img/element/cahaya.svg" class="w-10 lg:w-20" alt="" />
+      </div>
+      <!-- Card pc -->
+      <div class="flex justify-center items-center mx-5 lg:mx-10">
+        <div
+          class="grid grid-cols-1 lg:grid-cols-3 gap-6 flex items-center justify-center"
+        >
+          <!-- Card 1 -->
+          <div
+            class="lg:overflow-visible w-[200px] md:w-96 lg:w-[300px] slideUp translate-y-full transform fadeIn"
+          >
+            <img
+              src="img/element/placeholder.svg"
+              alt="Photo 1"
+              class="rounded-2xl"
+            />
+            <div class="p-4 text-center">
+              <p class="text-3xl font-bold text-gray-800">John Doe</p>
+              <p class="text-lg font-medium text-pink-600 mt-2">
+                Uvukilen University
+              </p>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div
+            class="lg:overflow-visible w-[200px] md:w-96 lg:w-[300px] slideUp translate-y-full transform fadeIn"
+          >
+            <img
+              src="img/element/placeholder.svg"
+              alt="Photo 2"
+              class="rounded-2xl"
+            />
+            <div class="p-4 text-center">
+              <p class="text-3xl font-bold text-gray-800">John Doe</p>
+              <p class="text-lg font-medium text-pink-600 mt-2">
+                Uvukilen University
+              </p>
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div
+            class="lg:overflow-visible w-[200px] md:w-96 lg:w-[300px] slideUp translate-y-full transform fadeIn"
+          >
+            <img
+              src="img/element/placeholder.svg"
+              alt="Photo 3"
+              class="rounded-2xl"
+            />
+            <div class="p-4 text-center">
+              <p class="text-3xl font-bold text-gray-800">John Doe</p>
+              <p class="text-lg font-medium text-pink-600 mt-2">
+                Uvukilen University
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br />
+      <div class="-translate-y-[40px]">
+        <div class="absolute left-0 mt-[40px]">
+          <img
+            src="img/element/Clip path group.svg"
+            alt="Clip"
+            class="w-[6dvw] min-w-[50px] fadeIn"
+          />
+        </div>
+        <div class="absolute right-0 mt-[40px] scale-x-[-1]">
+          <img
+            src="img/element/Clip path group.svg"
+            alt="Clip"
+            class="w-[6dvw] min-w-[50px] fadeIn"
+          />
+        </div>
+      </div>
+      <div
+        class="flex justify-center items-center mx-5 lg:mx-10 slideUp transform translate-y-full"
+      >
+        <img src="./img/element/cahaya.svg" class="w-10 lg:w-20" alt="" />
+        <div>
+          <h1 class="text-center text-black mt-5 text-xs font-khdam">
+            IFEST #13 : HEROES OF INNOVATION
+          </h1>
+          <h1
+            class="text-black text-center font-jersey text-4xl lg:text-5xl mx-2 mt-3"
+          >
+            PEMENANG WDC IFEST #13
+          </h1>
+          <br /><br />
+        </div>
+        <img src="./img/element/cahaya.svg" class="w-10 lg:w-20" alt="" />
+      </div>
+      <!-- Card pc -->
+      <div class="flex justify-center items-center mx-5 lg:mx-10">
+        <div
+          class="flex grid grid-cols-1 lg:grid-cols-3 gap-6 flex items-center justify-center"
+        >
+          <!-- Card 1 -->
+          <div
+            class="lg:overflow-visible w-[200px] md:w-96 lg:w-[300px] slideUp translate-y-full transform fadeIn"
+          >
+            <img
+              src="img/element/placeholder.svg"
+              alt="Photo 1"
+              class="rounded-2xl"
+            />
+            <div class="p-4 text-center">
+              <p class="text-3xl font-bold text-gray-800">John Doe</p>
+              <p class="text-lg font-medium text-pink-600 mt-2">
+                Uvukilen University
+              </p>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div
+            class="lg:overflow-visible w-[200px] md:w-96 lg:w-[300px] slideUp translate-y-full transform fadeIn"
+          >
+            <img
+              src="img/element/placeholder.svg"
+              alt="Photo 2"
+              class="rounded-2xl"
+            />
+            <div class="p-4 text-center">
+              <p class="text-3xl font-bold text-gray-800">John Doe</p>
+              <p class="text-lg font-medium text-pink-600 mt-2">
+                Uvukilen University
+              </p>
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div
+            class="lg:overflow-visible w-[200px] md:w-96 lg:w-[300px] slideUp translate-y-full transform fadeIn"
+          >
+            <img
+              src="img/element/placeholder.svg"
+              alt="Photo 3"
+              class="rounded-2xl"
+            />
+            <div class="p-4 text-center">
+              <p class="text-3xl font-bold text-gray-800">John Doe</p>
+              <p class="text-lg font-medium text-pink-600 mt-2">
+                Uvukilen University
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Start - slide 4 CTF-->
+    <section
+      class="w-full h-full bg-cover bg-center items-center justify-center"
+      style="background: linear-gradient(180deg, #a2d4ff 0%, #67b7ff 100%)"
+      id="galeri-CTF"
+    >
+      <img
+        src="./img/element/kelp.svg"
+        class="absolute w-20 md:w-[10dvw] -translate-y-[30px] left-0 fadeIn"
+        alt="kelp"
+      />
+      <div
+        class="flex justify-center items-center mx-5 lg:mx-10 slideUp translate-y-full transform"
+      >
+        <img src="./img/element/cahaya.svg" class="w-10 lg:w-20" alt="" />
+        <div>
+          <h1 class="text-center text-black mt-5 text-sm lg:text-lg font-khdam">
+            IFEST #13 : HEROES OF INNOVATION
+          </h1>
+          <h1
+            class="text-black text-center font-jersey text-5xl lg:text-7xl mx-2"
+          >
+            CAPTURE THE FLAG
+          </h1>
+          <h1 class="text-center text-black mt-2 text-sm lg:text-lg font-inter">
+            "Hack & Seek: Conquering Layers by Breaking Barriers"
+          </h1>
+        </div>
+        <img src="./img/element/cahaya.svg" class="w-10 lg:w-20" alt="" />
+      </div>
+      <br />
+      <h1
+        class="text-center text-black mx-5 text-sm lg:text-base lg:mx-36 font-inter fadeIn"
+        style="--fade-duration: 1"
+      >
+        Inilah medan tempur para jagoan keamanan siber! Yuk lihat bagaimana
+        mereka menunjukkan keahlian mereka dalam dunia digital. Penasaran siapa
+        yang berhasil menaklukkan semua tantangan? Cek langsung pemenang dan
+        momen seru mereka di sini!
+      </h1>
+      <br /><br />
+      <div class="max-w-full overflow-hidden">
+        <img
+          src="./img/element/stingray3.svg"
+          class="overflow-hidden absolute w-20 md:w-[13dvw] -translate-y-[30px] right-0 scale-x-[-1] fadeIn"
+          alt="stingray3"
+        />
+      </div>
+      <div
+        class="flex justify-center items-center mx-5 lg:mx-10 mt-5 slideUp translate-y-full transform"
+      >
+        <img src="./img/element/cahaya.svg" class="w-10 lg:w-20" alt="" />
+        <h1
+          class="text-black text-center font-jersey mt-2 text-4xl lg:text-5xl mx-2"
+        >
+          DOKUMENTASI CTF IFEST #13
+        </h1>
+        <img src="./img/element/cahaya.svg" class="w-10 lg:w-20" alt="" />
+      </div>
+      <!-- Start - Carousel -->
+      <div class="py-5 flex items-center justify-center w-full fadeIn">
+        <div class="swiper lg:overflow-visible w-[90%] md:w-96 lg:w-[500px]">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img
+                src="img/element/placeholder.svg"
+                alt=""
+                class="w-full rounded-2xl"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="img/element/placeholder.svg"
+                alt=""
+                class="w-full rounded-2xl"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="img/element/placeholder.svg"
+                alt=""
+                class="w-full rounded-2xl"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="img/element/placeholder.svg"
+                alt=""
+                class="w-full rounded-2xl"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="img/element/placeholder.svg"
+                alt=""
+                class="w-full rounded-2xl"
+              />
+            </div>
+          </div>
+          <div class="swiper-pagination bullet-"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-scrollbar"></div>
+        </div>
+      </div>
+      <!-- End - Carousel -->
+      <br />
+      <div
+        class="flex justify-center items-center mx-5 lg:mx-10 slideUp transform translate-y-full"
+      >
+        <img src="./img/element/cahaya.svg" class="w-10 lg:w-20" alt="" />
+        <div>
+          <h1 class="text-center text-black mt-5 text-xs font-khdam">
+            IFEST #13 : HEROES OF INNOVATION
+          </h1>
+          <h1
+            class="text-black text-center font-jersey text-4xl lg:text-5xl mx-2 mt-3"
+          >
+            JURI CTF IFEST #13
+          </h1>
+          <br /><br />
+        </div>
+        <img src="./img/element/cahaya.svg" class="w-10 lg:w-20" alt="" />
+      </div>
+      <!-- Card pc -->
+      <div class="flex justify-center items-center mx-5 lg:mx-10">
+        <div
+          class="grid grid-cols-1 lg:grid-cols-3 gap-6 flex items-center justify-center"
+        >
+          <!-- Card 1 -->
+          <div
+            class="lg:overflow-visible w-[200px] md:w-96 lg:w-[300px] slideUp translate-y-full transform fadeIn"
+          >
+            <img
+              src="img/element/placeholder.svg"
+              alt="Photo 1"
+              class="rounded-2xl"
+            />
+            <div class="p-4 text-center">
+              <p class="text-3xl font-bold text-gray-800">John Doe</p>
+              <p class="text-lg font-medium text-pink-600 mt-2">
+                Uvukilen University
+              </p>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div
+            class="lg:overflow-visible w-[200px] md:w-96 lg:w-[300px] slideUp translate-y-full transform fadeIn"
+          >
+            <img
+              src="img/element/placeholder.svg"
+              alt="Photo 2"
+              class="rounded-2xl"
+            />
+            <div class="p-4 text-center">
+              <p class="text-3xl font-bold text-gray-800">John Doe</p>
+              <p class="text-lg font-medium text-pink-600 mt-2">
+                Uvukilen University
+              </p>
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div
+            class="lg:overflow-visible w-[200px] md:w-96 lg:w-[300px] slideUp translate-y-full transform fadeIn"
+          >
+            <img
+              src="img/element/placeholder.svg"
+              alt="Photo 3"
+              class="rounded-2xl"
+            />
+            <div class="p-4 text-center">
+              <p class="text-3xl font-bold text-gray-800">John Doe</p>
+              <p class="text-lg font-medium text-pink-600 mt-2">
+                Uvukilen University
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br />
+      <div class="-translate-y-[40px]">
+        <div class="absolute left-0 mt-[40px]">
+          <img
+            src="img/element/Clip path group.svg"
+            alt="Clip"
+            class="w-[6dvw] min-w-[50px] fadeIn"
+          />
+        </div>
+        <div class="absolute right-0 mt-[40px] scale-x-[-1]">
+          <img
+            src="img/element/Clip path group.svg"
+            alt="Clip"
+            class="w-[6dvw] min-w-[50px] fadeIn"
+          />
+        </div>
+      </div>
+      <div
+        class="flex justify-center items-center mx-5 lg:mx-10 slideUp transform translate-y-full"
+      >
+        <img src="./img/element/cahaya.svg" class="w-10 lg:w-20" alt="" />
+        <div>
+          <h1 class="text-center text-black mt-5 text-xs font-khdam">
+            IFEST #13 : HEROES OF INNOVATION
+          </h1>
+          <h1
+            class="text-black text-center font-jersey text-4xl lg:text-5xl mx-2 mt-3"
+          >
+            PEMENANG CTF IFEST #13
+          </h1>
+          <br /><br />
+        </div>
+        <img src="./img/element/cahaya.svg" class="w-10 lg:w-20" alt="" />
+      </div>
+      <!-- Card pc -->
+      <div class="flex justify-center items-center mx-5 lg:mx-10">
+        <div
+          class="flex grid grid-cols-1 lg:grid-cols-3 gap-6 flex items-center justify-center"
+        >
+          <!-- Card 1 -->
+          <div
+            class="lg:overflow-visible w-[200px] md:w-96 lg:w-[300px] slideUp translate-y-full transform fadeIn"
+          >
+            <img
+              src="img/element/placeholder.svg"
+              alt="Photo 1"
+              class="rounded-2xl"
+            />
+            <div class="p-4 text-center">
+              <p class="text-3xl font-bold text-gray-800">John Doe</p>
+              <p class="text-lg font-medium text-pink-600 mt-2">
+                Uvukilen University
+              </p>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div
+            class="lg:overflow-visible w-[200px] md:w-96 lg:w-[300px] slideUp translate-y-full transform fadeIn"
+          >
+            <img
+              src="img/element/placeholder.svg"
+              alt="Photo 2"
+              class="rounded-2xl"
+            />
+            <div class="p-4 text-center">
+              <p class="text-3xl font-bold text-gray-800">John Doe</p>
+              <p class="text-lg font-medium text-pink-600 mt-2">
+                Uvukilen University
+              </p>
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div
+            class="lg:overflow-visible w-[200px] md:w-96 lg:w-[300px] slideUp translate-y-full transform fadeIn"
+          >
+            <img
+              src="img/element/placeholder.svg"
+              alt="Photo 3"
+              class="rounded-2xl"
+            />
+            <div class="p-4 text-center">
+              <p class="text-3xl font-bold text-gray-800">John Doe</p>
+              <p class="text-lg font-medium text-pink-600 mt-2">
+                Uvukilen University
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Start - slide 5 SEMNAS-->
+    <section
+      class="relative h-full bg-cover bg-center items-center justify-center"
+      style="background: linear-gradient(180deg, #67b7ff 0%, #0bdaff 100%)"
+      id="galeri-SEMNAS"
+    >
+      <div class="max-w-full overflow-hidden">
+        <img
+          src="./img/element/kelp.svg"
+          class="absolute w-20 md:w-[10dvw] -translate-y-[30px] right-0 scale-x-[-1] fadeIn"
+          alt="kelp"
+        />
+      </div>
+      <div
+        class="flex justify-center items-center mx-5 lg:mx-10 slideUp translate-y-full transform"
+      >
+        <img src="./img/element/cahaya.svg" class="w-10 lg:w-20" alt="" />
+        <div>
+          <h1 class="text-center text-black mt-5 text-sm lg:text-lg font-khdam">
+            IFEST #13 : HEROES OF INNOVATION
+          </h1>
+          <h1
+            class="text-black text-center font-jersey text-5xl lg:text-7xl mx-2"
+          >
+            SEMINAR NASIONAL
+          </h1>
+          <h1 class="text-center text-black mt-2 text-sm lg:text-lg font-inter">
+            "Technology in Harmony: Connecting People, Ideas, and Technology"
+          </h1>
+        </div>
+        <img src="./img/element/cahaya.svg" class="w-10 lg:w-20" alt="" />
+      </div>
+      <br />
+      <h1
+        class="text-center text-black mx-5 text-sm lg:text-base lg:mx-36 font-inter fadeIn"
+        style="--fade-duration: 1"
+      >
+        Semnas IFEST #13 jadi ajang seru untuk memperluas wawasan tentang
+        teknologi masa depan. Lihat dokumentasi para peserta yang antusias,
+        momen para pembicara berbagi ilmu, dan insight menarik tentang dunia
+        digital. Siapa tahu, kamu bisa jadi bagian dari momen ini di acara
+        selanjutnya!
+      </h1>
+      <br /><br />
+      <img
+        src="./img/element/jellyfish.svg"
+        class="absolute w-20 md:w-[10dvw] -translate-y-[30px] left-0 fadeIn"
+        alt="jellyfish"
+      />
+      <div
+        class="flex justify-center items-center mx-5 lg:mx-10 mt-5 slideUp translate-y-full transform"
+      >
+        <img src="./img/element/cahaya.svg" class="w-10 lg:w-20" alt="" />
+        <h1
+          class="text-black text-center font-jersey mt-2 text-4xl lg:text-5xl mx-2"
+        >
+          DOKUMENTASI SEMNAS IFEST #13
+        </h1>
+        <img src="./img/element/cahaya.svg" class="w-10 lg:w-20" alt="" />
+      </div>
+      <!-- Start - Carousel -->
+      <div class="py-5 flex items-center justify-center w-full fadeIn">
+        <div class="swiper lg:overflow-visible w-[90%] md:w-96 lg:w-[500px]">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img
+                src="img/element/placeholder.svg"
+                alt=""
+                class="w-full rounded-2xl"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="img/element/placeholder.svg"
+                alt=""
+                class="w-full rounded-2xl"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="img/element/placeholder.svg"
+                alt=""
+                class="w-full rounded-2xl"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="img/element/placeholder.svg"
+                alt=""
+                class="w-full rounded-2xl"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="img/element/placeholder.svg"
+                alt=""
+                class="w-full rounded-2xl"
+              />
+            </div>
+          </div>
+          <div class="swiper-pagination bullet-"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-scrollbar"></div>
+        </div>
+      </div>
+      <!-- End - Carousel -->
+      <br />
+      <div
+        class="flex justify-center items-center mx-5 lg:mx-10 slideUp transform translate-y-full"
+      >
+        <img src="./img/element/cahaya.svg" class="w-10 lg:w-20" alt="" />
+        <div>
+          <h1 class="text-center text-black mt-5 text-xs font-khdam">
+            IFEST #13 : HEROES OF INNOVATION
+          </h1>
+          <h1
+            class="text-black text-center font-jersey text-4xl lg:text-5xl mx-2 mt-3"
+          >
+            NAEASUMBER SEMNAS IFEST #13
+          </h1>
+          <br /><br />
+        </div>
+        <img src="./img/element/cahaya.svg" class="w-10 lg:w-20" alt="" />
+      </div>
+      <!-- Card pc -->
+      <div class="flex justify-center items-center mx-5 lg:mx-10">
+        <div
+          class="grid grid-cols-1 lg:grid-cols-3 gap-6 flex items-center justify-center"
+        >
+          <!-- Card 1 -->
+          <div
+            class="lg:overflow-visible w-[200px] md:w-96 lg:w-[300px] slideUp translate-y-full transform fadeIn"
+          >
+            <img
+              src="img/element/placeholder.svg"
+              alt="Photo 1"
+              class="rounded-2xl"
+            />
+            <div class="p-4 text-center">
+              <p class="text-3xl font-bold text-gray-800">John Doe</p>
+              <p class="text-lg font-medium text-pink-600 mt-2">
+                Uvukilen University
+              </p>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div
+            class="lg:overflow-visible w-[200px] md:w-96 lg:w-[300px] slideUp translate-y-full transform fadeIn"
+          >
+            <img
+              src="img/element/placeholder.svg"
+              alt="Photo 2"
+              class="rounded-2xl"
+            />
+            <div class="p-4 text-center">
+              <p class="text-3xl font-bold text-gray-800">John Doe</p>
+              <p class="text-lg font-medium text-pink-600 mt-2">
+                Uvukilen University
+              </p>
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div
+            class="lg:overflow-visible w-[200px] md:w-96 lg:w-[300px] slideUp translate-y-full transform fadeIn"
+          >
+            <img
+              src="img/element/placeholder.svg"
+              alt="Photo 3"
+              class="rounded-2xl"
+            />
+            <div class="p-4 text-center">
+              <p class="text-3xl font-bold text-gray-800">John Doe</p>
+              <p class="text-lg font-medium text-pink-600 mt-2">
+                Uvukilen University
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br />
+      <div
+        class="relative max-w-full w-full h-20 md:h-[13dvw] -mt-20 lg:-mt-[9dvw]"
+      >
+        <img
+          src="./img/element/sea_plant.svg"
+          class="absolute w-20 md:w-[13dvw] bottom-0 fadeIn right-0 scale-x-[-1]"
+          alt="sea_plant"
+        />
+        <img
+          src="./img/element/sea_plant.svg"
+          class="absolute w-20 md:w-[13dvw] bottom-0 fadeIn left-0"
+          alt="sea_plant"
+        />
+      </div>
+    </section>
+    <!-- Start - Footer-->
+    <section>
+      <!-- Start - Mobile -->
+
+      <div class="lg:hidden">
+        <div class="bg-[#00296B] h-auto w-auto text-white">
+          <div class="relative z-0">
+            <div class="absolute w-36">
+              <img
+                src="img/element/garis_footer.svg"
+                alt=""
+                class="opacity-85"
+              />
+            </div>
+
+            <div class="absolute w-36 right-0 scale-x-[-1]">
+              <img
+                src="img/element/garis_footer.svg"
+                alt=""
+                class="opacity-85"
+              />
+            </div>
+          </div>
+
+          <div class="relative z-0">
+            <div class="px-10 pt-20 pb-10">
+              <div>
+                <a href="/">
+                  <img src="img/element/logo_footer.svg" alt="" class="w-40" />
+                  <h1 class="font-interBold mt-3 text-xl">IFest #13</h1></a
+                >
+              </div>
+              <h1 class="font-inter mt-3 max-w-sm text-sm">
+                The premier annual IT event hosted by HIMAFORKA UAJY. Brings
+                together technology enthusiasts for a week of innovation,
+                competition, and collaboration.
+              </h1>
+              <hr class="my-5" />
+              <div class="flex flex-col space-y-5">
+                <div class="flex flex-col">
+                  <h1 class="font-interBold text-xl">EVENTS</h1>
+                  <div class="mt-5 hover:underline">
+                    <a href="/semnas" class="font-inter">Seminar nasional</a>
+                  </div>
+                </div>
+                <hr class="my-5" />
+                <div class="flex flex-col space-y-5">
+                  <h1 class="font-interBold text-xl">COMPETITION</h1>
+                  <div class="hover:underline">
+                    <a href="/muc" class="font-inter"
+                      >Mobile UI/UX Competition (MUC)</a
+                    >
+                  </div>
+                  <div class="hover:underline">
+                    <a href="/wdc" class="font-inter"
+                      >Web Design Competition (WDC)</a
+                    >
+                  </div>
+                  <div class="hover:underline">
+                    <a href="/ctf" class="font-inter">Capture The Flag (CTF)</a>
+                  </div>
+                </div>
+                <hr class="my-5" />
+                <div class="flex flex-col space-y-3">
+                  <h1 class="font-interBold text-xl">SOCIAL MEDIA</h1>
+                  <div class="flex gap-2">
+                    <a href=""
+                      ><img
+                        src="img/icon/mingcute_youtube-fill.svg"
+                        alt=""
+                        class="w-10"
+                    /></a>
+
+                    <a href="https://www.instagram.com/ifest_uajy/"
+                      ><img
+                        src="img/icon/mingcute_instagram-fill.svg"
+                        alt=""
+                        class="w-10"
+                    /></a>
+                    <a href=""
+                      ><img
+                        src="img/icon/mingcute_line-app-fill.svg"
+                        alt=""
+                        class="w-10"
+                    /></a>
+                  </div>
+                </div>
+                <hr class="my-5" />
+                <div class="flex flex-col space-y-3">
+                  <h1 class="font-interBold text-xl">OUR CONTACTS</h1>
+                  <div class="hover:underline">
+                    <a
+                      href="https://mail.google.com/mail/u/0/?view=cm&tf=1&fs=1&to=ifest.uajy1@gmail.com"
+                      class="font-inter"
+                      target="_blank"
+                      >ifest.uajy1@gmail.com</a
+                    >
+                  </div>
+                  <a href="https://wa.me/+6287794005230" target="_blank"
+                    ><h1 class="hover:underline mt-3">
+                      +6287794005230 - Ketua Pelaksana
+                    </h1></a
+                  >
+                  <a href="https://wa.me/+6281393776678" target="_blank"
+                    ><h1 class="hover:underline mt-3">
+                      +6281393776678 - Sponsorship
+                    </h1></a
+                  >
+                </div>
+                <hr class="my-5" />
+                <div class="text-center pt-10">
+                  <h1 class="text-white font-extrabold text-center">
+                    © 2025 IFEST #13 UAJY. All rights reserved. <br />
+                    Organized by WD IFEST #13
+                  </h1>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- End - Mobile -->
+
+      <!-- Start - Desktop -->
+      <div class="hidden lg:block">
+        <div class="bg-[#00296B] h-auto w-auto">
+          <div class="relative z-0">
+            <div class="absolute w-56">
+              <img
+                src="img/element/garis_footer.svg"
+                alt=""
+                class="opacity-85"
+              />
+            </div>
+
+            <div class="absolute w-56 right-0 scale-x-[-1]">
+              <img
+                src="img/element/garis_footer.svg"
+                alt=""
+                class="opacity-85"
+              />
+            </div>
+          </div>
+
+          <div class="relative z-10">
+            <div class="py-10 px-20 flex w-auto">
+              <div class="mx-auto text-white">
+                <div>
+                  <a href="/">
+                    <img src="img/element/logo_footer.svg" alt="" />
+                    <h1 class="font-interBold mt-3 text-xl">IFest #13</h1></a
+                  >
+                </div>
+
+                <h1 class="font-inter mt-5 w-96">
+                  The premier annual IT event hosted by HIMAFORKA UAJY. Brings
+                  together technology enthusiasts for a week of innovation,
+                  competition, and collaboration.
+                </h1>
+                <h1 class="font-interBold mt-8 text-xl">Presented By</h1>
+                <img src="img/element/logo_hima.svg" class="w-28 mt-5" alt="" />
+              </div>
+              <div class="mx-auto text-white">
+                <h1 class="font-interBold text-xl">EVENTS</h1>
+                <div class="mt-5 hover:underline">
+                  <a href="/semnas" class="font-inter">Seminar nasional</a>
+                </div>
+              </div>
+              <div class="mx-auto text-white">
+                <h1 class="font-interBold text-xl">COMPETITION</h1>
+                <div class="mt-5 hover:underline">
+                  <a href="/muc" class="font-inter"
+                    >Mobile UI/UX Competition <br />
+                    (MUC)</a
+                  >
+                </div>
+                <div class="mt-3 hover:underline">
+                  <a href="/wdc" class="font-inter"
+                    >Web Design Competition <br />
+                    (WDC)</a
+                  >
+                </div>
+                <div class="mt-3 hover:underline">
+                  <a href="/ctf" class="font-inter"
+                    >Capture The Flag <br />
+                    (CTF)</a
+                  >
+                </div>
+              </div>
+              <div class="mx-auto text-white">
+                <div class="flex flex-col">
+                  <h1 class="font-interBold text-xl">SOCIAL MEDIA</h1>
+                  <div class="flex gap-2 mt-3">
+                    <a href=""
+                      ><img
+                        src="img/icon/mingcute_youtube-fill.svg"
+                        alt=""
+                        class="w-10"
+                    /></a>
+
+                    <a
+                      href="https://www.instagram.com/ifest_uajy/"
+                      target="_blank"
+                      ><img
+                        src="img/icon/mingcute_instagram-fill.svg"
+                        alt=""
+                        class="w-10"
+                    /></a>
+                    <a href=""
+                      ><img
+                        src="img/icon/mingcute_line-app-fill.svg"
+                        alt=""
+                        class="w-10"
+                    /></a>
+                  </div>
+                  <div class="mt-10">
+                    <h1 class="font-interBold text-xl">OUR CONTACTS</h1>
+                    <div class="mt-3 hover:underline">
+                      <a
+                        href="https://mail.google.com/mail/u/0/?view=cm&tf=1&fs=1&to=ifest.uajy1@gmail.com"
+                        class="font-inter"
+                        target="_blank"
+                        >ifest.uajy1@gmail.com</a
+                      >
+                    </div>
+                    <a href="https://wa.me/+6287794005230" target="_blank"
+                      ><h1 class="hover:underline mt-3 font-inter">
+                        +6287794005230 <br />
+                        - Ketua Pelaksana
+                      </h1></a
+                    >
+                    <a href="https://wa.me/+6281393776678" target="_blank"
+                      ><h1 class="hover:underline mt-3 font-inter">
+                        +6281393776678 <br />
+                        - Sponsorship
+                      </h1></a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-center">
+            <hr class="mb-5 w-96" />
+          </div>
+          <h1 class="pb-5 text-white font-extrabold text-center">
+            © 2025 IFEST #13 UAJY. All rights reserved. | Organized by WD IFEST
+            #13
+          </h1>
+        </div>
+      </div>
+      <!-- End - Desktop -->
+    </section>
+    <!-- End - Footer-->
+
+    <script src="script.js"></script>
+  </body>
+</html>
