@@ -29,7 +29,6 @@ const toggleDropdown = (dropdown, arrowText, arrow) => {
   } else {
     arrowText.textContent = "^";
   }
-  arrow.classList.toggle("rotate-5");
 };
 
 // Desktop Dropdown (Navbar)
