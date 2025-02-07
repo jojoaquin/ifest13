@@ -29,7 +29,7 @@ const toggleDropdown = (dropdown, arrowText, arrow) => {
   } else {
     arrowText.textContent = "^";
   }
-  arrow.classList.toggle("rotate-30");
+  arrow.classList.toggle("rotate-5");
 };
 
 // Desktop Dropdown (Navbar)
@@ -199,36 +199,34 @@ var swiper = new Swiper(".swiper", {
     stretch: 0,
     depth: 280,
     modifier: 2,
-    slideShadows: true
+    slideShadows: true,
   },
   spaceBetween: 10,
   loop: true,
   pagination: {
     el: ".swiper-pagination",
-    clickable: true
+    clickable: true,
   },
   navigation: {
     nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev"
-  }
+    prevEl: ".swiper-button-prev",
+  },
 });
 
-window.addEventListener('scroll', reveal);
+window.addEventListener("scroll", reveal);
 
-function reveal(){
-  var reveals = document.querySelectorAll('.reveal');
+function reveal() {
+  var reveals = document.querySelectorAll(".reveal");
 
-  for(var i = 0; i < reveals.length; i++){
-
+  for (var i = 0; i < reveals.length; i++) {
     var windowheight = window.innerHeight;
     var revealtop = reveals[i].getBoundingClientRect().top;
     var revealpoint = 150;
 
-    if(revealtop < windowheight - revealpoint){
-      reveals[i].classList.add('active');
-    }
-    else{
-      reveals[i].classList.remove('active');
+    if (revealtop < windowheight - revealpoint) {
+      reveals[i].classList.add("active");
+    } else {
+      reveals[i].classList.remove("active");
     }
   }
 }
