@@ -968,6 +968,14 @@ video {
   margin-top: 800px;
 }
 
+.mt-80{
+  margin-top: 20rem;
+}
+
+.mt-52{
+  margin-top: 13rem;
+}
+
 .block{
   display: block;
 }
