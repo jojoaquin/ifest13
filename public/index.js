@@ -29,7 +29,6 @@ const toggleDropdown = (dropdown, arrowText, arrow) => {
   } else {
     arrowText.textContent = "^";
   }
-  arrow.classList.toggle("rotate-30");
 };
 
 // Desktop Dropdown (Navbar)
@@ -96,86 +95,79 @@ document.addEventListener("click", (event) => {
 
 // accordion
 function toggleAccordion(index) {
-    const content = document.getElementById(`content-${index}`);
-    const icon = document.getElementById(`icon-${index}`);
- 
-    // SVG for Minus icon
-    const minusSVG = `
+  const content = document.getElementById(`content-${index}`);
+  const icon = document.getElementById(`icon-${index}`);
+
+  // SVG for Minus icon
+  const minusSVG = `
       <img class="w-7" src="./asset/image/minus.svg" alt="">
     `;
- 
-    // SVG for Plus icon
-    const plusSVG = `
+
+  // SVG for Plus icon
+  const plusSVG = `
        <img class="w-7" src="./asset/image/plus.svg" alt="">
     `;
- 
-    // Toggle the content's max-height for smooth opening and closing
-    if (content.style.maxHeight && content.style.maxHeight !== '0px') {
-      content.style.maxHeight = '0';
-      icon.innerHTML = plusSVG;
+
+  // Toggle the content's max-height for smooth opening and closing
+  if (content.style.maxHeight && content.style.maxHeight !== "0px") {
+    content.style.maxHeight = "0";
+    icon.innerHTML = plusSVG;
+  } else {
+    content.style.maxHeight = content.scrollHeight + "px";
+    icon.innerHTML = minusSVG;
+  }
+}
+
+window.addEventListener("scroll", reveal);
+
+function reveal() {
+  var reveals = document.querySelectorAll(".reveal");
+
+  for (var i = 0; i < reveals.length; i++) {
+    var windowheight = window.innerHeight;
+    var revealtop = reveals[i].getBoundingClientRect().top;
+    var revealpoint = 150;
+
+    if (revealtop < windowheight - revealpoint) {
+      reveals[i].classList.add("active");
     } else {
-      content.style.maxHeight = content.scrollHeight + 'px';
-      icon.innerHTML = minusSVG;
+      reveals[i].classList.remove("active");
     }
   }
+}
 
-  window.addEventListener('scroll', reveal);
+window.addEventListener("scroll", rotate);
 
-  function reveal(){
-    var reveals = document.querySelectorAll('.reveal');
-  
-    for(var i = 0; i < reveals.length; i++){
-  
-      var windowheight = window.innerHeight;
-      var revealtop = reveals[i].getBoundingClientRect().top;
-      var revealpoint = 150;
-  
-      if(revealtop < windowheight - revealpoint){
-        reveals[i].classList.add('active');
-      }
-      else{
-        reveals[i].classList.remove('active');
-      }
+function rotate() {
+  var rotates = document.querySelectorAll(".rotate-right");
+
+  for (var i = 0; i < rotates.length; i++) {
+    var windowheight = window.innerHeight;
+    var rotatetop = rotates[i].getBoundingClientRect().top;
+    var rotatepoint = 150;
+
+    if (rotatetop < windowheight - rotatepoint) {
+      rotates[i].classList.add("actv");
+    } else {
+      rotates[i].classList.remove("actv");
     }
   }
+}
 
-  window.addEventListener('scroll', rotate);
+window.addEventListener("scroll", rotateLeft);
 
-  function rotate(){
-    var rotates = document.querySelectorAll('.rotate-right');
-  
-    for(var i = 0; i < rotates.length; i++){
-  
-      var windowheight = window.innerHeight;
-      var rotatetop = rotates[i].getBoundingClientRect().top;
-      var rotatepoint = 150;
-  
-      if(rotatetop < windowheight - rotatepoint){
-        rotates[i].classList.add('actv');
-      }
-      else{
-        rotates[i].classList.remove('actv');
-      }
+function rotateLeft() {
+  var rotatesLeft = document.querySelectorAll(".rotate-left");
+
+  for (var i = 0; i < rotatesLeft.length; i++) {
+    var windowheight = window.innerHeight;
+    var rotatetop = rotatesLeft[i].getBoundingClientRect().top;
+    var rotatepoint = 150;
+
+    if (rotatetop < windowheight - rotatepoint) {
+      rotatesLeft[i].classList.add("actvi");
+    } else {
+      rotatesLeft[i].classList.remove("actvi");
     }
   }
-
-
-  window.addEventListener('scroll', rotateLeft);
-
-  function rotateLeft(){
-    var rotatesLeft = document.querySelectorAll('.rotate-left');
-  
-    for(var i = 0; i < rotatesLeft.length; i++){
-  
-      var windowheight = window.innerHeight;
-      var rotatetop = rotatesLeft[i].getBoundingClientRect().top;
-      var rotatepoint = 150;
-  
-      if(rotatetop < windowheight - rotatepoint){
-        rotatesLeft[i].classList.add('actvi');
-      }
-      else{
-        rotatesLeft[i].classList.remove('actvi');
-      }
-    }
-  }
+}
