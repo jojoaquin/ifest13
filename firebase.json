@@ -5,7 +5,7 @@
     "rewrites": [
       {
         "source": "/",
-        "destination": "/wdc/wdc.html"
+        "destination": "/index/index.html"
       },
       {
         "source": "/wdc",
