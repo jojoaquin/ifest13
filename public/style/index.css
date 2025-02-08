@@ -1,0 +1,309 @@
+
+
+
+body{
+    background-color: black;
+}
+.container-hero{
+    background-image: linear-gradient(#4AB6FF,#87E8FF);
+}
+.text-hero{
+    font-family: "Jersey 10", serif;
+}
+
+
+
+
+
+.hero-heading{
+    line-height: 0.7;
+    text-shadow: -0.2rem 0.4rem #400089;
+}
+.hero-p{
+    line-height: 1;
+    text-shadow: -0.2rem 0.4rem #400089;
+}
+
+.cloud{
+    position: absolute;
+}
+
+.cloud-1{
+    width: 28%;
+    right: 69rem;
+    bottom: 7rem;
+}
+
+.cloud-2{
+    width: 28%;
+    left: 68.35rem ;
+    bottom: 7rem;
+}
+
+.cloud-3{
+    width: 15%;
+    bottom: 2.5rem;
+    left: 4rem;
+}
+
+.cloud-4{
+    width: 15%;
+    bottom: 2.5rem;
+    left: 78rem;
+}
+
+.cloud-5{
+    width: 21%;
+    top: 40.3rem;
+    left: 27.5rem;
+}
+
+.cloud-6{
+    width: 21%;
+    top: 40.3rem;
+    left: 47.5rem;
+}
+
+
+
+.hero-button{
+    font-family: "jersey 10", serif;
+    color: white;
+    margin-top: 2rem;
+
+}
+
+/* background image */
+.muc{
+    background-image: linear-gradient(#87E8FF,#B5F0FF);
+}
+
+.wdc{
+    background-image: linear-gradient(#b5f0ff, #D6F7FF);
+}
+
+.ctf{
+    background-image: linear-gradient(#D5F6FF, #d5f6ff);
+}
+
+.semnas{
+    background-image: linear-gradient(#d5f6ff, #CFFF9E);
+}
+
+.sponsor{
+    background-image: linear-gradient(#CFFF9E, #B1FF59);
+}
+
+.faq{
+    background-image: linear-gradient(#B1FF59,#FDCB6C);
+}
+
+.contact{
+    background-image: linear-gradient(#FDCB6C, #A36600);
+}
+
+/* background image end */
+.img-sp-right{
+    position: absolute;
+    width: 4rem;
+    left: 56rem;
+    bottom: 0.5rem;
+}
+
+.img-sp-left{
+    position: absolute;
+    width: 4rem;
+    bottom: 0.5rem;
+    left: 35rem;
+}
+
+.test{
+    background-color: #68E111;
+}
+
+.img-med-left{
+    position: absolute;
+    width: 4rem;
+    bottom: 0.5rem;
+    left: 31.5rem;
+}
+
+.img-med-right{
+    position: absolute;
+    width: 4rem;
+    bottom: 0.5rem;
+    left: 59rem;
+}
+
+.border-l-12{
+    border-left-width: 12px;
+}
+
+.ans{
+    width: 57rem;
+    text-align: justify;
+    font-style: italic;
+}
+
+.img-faq-right{
+    position: absolute;
+    width: 4rem;
+    bottom: 0.5rem;
+    left: 44rem;
+}
+
+.img-faq-left{
+    position: absolute;
+    width: 4rem;
+    bottom: 0.5rem;
+    right: 44rem;
+}
+
+
+
+.px-108{
+    padding-left: 29rem;
+    padding-right: 29rem;
+}
+
+.img-cp-left{
+    position: absolute;
+    width: 4rem;
+    bottom: 0rem;
+    left: 30.5rem;
+}
+
+.img-cp-right{
+    position: absolute ;
+    width: 4rem;
+    bottom: 0rem;
+    left: 60.5rem;
+}
+
+.reveal{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: all 1s ease;
+  }
+  
+  .reveal.active{
+    transform: translateY(0px);
+    opacity: 1;
+  }
+
+.landingReveal{
+    animation: landingReveal 1s ease-in-out;
+  }
+
+.ld-rv-txt{
+    animation: ld-rv-txt 2s ease-in-out;
+}
+
+.an-cl{
+    animation: ancl-l1 1.5s ease-in-out;
+}
+.ancl-2{
+    animation: ancl-l2 1.5s ease-in-out;
+}
+
+.ancl-3{
+    animation: ancl-3 1s ease-in-out;
+}
+
+.ancl-4{
+    animation: ancl-4 1s ease-in-out;
+}
+
+.ancl-stat{
+    animation: ancl-stat 1s ease-in-out;
+}
+
+.rotate-right{
+    transition: all 1s ease;
+    opacity: 0;
+}
+
+.rotate-right.actv{
+    opacity: 1;
+    animation: rotate-img 1.8s;
+}
+
+.rotate-left{
+    transition: all 1s ease;
+    opacity: 0;
+}
+
+.rotate-left.actvi{
+    opacity: 1;
+    animation: rotate-img 1.8s;
+}
+
+@keyframes rotate-left{
+    100% {transform: rotate(-360deg);}
+}
+
+
+
+
+
+@keyframes rotate-img {
+    100% {transform: rotate(360deg);}
+  }
+
+@keyframes ancl-stat{
+    0%{
+        opacity: 0;
+        transform: translatey(30px);
+        transition: all 0.5s ease;
+      }
+}
+
+
+@keyframes ancl-l1{
+    0%{
+        opacity: 0;
+        transform: translatex(-30px);
+        transition: all 0.5s ease;
+      }
+}
+
+@keyframes ancl-l2{
+    0%{
+        opacity: 0;
+        transform: translatex(-10px);
+        transition: all 0.5s ease;
+      }
+}
+@keyframes ancl-3{
+    0%{
+        opacity: 0;
+        transform: translatex(-30px);
+        transition: all 0.5s ease;
+      }
+}
+
+@keyframes
+ancl-4{
+    0%{
+        opacity: 0;
+        transform: translatex(-10px);
+        transition: all 0.5s ease;
+      }
+}
+@keyframes ld-rv-txt{
+    0%{
+        opacity: 0;
+        transform: translateY(10px);
+        transition: all 0.5s ease;
+      }
+}
+
+  @keyframes landingReveal{
+    0%{
+      opacity: 0;
+      transform: translateY(70px);
+      transition: all 1s ease;
+    }}
+  
+

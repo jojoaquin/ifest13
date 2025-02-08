@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@theme{
+    --font-quantico: 'Quantico', sans-serif;
+    --font-jersey: 'Jersey 10', sans-serif;
+    --font-jersey25: 'Jersey 25', sans-serif;
+    --font-roboto: 'Roboto', sans-serif;
+    --font-khdam: 'Kdam Thmor Pro', sans-serif;
+    --font-inter: 'Inter Tight', sans-serif;
+    --font-montserrat: 'Montserrat', sans-serif;
+    --font-interBold: 'Inter', sans-serif;
+    --color-textmuc : #EF7E00;
+    --color-btnmuc : #FF8F12;
+    --color-wdctxt :#F1591C;
+    --color-wdcbtn :#F1591C;
+    --color-ctfbtn :#1E398E;
+    --color-ctftxt :#1B378F;
+    --color-semnascl :#4AABFF;
+    --color-sponcl: #1D0073;
+    --color-sponbg : #68E111;
+    --color-spbtn : #009723;
+    --color-faqbg : #009723;
+    --color-anstxt :#2D678C;
+    --color-ansbtn :#2D678C;
+    --color-ansbg :#2D678C;
+    --color-ansborder :#2D678C;
+    
+}
