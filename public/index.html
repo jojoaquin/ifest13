@@ -1,0 +1,1404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <base href="./index/">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I FEST #13</title>
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jersey+10&family=Jersey+25&family=Kdam+Thmor+Pro&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <!-- font end -->
+    <link rel="stylesheet" href="./src/output.css">
+    <link rel="stylesheet" href="./style/index.css">
+
+</head>
+
+<body>
+    <!-- Landing Page -->
+
+    <section class="">
+
+        <div class="container-hero h-max">
+
+            <!-- Start - Navbar -->
+
+            <!-- Start - Mobile -->
+            <img class="relative lg:hidden z-0" src="./asset/image/awan.svg" alt="">
+            <div class="w-full h-20  lg:hidden relative">
+                
+                <div class="h-full flex items-center font-bold font-quantico">
+                    <div class="mx-5 flex w-full items-center">
+                        <a href="/src/index.html">
+                            <div class="flex items-center space-x-5">
+                                <img src="./asset/image/Logo Final (1) 1.png" alt="" class="h-6" />
+                                <span class="">IFEST #13</span>
+                            </div>
+                        </a>
+                        <div class="flex items-center lg:hidden ml-auto z-40">
+                            <button id="hamburger-btn"
+                                class="bg-white  p-3 rounded-full focus:outline-none shadow-xl border border-gray-300">
+                                <svg id="hamburger-icon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-black"
+                                    fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M3 12h18M3 6h18M3 18h18"></path>
+                                </svg>
+                                <svg id="close-icon" xmlns="http://www.w3.org/2000/svg"
+                                    class="h-6 w-6 text-black hidden" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M6 18L18 6M6 6l12 12"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="mobile-menu"
+                class="z-20 font-quantico font-bold hidden lg:hidden fixed top-0 right-0 h-full w-64 bg-white shadow-lg transform -translate-x-full transition-transform duration-300">
+                <div class="mt-16 p-5 space-y-4">
+                    <div class="text-black hover:bg-gray-200 p-2 rounded flex items-center" id="kompetisi-btn-mobile"
+                        role="button">
+                        KOMPETISI
+                        <svg id="dropdown-arrow-mobile" xmlns="http://www.w3.org/2000/svg"
+                            class="h-4 w-4 ml-2 transform transition-transform duration-200" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <text x="5" y="15" id="arrow-text-mobile">v</text>
+                        </svg>
+                    </div>
+                    <ul id="kompetisi-dropdown-mobile" class="hidden space-y-2 ml-5">
+                        <li>
+                            <a href="#" class="block text-black hover:bg-gray-200 p-2 rounded">Mobile UI/UX Competition
+                                (MUC)</a>
+                        </li>
+                        <li>
+                            <a href="#" class="block text-black hover:bg-gray-200 p-2 rounded">Web Development
+                                Competition (WDC)</a>
+                        </li>
+                        <li>
+                            <a href="#" class="block text-black hover:bg-gray-200 p-2 rounded">Capture the Flag
+                                (CTF)</a>
+                        </li>
+                    </ul>
+                    <a href="#semnas" class="block text-black hover:bg-gray-200 p-2 rounded">SEMINAR NASIONAL</a>
+                    <a href="#galeri" class="block text-black hover:bg-gray-200 p-2 rounded">GALERI</a>
+                    <a href="#partnership" class="block text-black hover:bg-gray-200 p-2 rounded">PARTNERSHIP</a>
+                </div>
+            </div>
+            <!-- End - Mobile -->
+
+            <!-- Start - Desktop -->
+            <div class="w-full relative z-50 h-20 hidden lg:block lg:fixed">
+                <nav class="mx-auto bg-white h-full flex items-center font-bold font-quantico">
+                    <div class="mx-10 flex w-full">
+                        <a href="/src/index.html">
+                            <div class="flex items-center space-x-5">
+                                <img src="./asset/image/Logo Final (1) 1.png" alt="" class="h-6" />
+                                <span class="">IFEST #13</span>
+                            </div>
+                        </a>
+                        <div class="ml-auto flex items-center gap-16">
+                            <div class="relative">
+                                <button id="kompetisi-btn-desktop" class="focus:outline-none flex items-center">
+                                    KOMPETISI
+                                    <svg id="dropdown-arrow-desktop" xmlns="http://www.w3.org/2000/svg"
+                                        class="h-4 w-4 ml-2 transform transition-transform duration-200" fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <text x="5" y="15" id="arrow-text-desktop">v</text>
+                                    </svg>
+                                </button>
+                                <div id="kompetisi-dropdown-desktop"
+                                    class="absolute z-20 hidden bg-white shadow-lg rounded-md p-4 mt-2 left-0 w-64 border border-gray-300">
+                                    <a href="#" class="block text-black hover:bg-gray-200 p-2 rounded">Mobile UI/UX
+                                        Competition (MUC)</a>
+                                    <a href="#" class="block text-black hover:bg-gray-200 p-2 rounded">Web Development
+                                        Competition (WDC)</a>
+                                    <a href="#" class="block text-black hover:bg-gray-200 p-2 rounded">Capture the Flag
+                                        (CTF)</a>
+                                </div>
+                            </div>
+                            <a href="#semnas">SEMINAR NASIONAL</a>
+                            <a href="#galeri">GALERI</a>
+                            <a href="#partnership">PARTNERSHIP</a>
+                        </div>
+                    </div>
+                </nav>
+                
+            </div>
+            <img class="hidden lg:block lg:pt-20" src="./asset/image/Group 330.svg" alt="">
+        
+            <!-- End - Desktop -->
+
+            <!-- End - Navbar -->
+
+
+            <!-- start landing hero  -->
+
+            <div class="w-full py-[10rem] landingReveal pb-[10rem] lg:pb-[20rem] lg:py-[8rem] h-full flex items-center justify-center flex-col">
+                <div class="">
+                    <div class="absolute z-0 left-0 ancl-3">
+                        <img class="w-[200px] lg:w-full" src="./asset/image/Vector.png" alt="">
+                    </div>
+                    <div class="absolute z-0 ancl-4 right-0">
+                        <img class="w-[200px] lg:w-full" src="./asset/image/Vector-1.png" alt="">
+                    </div>
+                </div>
+
+                <div class="text-hero ld-rv-txt text-center z-10 text-white">
+                    <h1 class="hero-heading lg:text-[8rem] text-[5rem]">Heroes Of Innovation</h1>
+                    <p class="hero-p lg:text-[4rem] text-[2rem] px-10 lg:px-0 ">Empowering Change in dynamic World</p>
+                </div>
+                <a class="hero-button lg:hidden lg:text-5xl text-2xl bg-[#4C5FDE] px-20 py-4 rounded-full" href="#muc">Start</a>
+                <a class="hero-button hidden lg:block lg:text-5xl text-2xl bg-[#4C5FDE] px-20 py-4 rounded-full" href="#start">Start</a>
+                <div class="">
+                    <div class="absolute an-cl left-0">
+                        <img class="w-[100px]  lg:w-full" src="./asset/image/Vector-2.png" alt="">
+                    </div>
+                    <div class="absolute right-0 ancl-2">
+                        <img class="w-[100px] lg:w-full" src="./asset/image/Vector-3.png" alt="">
+                    </div>
+                    <div class="absolute ancl-stat  mt-2 left-[7rem] lg:left-[26rem]">
+                        <img class="w-[100px]  lg:w-[350px]" src="./asset/image/Vector-4.png" alt="">
+                    </div>
+                    <div class="absolute mt-2 ancl-stat right-[7rem] lg:right-[26rem]">
+                        <img class="w-[100px] lg:w-[350px]" src="./asset/image/Vector-5.png" alt="">
+                    </div>
+                </div>
+
+            </div>
+            <!-- end landing hero -->
+
+        </div>
+
+    </section>
+
+    <!-- mobile -->
+    <section id="muc" class="muc pt-20 pb-20 w-full h-full relative lg:hidden " id="wdc">
+        <div class="h-full w-full flex flex-col justify-center items-center">
+            <div class="px-20 pb-10 mt-20 mx-auto">
+                <img class="w-auto rotate-right" src="./asset/image/MUC.png" alt="">
+            </div>
+            <h1 class="text-8xl reveal text-textmuc font-jersey">MUC</h1>
+            <p class="text-3xl text-center reveal text-textmuc font-khdam">Mobile UI/UX Competition</p>
+
+            <div class="flex reveal flex-row px-1 mt-5 mb-5">
+                <button class="text-[0.8rem] px-2 py-2 rounded-full bg-btnmuc text-white font-inter">SMA /
+                    Sederajat</button>
+                <button class="text-[0.8rem] ml-2 mr-1 px-3 py-2 rounded-full bg-btnmuc text-white font-inter">Max.
+                    2 orang</button>
+                <button
+                    class="text-[0.8rem] px-4 py-2 rounded-full bg-btnmuc text-white font-inter">Rp.100.000,00</button>
+            </div>
+
+            <p class="text-base reveal text-black mt-4 px-12 font-inter text-justify">
+                Dengan tema "Heroes of Innovation: Empowering Change in a Dynamic World" dan subtema "Building a Digital Approach to Mental Wellness". Mobile UI/UX Competition (MUC) 2025 menggabungkan kreativitas desain dengan kepedulian terhadap kesehatan mental. Kompetisi ini bertujuan untuk mendorong inovasi digital yang dapat menjadi solusi dalam mendukung kesejahteraan mental remaja. Peserta diharapkan mampu menciptakan desain aplikasi yang inklusif, interaktif, dan berdampak positif bagi masyarakat.
+            </p>
+            <div class="mt-6 reveal flex flex-row space-x-4">
+                <button
+                    class="bg-transparent border-4  border-btnmuc-0 rounded-full text-btnmuc px-4 py-2  hover:bg-btnmuc hover:text-white">
+                    View all +
+                </button>
+                <button class="bg-btnmuc text-white px-10 py-3 rounded-full hover:bg-white hover:text-textmuc">
+                    Daftar >
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section class="wdc w-full h-full relative lg:hidden pt-20 pb-20 " id="wdc">
+        <div class="w-full reveal h-full flex flex-col items-center justify-center">
+
+            <div class="mt-20 pb-10 mb-10 px-20 ">
+                <img class="mx-auto rotate-right  w-auto" src="./asset/image/WDC.png" alt="">
+            </div>
+
+            <h1 class="text-8xl reveal text-wdctxt font-jersey">WDC</h1>
+
+            <p class="text-3xl  reveal text-wdctxt text-center font-khdam">Web Development Competition</p>
+
+            <div class="flex reveal flex-row mt-5 mb-5">
+                <button class="text-[0.8rem] px-3 py-2 rounded-full bg-wdcbtn text-white font-inter">SMA /
+                    Sederajat</button>
+                <button class="text-[0.8rem] ml-2 mr-2 px-3 py-2 rounded-full bg-wdcbtn text-white font-inter">Max.
+                    3 orang</button>
+                <button
+                    class="text-[0.8rem] px-3 py-2 rounded-full bg-wdcbtn text-white font-inter">Rp.100.000,00</button>
+            </div>
+
+            <p class="text-base reveal text-black mt-4 px-12 font-inter text-justify">
+                Dengan tema "Heroes of Innovation: Empowering Change in a Dynamic World" dan subtema "Stitch Loop: Where Every Thread Tells a New Story". Web Development Competition (WDC) 2025 hadir sebagai wadah bagi mahasiswa untuk menciptakan inovasi digital yang mendukung keberlanjutan di industri fashion. Dalam kompetisi ini, peserta ditantang untuk merancang dan mengembangkan website yang dapat memperpanjang siklus hidup pakaian, mengurangi limbah fashion, serta meningkatkan kesadaran masyarakat tentang pentingnya konsumsi yang lebih bertanggung jawab. Melalui kolaborasi antara teknologi dan keberlanjutan, WDC 2025 bertujuan untuk membentuk generasi muda yang inovatif, kreatif, dan peduli terhadap lingkungan.
+            </p>
+
+            <div class="mt-6 reveal flex flex-row space-x-4">
+                <button
+                    class="bg-transparent border-4  border-wdcbtn rounded-full text-wdctxt px-4 py-2  hover:bg-wdcbtn hover:text-white">
+                    View all +
+                </button>
+                <button class="bg-wdcbtn text-white px-10 py-3 rounded-full hover:bg-white hover:text-wdcbtn">
+                    Daftar >
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section class="ctf w-full pt-10 pb-20 relative lg:hidden h-full">
+        <div class="w-full reveal h-full flex flex-col pt-20 pb-10 justify-center items-center">
+            <div class="px-20 pb-10 mt-20 ">
+                <img class="mx-auto rotate-right w-auto" src="./asset/image/CTF.png" alt="">
+            </div>
+
+            <h1 class="text-8xl reveal text-ctftxt font-jersey">CTF</h1>
+            <p class="text-3xl reveal text-ctftxt font-khdam">Capture The Flag</p>
+            <div class="flex reveal flex-row mt-5 mb-5">
+                <button class="text-[0.8rem] px-3 py-2 rounded-full bg-ctfbtn text-white font-inter">Coming Soon</button>
+                <button class="text-[0.8rem] ml-2 mr-2 px-3 py-2 rounded-full bg-ctfbtn text-white font-inter">Coming Soon</button>
+                <button
+                    class="text-[0.8rem] px-3 py-2 rounded-full bg-ctfbtn text-white font-inter">Coming Soon</button>
+            </div>
+            <p class="text-base reveal text-black mt-4 px-12 font-inter text-justify">
+                Dengan tema "Heroes of Innovation: Empowering Change in a Dynamic World" dan subtema "Hack & Seek: Conquering Layers by Breaking Barriers". Capture The Flag (CTF) 2025 hadir sebagai ajang bergengsi bagi mahasiswa untuk mengasah keterampilan di bidang keamanan siber. Dalam kompetisi ini, peserta akan diuji dalam berbagai tantangan yang mencakup cryptography, reverse engineering, web exploitation, binary exploitation, dan digital forensics. Kompetisi ini bertujuan untuk meningkatkan kesadaran tentang pentingnya keamanan siber serta mendorong generasi muda untuk berinovasi dan mengembangkan solusi pertahanan digital yang lebih tangguh.
+            </p>
+            <div class="mt-6 reveal flex flex-row space-x-4">
+                <button
+                    class="bg-transparent border-4  border-ctfbtn rounded-full text-ctftxt px-4 py-2  hover:bg-ctfbtn hover:text-white">
+                    View all +
+                </button>
+                <button class="bg-ctfbtn text-white px-10 py-3 rounded-full hover:bg-white hover:text-ctfbtn">
+                    Daftar >
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section class="semnas pt-10 pb-20 w-full h-full relative lg:hidden">
+        <div class="flex reveal flex-col pt-20 pb-10 justify-center items-center">
+            <div class="px-20 pb-10 mt-20 ">
+                <img class="mx-auto rotate-right w-auto" src="./asset/image/SEMNAS.png" alt="">
+            </div>
+            <h1 class="text-8xl text-semnascl reveal  font-jersey">SEMNAS</h1>
+            <p class="text-3xl text-semnascl reveal   font-khdam">Seminar Nasional</p>
+            <div class="flex-row reveal flex mt-5 mb-5">
+                <button class="text-[0.8rem] px-3 py-2 rounded-full bg-semnascl text-white font-inter">Coming Soon</button>
+                <button class="text-[0.8rem] ml-2 mr-2 px-3 py-2 rounded-full bg-semnascl text-white font-inter">Coming Soon</button>
+                <button
+                    class="text-[0.8rem] px-3 py-2 rounded-full bg-semnascl text-white font-inter">Coming Soon</button>
+            </div>
+            <p class="text-base reveal text-black px-12 mt-4 font-inter text-justify">
+                Sebagai puncak dari rangkaian acara IFEST #13, Seminar Nasional hadir untuk memberikan wawasan mendalam tentang perkembangan teknologi di era digital. Dengan tema "Technology in Harmony: Connecting People, Ideas, and Technology" seminar ini bertujuan untuk mengeksplorasi bagaimana teknologi dapat menjadi jembatan yang menghubungkan manusia, ide, dan inovasi. Menghadirkan narasumber berpengalaman di bidang IT, seminar ini akan membahas berbagai topik terkini seputar layanan digital, pengembangan aplikasi, serta tren teknologi masa depan. Peserta akan mendapatkan perspektif yang lebih luas tentang manfaat dan tantangan teknologi dalam berbagai sektor industri.
+            </p>
+            <div class="mt-6 reveal flex flex-row space-x-4">
+                <button
+                    class="bg-transparent border-4  border-semnascl rounded-full text-semnascl px-4 py-2  hover:bg-semnascl hover:text-white">
+                    View all +
+                </button>
+                <button class="bg-semnascl text-white px-10 py-3 rounded-full hover:bg-white hover:text-semnascl">
+                    Daftar >
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- desktop -->
+
+    <section id="start" class="w-full h-full py-20 pb-20 muc hidden lg:block">
+        <div class="w-full h-full reveal flex flex-row">
+            <!-- Bagian Kiri -->
+            <div class="pl-32 pr-20 mt-20">
+                <img class="w-auto rotate-right" src="./asset/image/MUC.png" alt="">
+            </div>
+
+            <!-- Bagian Kanan -->
+            <div class="w-1/2 ml-10">
+                <h1 class="text-8xl reveal text-textmuc font-jersey">MUC</h1>
+                <p class="text-3xl reveal text-textmuc font-khdam">Mobile UI/UX Competition</p>
+                <div class="row reveal mt-5 mb-5">
+                    <button class="text-1xl px-5 py-2 rounded-full bg-btnmuc text-white font-inter">SMA /
+                        Sederajat</button>
+                    <button class="text-1xl ml-2 mr-2 px-4 py-2 rounded-full bg-btnmuc text-white font-inter">Max.
+                        3 orang</button>
+                    <button
+                        class="text-1xl px-4 py-2 rounded-full bg-btnmuc text-white font-inter">Rp.100.000,00</button>
+                </div>
+                <p class="reveal text-lg text-black mt-4 pr-32 font-inter text-justify">
+                    Dengan tema "Heroes of Innovation: Empowering Change in a Dynamic World" dan subtema "Building a Digital Approach to Mental Wellness". Mobile UI/UX Competition (MUC) 2025 menggabungkan kreativitas desain dengan kepedulian terhadap kesehatan mental. Kompetisi ini bertujuan untuk mendorong inovasi digital yang dapat menjadi solusi dalam mendukung kesejahteraan mental remaja. Peserta diharapkan mampu menciptakan desain aplikasi yang inklusif, interaktif, dan berdampak positif bagi masyarakat.
+                </p>
+                <div class="mt-6 space-x-4 reveal">
+                    <button
+                        class="bg-transparent border-4  border-btnmuc rounded-full text-btnmuc px-10 py-2  hover:bg-btnmuc hover:text-white">
+                        View all +
+                    </button>
+                    <button class="bg-btnmuc text-white px-16 py-3 rounded-full hover:bg-white hover:text-textmuc">
+                        Daftar >
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="w-full pt-20 pb-20 hidden lg:block h-full wdc">
+        <div class="flex flex-row reveal">
+            <!-- Bagian Kiri -->
+            <div class="w-1/2 ml-24">
+                <h1 class="text-8xl reveal text-wdctxt font-jersey">WDC</h1>
+                <p class="text-3xl reveal text-wdctxt font-khdam">Web Development Competition</p>
+                <div class="row reveal mt-5 mb-5">
+                    <button class="text-1xl px-5 py-2 rounded-full bg-wdcbtn text-white font-inter">Mahasiswa/i aktif D3/D4/S1</button>
+                    <button class="text-1xl ml-2 mr-2 px-4 py-2 rounded-full bg-wdcbtn text-white font-inter">Max.
+                        3 orang</button>
+                    <button
+                        class="text-1xl px-4 py-2 rounded-full bg-wdcbtn text-white font-inter">Rp.50.000,00</button>
+                </div>
+                <p class="text-lg reveal text-black mt-4 pr-32 font-inter text-justify">
+                    Dengan tema "Heroes of Innovation: Empowering Change in a Dynamic World" dan subtema "Stitch Loop: Where Every Thread Tells a New Story". Web Development Competition (WDC) 2025 hadir sebagai wadah bagi mahasiswa untuk menciptakan inovasi digital yang mendukung keberlanjutan di industri fashion. Dalam kompetisi ini, peserta ditantang untuk merancang dan mengembangkan website yang dapat memperpanjang siklus hidup pakaian, mengurangi limbah fashion, serta meningkatkan kesadaran masyarakat tentang pentingnya konsumsi yang lebih bertanggung jawab. Melalui kolaborasi antara teknologi dan keberlanjutan, WDC 2025 bertujuan untuk membentuk generasi muda yang inovatif, kreatif, dan peduli terhadap lingkungan.
+                <div class="mt-6 reveal space-x-4">
+                    <button
+                        class="bg-transparent border-4  border-wdcbtn rounded-full text-wdctxt px-10 py-2  hover:bg-wdcbtn hover:text-white">
+                        View all +
+                    </button>
+                    <button class="bg-wdcbtn text-white px-16 py-3 rounded-full hover:bg-white hover:text-wdcbtn">
+                        Daftar >
+                    </button>
+                </div>
+            </div>
+            <div class="pl-10 mt-20 pr-32 ">
+                <img class="mx-auto rotate-left w-auto" src="./asset/image/WDC.png" alt="">
+            </div>
+
+        </div>
+    </section>
+
+    <section class="w-full h-full hidden lg:block pt-20 pb-20 ctf">
+        <div class="flex flex-row reveal">
+            <!-- Kanan -->
+            <div class="pl-30 pr-20 mt-20 ">
+                <img class="rotate-right mx-auto w-auto" src="./asset/image/CTF.png" alt="">
+            </div>
+            <!-- Bagian Kiri -->
+            <div class="w-1/2 ml-24">
+                <h1 class="text-8xl reveal text-ctftxt font-jersey">CTF</h1>
+                <p class="text-3xl reveal text-ctftxt font-khdam">Capture The Flag</p>
+                <div class="row reveal mt-5 mb-5">
+                    <button class="text-1xl px-5 py-2 rounded-full bg-ctfbtn text-white font-inter">Coming Soon</button>
+                    <button class="text-1xl ml-2 mr-2 px-4 py-2 rounded-full bg-ctfbtn text-white font-inter">Coming Soon</button>
+                    <button
+                        class="text-1xl px-4 py-2 rounded-full bg-ctfbtn text-white font-inter">Coming Soon</button>
+                </div>
+                <p class="text-lg reveal text-black mt-4 pr-32 font-inter text-justify">
+                    Dengan tema "Heroes of Innovation: Empowering Change in a Dynamic World" dan subtema "Hack & Seek: Conquering Layers by Breaking Barriers". Capture The Flag (CTF) 2025 hadir sebagai ajang bergengsi bagi mahasiswa untuk mengasah keterampilan di bidang keamanan siber. Dalam kompetisi ini, peserta akan diuji dalam berbagai tantangan yang mencakup cryptography, reverse engineering, web exploitation, binary exploitation, dan digital forensics. Kompetisi ini bertujuan untuk meningkatkan kesadaran tentang pentingnya keamanan siber serta mendorong generasi muda untuk berinovasi dan mengembangkan solusi pertahanan digital yang lebih tangguh.
+                <div class="mt-6 space-x-4 reveal">
+                    <button
+                        class="bg-transparent border-4  border-ctfbtn rounded-full text-ctftxt px-10 py-2  hover:bg-ctfbtn hover:text-white">
+                        View all +
+                    </button>
+                    <button class="bg-ctfbtn text-white px-16 py-3 rounded-full hover:bg-white hover:text-ctfbtn">
+                        Daftar >
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="semnas w-full hidden lg:block h-full pt-20 pb-20">
+        <div class="flex flex-row">
+            <!-- Bagian Kiri -->
+            <div class="w-1/2 ml-24">
+                <h1 class="text-8xl reveal text-semnascl  font-jersey">SEMNAS</h1>
+                <p class="text-3xl reveal text-semnascl  font-khdam">Seminar Nasional</p>
+                <div class="row reveal mt-5 mb-5">
+                    <button class="text-1xl px-5 py-2 rounded-full bg-semnascl text-white font-inter">Coming Soon</button>
+                    <button class="text-1xl ml-2 mr-2 px-4 py-2 rounded-full bg-semnascl text-white font-inter">Coming Soon</button>
+                    <button
+                        class="text-1xl px-4 py-2 rounded-full bg-semnascl text-white font-inter">Coming Soon</button>
+                </div>
+                <p class="text-lg reveal text-black mt-4 pr-32 font-inter text-justify">
+                    Sebagai puncak dari rangkaian acara IFEST #13, Seminar Nasional hadir untuk memberikan wawasan mendalam tentang perkembangan teknologi di era digital. Dengan tema "Technology in Harmony: Connecting People, Ideas, and Technology" seminar ini bertujuan untuk mengeksplorasi bagaimana teknologi dapat menjadi jembatan yang menghubungkan manusia, ide, dan inovasi. Menghadirkan narasumber berpengalaman di bidang IT, seminar ini akan membahas berbagai topik terkini seputar layanan digital, pengembangan aplikasi, serta tren teknologi masa depan. Peserta akan mendapatkan perspektif yang lebih luas tentang manfaat dan tantangan teknologi dalam berbagai sektor industri.
+                </p>
+                <div class="mt-6 space-x-4 reveal">
+                    <button
+                        class="bg-transparent border-4  border-semnascl rounded-full text-semnascl px-10 py-2  hover:bg-semnascl hover:text-white">
+                        View all +
+                    </button>
+                    <button
+                        class="bg-semnascl text-white px-16 py-3 rounded-full hover:bg-white hover:text-semnascl">
+                        Daftar >
+                    </button>
+                </div>
+            </div>
+            <div class="pl-20 pr-32  mt-20 ">
+                <img class="mx-auto rotate-left w-auto" src="./asset/image/SEMNAS.png" alt="">
+            </div>
+        </div>
+    </section>
+
+    <section class="sponsor media w-full h-full pt-20 pb-20" id="sponsor">
+        <div class="reveal medspo flex flex-col items-center justify-center">
+            <div class="heading-sp text-center pt-14">
+                <p class="text-md reveal mb-8 font-khdam text-sponcl">I FEST#13: HEROES OF INNOVATION</p>
+                <div class="flex flex-row reveal justify-center items-center mx-10">
+                    <div class="w-12 reveal lg:w-20 mb-12">
+                        <img class="" src="./asset/image/bling.svg" alt="">
+                    </div>
+
+                    <h1 class="text-6xl lg:text-7xl mb-4 font-jersey text-sponcl reveal ">SPONSORS</h1>
+                    <div class="w-12 lg:w-20 mb-12">
+                        <img class="reveal" src="./asset/image/bling.svg" alt="">
+                    </div>
+
+                </div>
+
+                <p class="text-md font-khdam text-sponcl reveal">With the precious support of our partners</p>
+            </div>
+            <div class="flex flex-col reveal items-center justify-center">
+                <div class="flex flex-wrap items-center justify-center mt-10">
+
+                    <!-- card 1 -->
+                    <div class="p-1 max-w-sm">
+                        <div class="h-[12rem] flex justify-center items-center w-[18rem] bg-sponbg px-16 py-20">
+                            <img class="w-40" src="./asset/image/coming.png" alt="">
+                        </div>
+                    </div>
+
+                    <!-- card 2 -->
+                    <div class="p-1 max-w-sm">
+                        <div class="h-[12rem] flex justify-center items-center w-[18rem] bg-sponbg px-16 py-20">
+                            <img class="w-40" src="./asset/image/coming.png" alt="">
+                        </div>
+                    </div>
+
+                    <!-- card 3 -->
+                    <div class="p-1 max-w-sm">
+                        <div class="h-[12rem] flex justify-center items-center w-[18rem] bg-sponbg px-16 py-20">
+                            <img class="w-40" src="./asset/image/coming.png" alt="">
+                        </div>
+                    </div>
+                    <!-- card 4 -->
+                    <div class="p-1 max-w-sm">
+                        <div class="h-[12rem] flex justify-center items-center w-[18rem] bg-sponbg px-16 py-20">
+                            <img class="w-40" src="./asset/image/coming.png" alt="">
+                        </div>
+                    </div>
+
+                    <!-- card 5 -->
+                    <div class="p-1 max-w-sm">
+                        <div class="h-[12rem] flex justify-center items-center w-[18rem] bg-sponbg px-16 py-20">
+                            <img class="w-40" src="./asset/image/coming.png" alt="">
+                        </div>
+                    </div>
+
+                </div>
+                <!-- sponsor end -->
+
+                <!-- media -->
+                <div class="heading-sp reveal text-center pt-14">
+                    <div class="flex reveal flex-row justify-center items-center mx-10">
+                        <div class="w-10 reveal lg:w-20 mb-12">
+                            <img class="" src="./asset/image/bling.svg" alt="">
+                        </div>
+                        <h1 class="text-6xl reveal lg:text-7xl mb-4 font-jersey text-sponcl ">MEDIA PARTNER</h1>
+                        <div class="w-10 reveal lg:w-20 mb-12">
+                            <img class="" src="./asset/image/bling.svg" alt="">
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="flex reveal flex-wrap items-center justify-center mt-10">
+
+                    <!-- card 1 -->
+                    <div class="p-1 max-w-sm">
+                        <div class="h-[12rem] flex justify-center items-center w-[18rem] bg-sponbg px-16 py-20">
+                            <img class="w-[20rem] h-[10rem]" src="./asset/image/Logo events.ina.png" alt="">
+                        </div>
+                    </div>
+
+                    <!-- card 2 -->
+                    <div class="p-1 max-w-sm">
+                        <div class="h-[12rem] flex justify-center items-center w-[18rem]  bg-sponbg px-16 py-20">
+                            <img class="" src="./asset/image/Logo Sewa Valo (Sponsor).png" alt="">
+                        </div>
+                    </div>
+
+                    <!-- card 3 -->
+                    <div class="p-1 max-w-sm">
+                        <div class="h-[12rem] flex justify-center items-center w-[18rem]  bg-sponbg px-16 py-20">
+                            <img class="" src="./asset/image/logo Lomba SMA.png" alt="">
+                        </div>
+                    </div>
+                    <!-- card 4 -->
+                    <div class="p-1 max-w-sm">
+                        <div class="h-[12rem] flex justify-center items-center w-[18rem]  bg-sponbg px-16 py-20">
+                            <img class="" src="./asset/image/logo Event nasional.id.png" alt="">
+                        </div>
+                    </div>
+
+                    <!-- card 5 -->
+                    <div class="p-1 max-w-sm">
+                        <div class="h-[12rem] flex justify-center items-center w-[18rem]  bg-sponbg px-16 py-20">
+                            <img class="" src="./asset/image/Logo event.TIK.png" alt="">
+                        </div>
+                    </div>
+                    <div class="p-1 max-w-sm">
+                        <div class="h-[12rem] flex justify-center items-center w-[18rem]  bg-sponbg px-16 py-20">
+                            <img class="" src="./asset/image/Logo edaran event 1.png" alt="">
+                        </div>
+                    </div>
+                    <div class="p-1 max-w-sm">
+                        <div class="h-[12rem] flex justify-center items-center w-[18rem]  bg-sponbg px-16 py-20">
+                            <img class="" src="./asset/image/Logo ELS.ID 1.png" alt="">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="flex reveal justify-center items-center pt-5 mt-5 pb-10">
+                    <button class="rounded-full py-4 px-12 text-white bg-spbtn">Become our support ></button>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- FAQ MOBILE -->
+    <section class="faq pt-10 pb-20 w-full h-full lg:hidden">
+        <div class="flex reveal flex-col justify-center items-center">
+            <div class="heading-sp text-center pt-14 mb-10">
+                <p class="reveal text-sm mb-4 font-khdam text-sponcl">I FEST#13: HEROES OF INNOVATION</p>
+                <div class="flex flex-row justify-center items-center mx-10">
+                    <div class="mb-12 w-10">
+                        <img class="reveal" src="./asset/image/bling.svg" alt="">
+                    </div>
+
+                    <h1 class="reveal text-3xl mb-4 font-jersey text-sponcl ">FREQUENTLY ASKED QUESTION</h1>
+                    <div class="mb-12 w-10">
+                        <img class="reveal" src="./asset/image/bling.svg" alt="">
+                    </div>
+                </div>
+                <p class="text-sm reveal px-12 font-khdam text-sponcl-0 ">Here are some common question about IFEST #13</p>
+            </div>
+
+            <div class="flex reveal justify-center flex-col items-center py-2 px-3">
+                <button onclick="toggleAccordion(1)"
+                    class="w-full  border-l-white mx-10 border-l-12 z-10 bg-faqbg rounded-xl px-2 py-2 text-white">
+                    <p class="text-left text-[0.7rem] font-bold"> Apa saja Lomba yang ditujukan untuk mahasiswa pada IFest #13?</p>
+
+                </button>
+
+                <div id="content-1"
+                    class="bg-white rounded-lg relative bottom-2 max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                    <div class="pb-7 pt-5 ml-2 px-2 text-sm text-anstxt italic">
+                        IFEST#13 menghadirkan berbagai kompetisi yang ditujukan untuk mahasiswa guna mengasah kreativitas dan keterampilan di bidang teknologi informasi. Lomba-lomba yang tersedia antara lain Web Development Competition (WDC) yang berfokus pada pengembangan website untuk mendukung keberlanjutan di industri fashion, serta Capture The Flag (CTF) yang menguji kemampuan peserta dalam bidang keamanan siber melalui serangkaian tantangan dengan format Jeopardy-Style. Kompetisi ini dirancang untuk memberikan pengalaman berharga bagi mahasiswa dalam mengembangkan inovasi teknologi yang aplikatif dan bermanfaat bagi masyarakat.
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="flex reveal justify-center flex-col items-center py-2 px-3">
+                <button onclick="toggleAccordion(2)"
+                    class="w-full  border-l-white mx-10 border-l-12 z-10 bg-faqbg rounded-xl px-2 py-2 text-white">
+                    <p class="text-left text-[0.7rem] font-bold">Apakah ada hadiah menarik untuk para pemenang perlombaan IFest #13?</p>
+
+                </button>
+
+                <div id="content-2"
+                    class="bg-white rounded-lg relative bottom-2 max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                    <div class="pb-7 pt-5 ml-2 px-2 text-sm italic text-anstxt">
+                        IFEST#13 memberikan hadiah-hadiah menarik untuk para pemenang kompetisi, termasuk penghargaan uang tunai, kesempatan untuk berkolaborasi dengan perusahaan terkemuka, dan sertifikat pengakuan. Temukan lebih lanjut tentang hadiah yang dapat Anda raih dan apa manfaatnya untuk karier Anda di dunia teknologi informasi.
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="flex reveal justify-center flex-col items-center py-2 px-3">
+                <button onclick="toggleAccordion(3)"
+                    class="w-full border-l-white mx-10 relative border-l-12 z-10 bg-faqbg rounded-xl px-2 py-2 text-white">
+                    <p class="text-left text-[0.7rem] font-bold">Bagaimana jadwal acara IFEST #13?</p>
+
+                </button>
+
+                <div id="content-3"
+                    class="bg-white rounded-lg relative bottom-2 max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                    <div class="pb-7 pt-5 ml-2 px-2 text-sm text-anstxt italic">
+                        Rangkaian acara IFEST#13 akan berlangsung dalam beberapa tahap sejak Februari hingga Juni 2025. Setiap kompetisi memiliki jadwal tersendiri, dimulai dengan tahap pendaftaran, seleksi, hingga final. Web Development Competition (WDC) akan dimulai pada bulan Februari dan mencapai puncaknya pada bulan April, sementara Capture The Flag (CTF) akan mengadakan babak penyisihan pada bulan Mei dan final secara langsung pada bulan Mei 2025. Acara puncak berupa Seminar Nasional akan diselenggarakan pada 14 Juni 2025. 
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="flex reveal justify-center flex-col items-center py-2 px-3">
+                <button onclick="toggleAccordion(4)"
+                    class="w-full  border-l-white mx-10 border-l-12 z-10 bg-faqbg rounded-xl px-2 py-2 text-white">
+                    <p class="text-left text-[0.7rem] font-bold">Bagaimana saya bisa berkontribusi sebagai sponsor atau
+                        relawan untuk IFEST #13?</p>
+
+                </button>
+
+                <div id="content-4"
+                    class="bg-white rounded-lg relative bottom-2 max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                    <div class="pb-7 pt-5 ml-2 px-2 text-sm text-anstxt italic">
+                        Terdapat berbagai cara untuk berkontribusi dalam IFEST#13, baik sebagai sponsor maupun relawan. Bagi perusahaan atau organisasi yang ingin mendukung acara ini, tersedia berbagai paket sponsorship dengan keuntungan seperti pencantuman logo di berbagai media promosi, kesempatan membuka booth, serta eksposur di media sosial dan acara seminar. Sponsorship tidak hanya mendukung keberlangsungan acara tetapi juga memberikan peluang bagi perusahaan untuk berinteraksi langsung dengan generasi muda berbakat di bidang teknologi.
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="flex reveal flex-col justify-center items-center pt-5 mt-10 pb-10">
+                <p class="text-sponcl font-khdam mb-5">Still Have any Question ?</p>
+                <a class="rounded-full py-4 px-12 text-white bg-spbtn" href="#contact">Contact Us</a>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- FAQ DESKTOP -->
+    <section class="faq w-full h-full hidden lg:block" id="faq">
+        <div class=" reveal flex flex-col justify-center items-center">
+            <div class="heading-sp reveal text-center pt-14 mb-10">
+                <p class="text-md mb-4 font-khdam text-sponcl">I FEST#13: HEROES OF INNOVATION</p>
+                <div class="flex reveal flex-row justify-center items-center">
+                    <div class="mb-12">
+                        <img class="reveal" src="./asset/image/bling.svg" alt="">
+                    </div>
+
+                    <h1 class="text-7xl mb-4 font-jersey text-sponcl reveal ">FREQUENTLY ASKED QUESTION</h1>
+                    <div class="mb-12">
+                        <img class="reveal" src="./asset/image/bling.svg" alt="">
+                    </div>
+
+                </div>
+                <p class="text-md reveal font-khdam text-sponcl ">Here are some common question about IFEST #13</p>
+            </div>
+
+            <!-- Accordion Item 1 -->
+
+            <div class="flex-col mb-5 reveal">
+                <button onclick="toggleAccordion(5)"
+                    class="w-full border-l-white border-l-12 z-10 relative bg-faqbg rounded-xl pl-10 pr-5 py-5 text-white">
+                    <div class="btn-txt flex flex-row items-center">
+                        <p class="text-left font-bold mr-16">Apa saja lomba yang ditujukan untuk mahasiswa pada IFEST#13?
+                        </p>
+                        <span id="icon-5" class="text-white ml-96 transition-transform row-span-5 duration-300">
+                            <img class="w-7" src="./asset/image/plus.svg" alt="">
+                        </span>
+                    </div>
+
+                </button>
+
+                <div id="content-5"
+                    class="bg-white rounded-lg relative bottom-2 max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                    <div class="pb-7 pt-5 pl-5 text-anstxt">
+                        <p class="ans">IFEST#13 menghadirkan berbagai kompetisi yang ditujukan untuk mahasiswa guna mengasah kreativitas dan keterampilan di bidang teknologi informasi. Lomba-lomba yang tersedia antara lain Web Development Competition (WDC) yang berfokus pada pengembangan website untuk mendukung keberlanjutan di industri fashion, serta Capture The Flag (CTF) yang menguji kemampuan peserta dalam bidang keamanan siber melalui serangkaian tantangan dengan format Jeopardy-Style. Kompetisi ini dirancang untuk memberikan pengalaman berharga bagi mahasiswa dalam mengembangkan inovasi teknologi yang aplikatif dan bermanfaat bagi masyarakat.
+                        </p>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Accordion Item 2 -->
+            <div class="flex-col mb-5 reveal">
+                <button onclick="toggleAccordion(6)"
+                    class="w-full border-l-white border-l-12 z-10 relative bg-faqbg rounded-xl pl-10 pr-5 py-5 text-white">
+                    <div class="btn-txt flex flex-row items-center">
+                        <p class="text-left font-bold">Apakah ada hadiah menarik untuk para pemenang perlombaan IFest #13?</p>
+                        <span id="icon-6" class="text-white ml-96 transition-transform row-span-5 duration-300">
+                            <img class="w-7" src="./asset/image/plus.svg" alt="">
+                        </span>
+                    </div>
+
+                </button>
+
+                <div id="content-6"
+                    class="bg-white rounded-lg relative bottom-2 max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                    <div class="pb-7 pt-5 pl-5 text-anstxt">
+                        <p class="ans">IFEST #12 memberikan hadiah-hadiah menarik untuk para pemenang kompetisi,
+                            termasuk penghargaan uang tunai, kesempatan untuk berkolaborasi dengan perusahaan terkemuka,
+                            dan sertifikat pengakuan. Temukan lebih lanjut tentang hadiah yang dapat Anda raih dan apa
+                            manfaatnya untuk karier Anda di dunia teknologi informasi.</p>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Accordion Item 3 -->
+            <div class="flex-col mb-5 reveal">
+                <button onclick="toggleAccordion(7)"
+                    class="w-full border-l-white border-l-12 z-10 relative bg-faqbg rounded-xl pl-10 pr-5 py-5 text-white">
+                    <div class="btn-txt flex flex-row items-center">
+                        <p class="text-left font-bold">Bagaimana jadwal acara IFEST #13?</p>
+                        <span id="icon-7" class="text-white pl-96 ml-72 transition-transform row-span-5 duration-300">
+                            <img class="w-7" src="./asset/image/plus.svg" alt="">
+                        </span>
+                    </div>
+
+                </button>
+
+                <div id="content-7"
+                    class="bg-white rounded-lg relative bottom-2 max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                    <div class="pb-7 pt-5 pl-5 text-anstxt">
+                        <p class="ans">Rangkaian acara IFEST#13 akan berlangsung dalam beberapa tahap sejak Februari hingga Juni 2025. Setiap kompetisi memiliki jadwal tersendiri, dimulai dengan tahap pendaftaran, seleksi, hingga final. Web Development Competition (WDC) akan dimulai pada bulan Februari dan mencapai puncaknya pada bulan April, sementara Capture The Flag (CTF) akan mengadakan babak penyisihan pada bulan Mei dan final secara langsung pada bulan Mei 2025. Acara puncak berupa Seminar Nasional akan diselenggarakan pada 14 Juni 2025. </p>
+
+                    </div>
+
+                </div>
+            </div>
+            <!-- accordion item 4 -->
+            <div class="flex-col reveal">
+                <button onclick="toggleAccordion(8)"
+                    class="w-full border-l-white border-l-12 z-10 relative bg-faqbg rounded-xl pl-10 pr-5 py-5 text-white">
+                    <div class="btn-txt flex flex-row items-center">
+                        <p class="text-left font-bold">Bagaimana saya bisa berkontribusi sebagai sponsor atau relawan
+                            untuk IFEST #13?</p>
+                        <span id="icon-8" class="text-white ml-80 transition-transform row-span-5 duration-300">
+                            <img class="w-7" src="./asset/image/plus.svg" alt="">
+                        </span>
+                    </div>
+
+                </button>
+
+                <div id="content-8"
+                class="bg-white rounded-lg relative bottom-2 max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                <div class="pb-7 pt-5 pl-5 text-anstxt">
+                    <p class="ans">Terdapat berbagai cara untuk berkontribusi dalam IFEST#13, baik sebagai sponsor maupun relawan. Bagi perusahaan atau organisasi yang ingin mendukung acara ini, tersedia berbagai paket sponsorship dengan keuntungan seperti pencantuman logo di berbagai media promosi, kesempatan membuka booth, serta eksposur di media sosial dan acara seminar. Sponsorship tidak hanya mendukung keberlangsungan acara tetapi juga memberikan peluang bagi perusahaan untuk berinteraksi langsung dengan generasi muda berbakat di bidang teknologi.
+                    </p>
+
+                </div>
+
+            </div>
+            </div>
+            <div class="flex reveal flex-col justify-center items-center pt-5 mt-10 pb-10">
+                <p class="text-sponcl font-khdam mb-5">Still Have any Question ?</p>
+                <a class="rounded-full py-4 px-12 text-white bg-spbtn" href="#contact">Contact Us</a>
+            </div>
+        </div>
+
+
+        </div>
+    </section>
+
+    <section id="contact" class="contact w-full h-full py-20">
+        <div class="flex flex-col reveal h-full w-full justify-center items-center">
+            <p class="text-sm lg:text-md mb-4 font-khdam text-sponcl reveal">I FEST#13: HEROES OF INNOVATION</p>
+            <div class="flex flex-row justify-center items-center mx-10">
+                <div class="w-10 lg:w-20 mb-12">
+                    <img class="reveal" src="./asset/image/bling.svg" alt="">
+                </div>
+
+                <h1 class="text-4xl text-center lg:text-7xl mb-6 font-jersey text-sponcl reveal ">CONTACT PERSON</h1>
+                <div class="reveal">
+                    <img class="w-10 lg:w-20 mb-12" src="./asset/image/bling.svg" alt="">
+                </div>
+
+            </div>
+            <p class="text-sm lg:text-lg px-8 lg:px-96 lg:text-center text-center font-khdam text-sponcl-0 reveal ">Jika Anda
+                memiliki pertanyaan lebih lanjut atau
+                membutuhkan bantuan
+                terkait IFEST #13, jangan ragu untuk menghubungi kami!</p>
+
+            <div class="hidden lg:block reveal">
+                <div class="flex flex-row justify-center items-center">
+                    <div class="relative z-10 flex justify-center mt-10 lg:mt-28 pb-10">
+                        <div class="w-64 h-auto px-3 py-8 mx-3 rounded-2xl flex flex-col items-center justify-center fadeIn"
+                            style="
+                                background: radial-gradient(circle, #ffe864, #d4cf4a, #1b813d);
+                                --fade-duration: 2;
+                              ">
+                            <div class="mb-5">
+                                <div class="flex gap-2 items-end justify-center text-center mb-1">
+                                    <h1 class="text-2xl text-[#00296B] text-center font-jersey25">
+                                        MUC
+                                    </h1>
+                                    <img src="./asset/image/landing-vec.png" class="w-16" alt="" />
+                                </div>
+    
+                                <h1 class="text-[#00296B] font-inter text-center text-sm">
+                                    Mobile UI/UX Competition
+                                </h1>
+                            </div>
+                            <div class="mt-0">
+                                <a href="https://wa.me/+6285752867028
+                                " target="_blank">
+                                    <h1 class="text-[#00296B] font-montserrat text-center text-sm">
+                                        Dinna
+                                    </h1>
+                                    <div class="rounded-2xl bg-[#5ECC85] py-2 px-3 mt-2 flex gap-2">
+                                        <img src="./asset/image/wa.png" class="w-5" alt="" />
+                                        <h1 class="text-[#00296B] font-bold text-center text-sm">
+                                            0857-5286-7028
+                                        </h1>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="mt-5">
+                                <a href="https://wa.me/+6282228198418
+                                " target="_blank">
+                                    <h1 class="text-[#00296B] font-montserrat text-center text-sm">
+                                        Cindy
+                                    </h1>
+                                    <div class="rounded-2xl bg-[#5ECC85] py-2 px-3 mt-2 flex gap-2">
+                                        <img src="./asset/image/wa.png" class="w-5" alt="" />
+                                        <h1 class="text-[#00296B] font-bold text-center text-sm">
+                                            0857-5286-7028
+                                        </h1>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="relative z-10 flex justify-center mt-10 lg:mt-28 pb-10">
+                        <div class="w-64 h-auto px-3 py-8 mx-3 rounded-2xl flex flex-col items-center justify-center fadeIn"
+                            style="
+                                background: radial-gradient(circle, #ffe864, #d4cf4a, #1b813d);
+                                --fade-duration: 2;
+                              ">
+                            <div class="mb-5">
+                                <div class="flex gap-2 items-end justify-center text-center mb-1">
+                                    <h1 class="text-2xl text-[#00296B] text-center font-jersey25">
+                                        WDC
+                                    </h1>
+                                    <img src="./asset/image/web.png" class="w-10" alt="" />
+                                </div>
+    
+                                <h1 class="text-[#00296B] font-inter text-center text-sm">
+                                    Web Development Competition
+                                </h1>
+                            </div>
+                            <div class="mt-0">
+                                <a href="https://wa.me/+628112639082
+                                " target="_blank">
+                                    <h1 class="text-[#00296B] font-montserrat text-center text-sm">
+                                        Marvela
+                                    </h1>
+                                    <div class="rounded-2xl bg-[#5ECC85] py-2 px-3 mt-2 flex gap-2">
+                                        <img src="./asset/image/wa.png" class="w-5" alt="" />
+                                        <h1 class="text-[#00296B] font-bold text-center text-sm">
+                                            0811-2639-082
+                                        </h1>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="mt-5">
+                                <a href="https://wa.me/+6287829407249
+                                " target="_blank">
+                                    <h1 class="text-[#00296B] font-montserrat text-center text-sm">
+                                        Aldo
+                                    </h1>
+                                    <div class="rounded-2xl bg-[#5ECC85] py-2 px-3 mt-2 flex gap-2">
+                                        <img src="./asset/image/wa.png" class="w-5" alt="" />
+                                        <h1 class="text-[#00296B] font-bold text-center text-sm">
+                                            0878-2940-7249
+                                        </h1>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="relative z-10 flex justify-center mt-10 lg:mt-28 pb-10">
+                        <div class="w-64 h-auto px-3 py-8 mx-3 rounded-2xl flex flex-col items-center justify-center fadeIn"
+                            style="
+                                background: radial-gradient(circle, #ffe864, #d4cf4a, #1b813d);
+                                --fade-duration: 2;
+                              ">
+                            <div class="mb-5">
+                                <div class="flex gap-2 items-end justify-center text-center mb-1">
+                                    <h1 class="text-2xl text-[#00296B] text-center font-jersey25">
+                                        CTF
+                                    </h1>
+                                    <img src="./asset/image/ctf.svg" class="w-10" alt="" />
+                                </div>
+    
+                                <h1 class="text-[#00296B] font-inter text-center text-sm">
+                                    Capture The Flag
+                                </h1>
+                            </div>
+                            <div class="mt-0">
+                                <a href="https://wa.me/+6282322610885
+
+                                " target="_blank">
+                                    <h1 class="text-[#00296B] font-montserrat text-center text-sm">
+                                        Ica
+                                    </h1>
+                                    <div class="rounded-2xl bg-[#5ECC85] py-2 px-3 mt-2 flex gap-2">
+                                        <img src="./asset/image/wa.png" class="w-5" alt="" />
+                                        <h1 class="text-[#00296B] font-bold text-center text-sm">
+                                            0823-2261-0885
+
+                                        </h1>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="mt-5">
+                                <a href="https://wa.me/+6281294148768
+                                " target="_blank">
+                                    <h1 class="text-[#00296B] font-montserrat text-center text-sm">
+                                        Alegra
+                                    </h1>
+                                    <div class="rounded-2xl bg-[#5ECC85] py-2 px-3 mt-2 flex gap-2">
+                                        <img src="./asset/image/wa.png" class="w-5" alt="" />
+                                        <h1 class="text-[#00296B] font-bold text-center text-sm">
+                                            0812-9414-8768
+
+                                        </h1>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="relative z-10 flex justify-center  mt-10 lg:mt-28 pb-10">
+                        <div class="w-64 h-auto px-3 py-8 mx-3 rounded-2xl flex flex-col items-center justify-center fadeIn"
+                            style="
+                                background: radial-gradient(circle, #ffe864, #d4cf4a, #1b813d);
+                                --fade-duration: 2;
+                              ">
+                            <div class="mb-5">
+                                <div class="flex gap-2 items-end justify-center text-center mb-1">
+                                    <h1 class="text-2xl text-[#00296B] text-center font-jersey25">
+                                        SEMNAS
+                                    </h1>
+                                    <img src="./asset/image/semnas.svg" class="w-10" alt="" />
+                                </div>
+    
+                                <h1 class="text-[#00296B] font-inter text-center text-sm">
+                                    Seminar Nasional
+                                </h1>
+                            </div>
+                            <div class="mt-0">
+                                <a href="https://wa.me/+6282256194052
+
+                                " target="_blank">
+                                    <h1 class="text-[#00296B] font-montserrat text-center text-sm">
+                                        Valen
+                                    </h1>
+                                    <div class="rounded-2xl bg-[#5ECC85] py-2 px-3 mt-2 flex gap-2">
+                                        <img src="./asset/image/wa.png" class="w-5" alt="" />
+                                        <h1 class="text-[#00296B] font-bold text-center text-sm">
+                                            0822-5619-4052
+
+                                        </h1>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="mt-5">
+                                <a href="https://wa.me/+6281231162826
+                                " target="_blank">
+                                    <h1 class="text-[#00296B] font-montserrat text-center text-sm">
+                                        Cindy
+                                    </h1>
+                                    <div class="rounded-2xl bg-[#5ECC85] py-2 px-3 mt-2 flex gap-2">
+                                        <img src="./asset/image/wa.png" class="w-5" alt="" />
+                                        <h1 class="text-[#00296B] font-bold text-center text-sm">
+                                            0812-3116-2826
+                                        </h1>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+                <!-- mobile -->
+
+                <div class="lg:hidden reveal">
+                    <div class="flex flex-col justify-center items-center">
+                        <div class="relative z-10 flex justify-center mt-10 lg:mt-28 pb-10">
+                            <div class="w-64 h-auto px-5 py-8 mx-5 rounded-2xl flex flex-col items-center justify-center fadeIn"
+                                style="
+                                    background: radial-gradient(circle, #ffe864, #d4cf4a, #1b813d);
+                                    --fade-duration: 2;
+                                  ">
+                                <div class="mb-5">
+                                    <div class="flex gap-2 items-end justify-center text-center mb-1">
+                                        <h1 class="text-2xl text-[#00296B] text-center font-jersey25">
+                                            MUC
+                                        </h1>
+                                        <img src="./asset/image/landing-vec.png" class="w-16" alt="" />
+                                    </div>
+        
+                                    <h1 class="text-[#00296B] font-inter text-center text-sm">
+                                        Mobile UI/UX Competition
+                                    </h1>
+                                </div>
+                                <div class="mt-0">
+                                    <a href="https://wa.me/+6285752867028
+                                    " target="_blank">
+                                        <h1 class="text-[#00296B] font-montserrat text-center text-sm">
+                                            Dinna
+                                        </h1>
+                                        <div class="rounded-2xl bg-[#5ECC85] py-2 px-3 mt-2 flex gap-2">
+                                            <img src="./asset/image/wa.png" class="w-5" alt="" />
+                                            <h1 class="text-[#00296B] font-bold text-center text-sm">
+                                                0857-5286-7028
+                                            </h1>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="mt-5">
+                                    <a href="https://wa.me/+6282228198418
+                                    " target="_blank">
+                                        <h1 class="text-[#00296B] font-montserrat text-center text-sm">
+                                            Cindy
+                                        </h1>
+                                        <div class="rounded-2xl bg-[#5ECC85] py-2 px-3 mt-2 flex gap-2">
+                                            <img src="./asset/image/wa.png" class="w-5" alt="" />
+                                            <h1 class="text-[#00296B] font-bold text-center text-sm">
+                                                0857-5286-7028
+                                            </h1>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="relative z-10 flex justify-center mt-10 lg:mt-28 pb-10">
+                            <div class="w-64 h-auto px-5 py-8 mx-5 rounded-2xl flex flex-col items-center justify-center fadeIn"
+                                style="
+                                    background: radial-gradient(circle, #ffe864, #d4cf4a, #1b813d);
+                                    --fade-duration: 2;
+                                  ">
+                                <div class="mb-5">
+                                    <div class="flex gap-2 items-end justify-center text-center mb-1">
+                                        <h1 class="text-2xl text-[#00296B] text-center font-jersey25">
+                                            WDC
+                                        </h1>
+                                        <img src="./asset/image/web.png" class="w-10" alt="" />
+                                    </div>
+        
+                                    <h1 class="text-[#00296B] font-inter text-center text-sm">
+                                        Web Development Competition
+                                    </h1>
+                                </div>
+                                <div class="mt-0">
+                                    <a href="https://wa.me/+628112639082
+                                    " target="_blank">
+                                        <h1 class="text-[#00296B] font-montserrat text-center text-sm">
+                                            Marvela
+                                        </h1>
+                                        <div class="rounded-2xl bg-[#5ECC85] py-2 px-3 mt-2 flex gap-2">
+                                            <img src="./asset/image/wa.png" class="w-5" alt="" />
+                                            <h1 class="text-[#00296B] font-bold text-center text-sm">
+                                                0811-2639-082
+                                            </h1>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="mt-5">
+                                    <a href="https://wa.me/+6287829407249
+                                    " target="_blank">
+                                        <h1 class="text-[#00296B] font-montserrat text-center text-sm">
+                                            Aldo
+                                        </h1>
+                                        <div class="rounded-2xl bg-[#5ECC85] py-2 px-3 mt-2 flex gap-2">
+                                            <img src="./asset/image/wa.png" class="w-5" alt="" />
+                                            <h1 class="text-[#00296B] font-bold text-center text-sm">
+                                                0878-2940-7249
+                                            </h1>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="relative z-10 flex justify-center mt-10 lg:mt-28 pb-10">
+                            <div class="w-64 h-auto px-5 py-8 mx-5 rounded-2xl flex flex-col items-center justify-center fadeIn"
+                                style="
+                                    background: radial-gradient(circle, #ffe864, #d4cf4a, #1b813d);
+                                    --fade-duration: 2;
+                                  ">
+                                <div class="mb-5">
+                                    <div class="flex gap-2 items-end justify-center text-center mb-1">
+                                        <h1 class="text-2xl text-[#00296B] text-center font-jersey25">
+                                            CTF
+                                        </h1>
+                                        <img src="./asset/image/ctf.svg" class="w-10" alt="" />
+                                    </div>
+        
+                                    <h1 class="text-[#00296B] font-inter text-center text-sm">
+                                        Capture The Flag
+                                    </h1>
+                                </div>
+                                <div class="mt-0">
+                                    <a href="https://wa.me/+6282322610885
+    
+                                    " target="_blank">
+                                        <h1 class="text-[#00296B] font-montserrat text-center text-sm">
+                                            Ica
+                                        </h1>
+                                        <div class="rounded-2xl bg-[#5ECC85] py-2 px-3 mt-2 flex gap-2">
+                                            <img src="./asset/image/wa.png" class="w-5" alt="" />
+                                            <h1 class="text-[#00296B] font-bold text-center text-sm">
+                                                0823-2261-0885
+    
+                                            </h1>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="mt-5">
+                                    <a href="https://wa.me/+6281294148768
+                                    " target="_blank">
+                                        <h1 class="text-[#00296B] font-montserrat text-center text-sm">
+                                            Alegra
+                                        </h1>
+                                        <div class="rounded-2xl bg-[#5ECC85] py-2 px-3 mt-2 flex gap-2">
+                                            <img src="./asset/image/wa.png" class="w-5" alt="" />
+                                            <h1 class="text-[#00296B] font-bold text-center text-sm">
+                                                0812-9414-8768
+    
+                                            </h1>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="relative z-10 flex justify-center mt-10 lg:mt-28 pb-10">
+                            <div class="w-64 h-auto px-5 py-8 mx-5 rounded-2xl flex flex-col items-center justify-center fadeIn"
+                                style="
+                                    background: radial-gradient(circle, #ffe864, #d4cf4a, #1b813d);
+                                    --fade-duration: 2;
+                                  ">
+                                <div class="mb-5">
+                                    <div class="flex gap-2 items-end justify-center text-center mb-1">
+                                        <h1 class="text-2xl text-[#00296B] text-center font-jersey25">
+                                            SEMNAS
+                                        </h1>
+                                        <img src="./asset/image/web.png" class="w-10" alt="" />
+                                    </div>
+        
+                                    <h1 class="text-[#00296B] font-inter text-center text-sm">
+                                        Seminar Nasional
+                                    </h1>
+                                </div>
+                                <div class="mt-0">
+                                    <a href="https://wa.me/+6282256194052
+    
+                                    " target="_blank">
+                                        <h1 class="text-[#00296B] font-montserrat text-center text-sm">
+                                            Valen
+                                        </h1>
+                                        <div class="rounded-2xl bg-[#5ECC85] py-2 px-3 mt-2 flex gap-2">
+                                            <img src="./asset/image/wa.png" class="w-5" alt="" />
+                                            <h1 class="text-[#00296B] font-bold text-center text-sm">
+                                                0822-5619-4052
+    
+                                            </h1>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="mt-5">
+                                    <a href="https://wa.me/+6281231162826
+                                    " target="_blank">
+                                        <h1 class="text-[#00296B] font-montserrat text-center text-sm">
+                                            Cindy
+                                        </h1>
+                                        <div class="rounded-2xl bg-[#5ECC85] py-2 px-3 mt-2 flex gap-2">
+                                            <img src="./asset/image/wa.png" class="w-5" alt="" />
+                                            <h1 class="text-[#00296B] font-bold text-center text-sm">
+                                                0812-3116-2826
+                                            </h1>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+
+    </section>
+
+
+    <!-- Start - Footer-->
+    <section>
+        <!-- Start - Mobile -->
+
+        <div class="lg:hidden">
+            <div class="bg-[#00296B] h-auto w-auto text-white">
+                <div class="relative z-0">
+                    <div class="absolute w-36">
+                        <img src="./asset/image/garis_footer.svg" alt="" class="opacity-85" />
+                    </div>
+
+                    <div class="absolute w-36 right-0 scale-x-[-1]">
+                        <img src="./asset/image/garis_footer.svg" alt="" class="opacity-85" />
+                    </div>
+                </div>
+
+                <div class="relative z-0">
+                    <div class="px-10 pt-20 pb-10">
+                        <div>
+                            <a href="/">
+                                <img src="./asset/image/logo_footer.svg" alt="" class="w-40 rounded-xl" />
+                                <h1 class="font-interBold mt-3 text-xl">IFest #13</h1>
+                            </a>
+                        </div>
+                        <h1 class="font-inter mt-3 max-w-sm text-sm">
+                            The premier annual IT event hosted by HIMAFORKA UAJY. Brings
+                            together technology enthusiasts for a week of innovation,
+                            competition, and collaboration.
+                        </h1>
+                        <hr class="my-5" />
+                        <div class="flex flex-col space-y-5">
+                            <div class="flex flex-col">
+                                <h1 class="font-interBold text-xl">EVENTS</h1>
+                                <div class="mt-5 hover:underline">
+                                    <a href="/semnas" class="font-inter">Seminar nasional</a>
+                                </div>
+                            </div>
+                            <hr class="my-5" />
+                            <div class="flex flex-col space-y-5">
+                                <h1 class="font-interBold text-xl">COMPETITION</h1>
+                                <div class="hover:underline">
+                                    <a href="/muc" class="font-inter">Mobile UI/UX Competition (MUC)</a>
+                                </div>
+                                <div class="hover:underline">
+                                    <a href="/wdc" class="font-inter">Web Design Competition (WDC)</a>
+                                </div>
+                                <div class="hover:underline">
+                                    <a href="/ctf" class="font-inter">Capture The Flag (CTF)</a>
+                                </div>
+                            </div>
+                            <hr class="my-5" />
+                            <div class="flex flex-col space-y-3">
+                                <h1 class="font-interBold text-xl">SOCIAL MEDIA</h1>
+                                <div class="flex gap-2">
+                                    <a href=""><img src="./asset/image/mingcute_youtube-fill.svg" alt=""
+                                            class="w-10" /></a>
+
+                                    <a href="https://www.instagram.com/ifest_uajy/"><img
+                                            src="./asset/image/mingcute_instagram-fill.svg" alt="" class="w-10" /></a>
+                                    <a href=""><img src="./asset/image/mingcute_line-app-fill.svg" alt=""
+                                            class="w-10" /></a>
+                                </div>
+                            </div>
+                            <hr class="my-5" />
+                            <div class="flex flex-col space-y-3">
+                                <h1 class="font-interBold text-xl">OUR CONTACTS</h1>
+                                <div class="mt-3 hover:underline">
+                                    <a href="/" class="font-inter">ifestuajy@gmail.com</a>
+                                </div>
+                                <h1 class="mt-2">+6212345678</h1>
+                            </div>
+                            <hr class="my-5" />
+                            <div class="text-center pt-10">
+                                <h1 class="text-white font-extrabold text-center">
+                                    © 2025 IFEST #13 UAJY. All rights reserved. <br />
+                                    Organized by WD IFEST #13
+                                </h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- End - Mobile -->
+
+        <!-- Start - Desktop -->
+        <div class="hidden lg:block">
+            <div class="bg-[#00296B] h-auto w-auto">
+                <div class="relative z-0">
+                    <div class="absolute w-56">
+                        <img src="./asset/image/garis_footer.svg" alt="" class="opacity-85" />
+                    </div>
+
+                    <div class="absolute w-56 right-0 scale-x-[-1]">
+                        <img src="./asset/image/garis_footer.svg" alt="" class="opacity-85" />
+                    </div>
+                </div>
+
+                <div class="relative z-10">
+                    <div class="py-10 px-20 flex w-auto">
+                        <div class="mx-auto text-white">
+                            <div>
+                                <a href="/">
+                                    <img class="w-40 rounded-xl" src="./asset/image/logo_footer.svg.svg" alt="" />
+                                    <h1 class="font-interBold mt-3 text-xl">IFest #13</h1>
+                                </a>
+                            </div>
+
+                            <h1 class="font-inter mt-5 w-96">
+                                The premier annual IT event hosted by HIMAFORKA UAJY. Brings
+                                together technology enthusiasts for a week of innovation,
+                                competition, and collaboration.
+                            </h1>
+                            <h1 class="font-interBold mt-8 text-xl">Presented By</h1>
+                            <img src="img/element/logo_hima.svg" class="w-28 mt-5" alt="" />
+                        </div>
+                        <div class="mx-auto text-white">
+                            <h1 class="font-interBold text-xl">EVENTS</h1>
+                            <div class="mt-5 hover:underline">
+                                <a href="/semnas" class="font-inter">Seminar nasional</a>
+                            </div>
+                        </div>
+                        <div class="mx-auto text-white">
+                            <h1 class="font-interBold text-xl">COMPETITION</h1>
+                            <div class="mt-5 hover:underline">
+                                <a href="/muc" class="font-inter">Mobile UI/UX Competition <br />
+                                    (MUC)</a>
+                            </div>
+                            <div class="mt-3 hover:underline">
+                                <a href="/wdc" class="font-inter">Web Design Competition <br />
+                                    (WDC)</a>
+                            </div>
+                            <div class="mt-3 hover:underline">
+                                <a href="/ctf" class="font-inter">Capture The Flag <br />
+                                    (CTF)</a>
+                            </div>
+                        </div>
+                        <div class="mx-auto text-white">
+                            <div class="flex flex-col">
+                                <h1 class="font-interBold text-xl">SOCIAL MEDIA</h1>
+                                <div class="flex gap-2 mt-3">
+                                    <a href=""><img src="./asset/image/mingcute_youtube-fill.svg" alt=""
+                                            class="w-10" /></a>
+
+                                    <a href="https://www.instagram.com/ifest_uajy/" target="_blank"><img
+                                            src="./asset/image/mingcute_instagram-fill.svg" alt="" class="w-10" /></a>
+                                    <a href=""><img src="./asset/image/mingcute_line-app-fill.svg" alt=""
+                                            class="w-10" /></a>
+                                </div>
+                                <div class="mt-10">
+                                    <h1 class="font-interBold text-xl">OUR CONTACTS</h1>
+                                    <div class="mt-3 hover:underline">
+                                        <a href="/" class="font-inter">ifestuajy@gmail.com</a>
+                                    </div>
+                                    <h1 class="mt-2">+6212345678</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex items-center justify-center">
+                    <hr class="mb-5 w-96" />
+                </div>
+                <h1 class="pb-5 text-white font-extrabold text-center">
+                    © 2025 IFEST #13 UAJY. All rights reserved. | Organized by WD IFEST
+                    #13
+                </h1>
+            </div>
+        </div>
+        <!-- End - Desktop -->
+    </section>
+    <!-- End - Footer-->
+
+
+
+    <script src="./src/index.js"></script>
+</body>
+
+</html>
