@@ -24,8 +24,8 @@
         "destination": "/ctf-soon/index.html"
       },
       {
-        "source": "/semnas-soon",
-        "destination": "/semnas-soon/index.html"
+        "source": "/i-talk-soon",
+        "destination": "/i-talk-soon/index.html"
       },
       {
         "source": "/sponsor-soon",
@@ -43,8 +43,8 @@
         "type": 301
       },
       {
-        "source": "/semnas",
-        "destination": "/semnas-soon",
+        "source": "/i-talk",
+        "destination": "/i-talk-soon",
         "type": 301
       },
       {
